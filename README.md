@@ -14,6 +14,9 @@ or
 git clone https://github.com/hc-institute-japan/kizunakit.git
 
 cd kizunakit
+
+git pull origin dev
+
 ```
 
 install dependencies and run:
