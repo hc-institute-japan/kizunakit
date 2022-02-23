@@ -2,13 +2,29 @@
 <html dir="ltr" lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <link rel="stylesheet" href="/build/kizunakit.css" />
     <title>Stencil Component Starter</title>
 
     <script type="module" src="/build/kizunakit.esm.js"></script>
     <script nomodule src="/build/kizunakit.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <div class="container">
+      <div class="title"><h3>Avatars</h3></div>
+      <div class="content space-between">
+        <kizuna-avatar
+          size="md"
+          appearance="square"
+          rounded="lg"
+          image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
+          indicator
+          status="away"
+        ></kizuna-avatar>
+      </div>
+    </div>
   </body>
 </html>
