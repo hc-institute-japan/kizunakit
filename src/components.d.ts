@@ -6,20 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-
+    interface KizunaAvatar {
+    }
 }
 declare global {
+    interface HTMLKizunaAvatarElement extends Components.KizunaAvatar, HTMLStencilElement {
+    }
+    var HTMLKizunaAvatarElement: {
+        prototype: HTMLKizunaAvatarElement;
+        new (): HTMLKizunaAvatarElement;
+    };
     interface HTMLElementTagNameMap {
+        "kizuna-avatar": HTMLKizunaAvatarElement;
     }
 }
 declare namespace LocalJSX {
+    interface KizunaAvatar {
+    }
     interface IntrinsicElements {
+        "kizuna-avatar": KizunaAvatar;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
         }
     }
 }
