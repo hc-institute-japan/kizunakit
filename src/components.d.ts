@@ -7,6 +7,13 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface KizunaAvatar {
+        "appearance": string;
+        "image": string;
+        "indicator": boolean;
+        "rounded": string;
+        "size": string | number;
+        "status": string;
+        "toolkit": string;
     }
 }
 declare global {
@@ -22,6 +29,13 @@ declare global {
 }
 declare namespace LocalJSX {
     interface KizunaAvatar {
+        "appearance"?: string;
+        "image"?: string;
+        "indicator"?: boolean;
+        "rounded"?: string;
+        "size"?: string | number;
+        "status"?: string;
+        "toolkit"?: string;
     }
     interface IntrinsicElements {
         "kizuna-avatar": KizunaAvatar;
