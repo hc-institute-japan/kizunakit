@@ -6,19 +6,27 @@ Design system for Kizuna Messaging Application.
 
 ## Getting Started
 
-To start building a new web component using Stencil, clone this repo to a new directory:
+Clone the repository:
 
 ```bash
-git clone https://github.com/ionic-team/stencil-component-starter.git my-component
-cd my-component
-git remote rm origin
+git clone git@github.com:hc-institute-japan/kizunakit.git
+or
+git clone https://github.com/hc-institute-japan/kizunakit.git
+
+cd kizunakit
 ```
 
 and run:
 
 ```bash
-npm install
-npm start
+yarn
+yarb start
+```
+
+to create a new component:
+
+```bash
+yarn generate
 ```
 
 To build the component for production, run:
