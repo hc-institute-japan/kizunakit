@@ -16,14 +16,14 @@ git clone https://github.com/hc-institute-japan/kizunakit.git
 cd kizunakit
 ```
 
-and run:
+install dependencies and run:
 
 ```bash
 yarn
-yarb start
+yarn start
 ```
 
-to create a new component:
+To create a new component:
 
 ```bash
 yarn generate
