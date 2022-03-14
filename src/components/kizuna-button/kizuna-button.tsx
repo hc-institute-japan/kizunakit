@@ -10,6 +10,7 @@ export class KizunaButton {
   @Prop() disabled: boolean;
   @Prop() icon: string;
   @Prop() text: string = 'Button Text';
+  @Prop() handleOnClick: Function;
 
   private getBtnType = () => {
     if (this.type?.toLowerCase() === 'primary') {
@@ -38,6 +39,7 @@ export class KizunaButton {
       <div>
         <button
           class={`btn ${this.getBtnType()} ${this.getBtnDisabledClassName()}`}
+          onClick={() => this.handleOnClick}
         >
           {this.icon && <span class="btn-icon" innerHTML={this.icon} />}{' '}
           {this.text}

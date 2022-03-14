@@ -17,6 +17,7 @@ export namespace Components {
     }
     interface KizunaButton {
         "disabled": boolean;
+        "handleOnClick": Function;
         "icon": string;
         "text": string;
         "type": string;
@@ -52,6 +53,7 @@ declare namespace LocalJSX {
     }
     interface KizunaButton {
         "disabled"?: boolean;
+        "handleOnClick"?: Function;
         "icon"?: string;
         "text"?: string;
         "type"?: string;
