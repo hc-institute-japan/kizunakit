@@ -15,6 +15,12 @@ export namespace Components {
         "status": string;
         "toolkit": string;
     }
+    interface KizunaButton {
+        "disabled": boolean;
+        "icon": string;
+        "text": string;
+        "type": string;
+    }
 }
 declare global {
     interface HTMLKizunaAvatarElement extends Components.KizunaAvatar, HTMLStencilElement {
@@ -23,8 +29,15 @@ declare global {
         prototype: HTMLKizunaAvatarElement;
         new (): HTMLKizunaAvatarElement;
     };
+    interface HTMLKizunaButtonElement extends Components.KizunaButton, HTMLStencilElement {
+    }
+    var HTMLKizunaButtonElement: {
+        prototype: HTMLKizunaButtonElement;
+        new (): HTMLKizunaButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "kizuna-avatar": HTMLKizunaAvatarElement;
+        "kizuna-button": HTMLKizunaButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -37,8 +50,15 @@ declare namespace LocalJSX {
         "status"?: string;
         "toolkit"?: string;
     }
+    interface KizunaButton {
+        "disabled"?: boolean;
+        "icon"?: string;
+        "text"?: string;
+        "type"?: string;
+    }
     interface IntrinsicElements {
         "kizuna-avatar": KizunaAvatar;
+        "kizuna-button": KizunaButton;
     }
 }
 export { LocalJSX as JSX };
@@ -46,6 +66,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
+            "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
         }
     }
 }

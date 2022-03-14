@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="title"><h3>Avatars</h3></div>
+      <!-- <div class="title"><h3>Avatars</h3></div>
       <div class="content space-between">
         <kizuna-avatar
           size="md"
@@ -27,6 +27,39 @@
           indicator
           status="away"
         ></kizuna-avatar>
+      </div> -->
+      <div class="button-container">
+        <h1 class="title">Button</h1>
+        <div>
+        <table>
+          <tr>
+            <th></th>
+            <th>Default</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>Primary</td>
+            <td><kizuna-button type="primary" text="Label"></kizuna-button></td>
+            <td><kizuna-button type="primary" text="Label" disabled></kizuna-button></td>
+          </tr>
+          <tr>
+            <td>Primary with Icon</td>
+            <td><kizuna-button type="primary" text="Label" icon='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>'></kizuna-button></td>
+            <td>
+              <kizuna-button type="primary" disabled text="Label"  icon='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>'></kizuna-button>
+            </td>
+          </tr>
+          <tr>
+            <td>Secondary</td>
+            <td><kizuna-button type="secondary" text="Label"></kizuna-button></td>
+            <td><kizuna-button type="secondary" text="Label" disabled></kizuna-button></td>
+          </tr>
+          <tr>
+            <td>Secondary with Icon</td>
+            <td><kizuna-button type="secondary" text="Label"  icon='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>'></kizuna-button></td>
+            <td><kizuna-button type="secondary" text="Label"  disabled icon='<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>'></kizuna-button></td>
+          </tr>
+        </table>
       </div>
     </div>
   </body>
