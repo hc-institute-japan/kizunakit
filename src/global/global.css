@@ -48,6 +48,7 @@ table {
 
 .title {
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 tr:first-child {
@@ -62,10 +63,8 @@ th {
   font-weight: 400;
 }
 
-.primary-wrapper,
-.secondary-wrapper {
-  display: flex;
-  align-items: center;
+.toggle-button-wrapper {
+  margin: 40px 0;
 }
 
 .container {

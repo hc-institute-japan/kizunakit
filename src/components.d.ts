@@ -22,6 +22,10 @@ export namespace Components {
         "text": string;
         "type": string;
     }
+    interface KizunaToggle {
+        "checked": boolean;
+        "disabled": boolean;
+    }
 }
 declare global {
     interface HTMLKizunaAvatarElement extends Components.KizunaAvatar, HTMLStencilElement {
@@ -36,9 +40,16 @@ declare global {
         prototype: HTMLKizunaButtonElement;
         new (): HTMLKizunaButtonElement;
     };
+    interface HTMLKizunaToggleElement extends Components.KizunaToggle, HTMLStencilElement {
+    }
+    var HTMLKizunaToggleElement: {
+        prototype: HTMLKizunaToggleElement;
+        new (): HTMLKizunaToggleElement;
+    };
     interface HTMLElementTagNameMap {
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
+        "kizuna-toggle": HTMLKizunaToggleElement;
     }
 }
 declare namespace LocalJSX {
@@ -58,9 +69,14 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: string;
     }
+    interface KizunaToggle {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+    }
     interface IntrinsicElements {
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
+        "kizuna-toggle": KizunaToggle;
     }
 }
 export { LocalJSX as JSX };
@@ -69,6 +85,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
+            "kizuna-toggle": LocalJSX.KizunaToggle & JSXBase.HTMLAttributes<HTMLKizunaToggleElement>;
         }
     }
 }
