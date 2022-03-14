@@ -63,7 +63,8 @@ th {
   font-weight: 400;
 }
 
-.toggle-button-wrapper {
+.toggle-button-wrapper,
+.checkbox-wrapper {
   margin: 40px 0;
 }
 
