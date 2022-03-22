@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { KizunaToggle } from '../kizuna-toggle';
+import { KizunaTextbox } from '../kizuna-textbox';
 
-describe('kizuna-toggle', () => {
+describe('kizuna-textbox', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [KizunaToggle],
-      html: `<kizuna-toggle></kizuna-toggle>`,
+      components: [KizunaTextbox],
+      html: `<kizuna-textbox></kizuna-textbox>`,
     });
     expect(page.root).toEqualHtml(`
-      <kizuna-toggle>
+      <kizuna-textbox>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </kizuna-toggle>
+      </kizuna-textbox>
     `);
   });
 });

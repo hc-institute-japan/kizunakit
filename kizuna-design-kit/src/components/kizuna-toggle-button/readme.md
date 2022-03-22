@@ -1,4 +1,4 @@
-# kizuna-checkbox
+# kizuna-toggle-button
 
 
 
@@ -12,8 +12,6 @@
 | `checked`  | `checked`  |             | `boolean`                 | `undefined` |
 | `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
 | `disabled` | `disabled` |             | `boolean`                 | `undefined` |
-| `name`     | `name`     |             | `string`                  | `undefined` |
-| `value`    | `value`    |             | `string`                  | `undefined` |
 
 
 ----------------------------------------------

@@ -41,7 +41,7 @@
   opacity: 0.6;
 }
 
-/* When the checkbox is checked, add a primary background */
+/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: var(--primary);
 }

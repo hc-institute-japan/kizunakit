@@ -7,15 +7,17 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface KizunaAvatar {
-        "appearance": string;
+        "classes": { [key: string]: any };
         "image": string;
         "indicator": boolean;
+        "name": string;
         "rounded": string;
-        "size": string | number;
+        "size": string;
         "status": string;
         "toolkit": string;
     }
     interface KizunaButton {
+        "classes": { [key: string]: any };
         "disabled": boolean;
         "handleOnClick": Function;
         "icon": string;
@@ -24,12 +26,22 @@ export namespace Components {
     }
     interface KizunaCheckbox {
         "checked": boolean;
+        "classes": { [key: string]: any };
         "disabled": boolean;
         "name": string;
         "value": string;
     }
-    interface KizunaToggle {
+    interface KizunaTextbox {
+        "classes": { [key: string]: any };
+        "id": string;
+        "label": string;
+        "name": string;
+        "placeholder": string;
+        "value": string;
+    }
+    interface KizunaToggleButton {
         "checked": boolean;
+        "classes": { [key: string]: any };
         "disabled": boolean;
     }
 }
@@ -52,30 +64,39 @@ declare global {
         prototype: HTMLKizunaCheckboxElement;
         new (): HTMLKizunaCheckboxElement;
     };
-    interface HTMLKizunaToggleElement extends Components.KizunaToggle, HTMLStencilElement {
+    interface HTMLKizunaTextboxElement extends Components.KizunaTextbox, HTMLStencilElement {
     }
-    var HTMLKizunaToggleElement: {
-        prototype: HTMLKizunaToggleElement;
-        new (): HTMLKizunaToggleElement;
+    var HTMLKizunaTextboxElement: {
+        prototype: HTMLKizunaTextboxElement;
+        new (): HTMLKizunaTextboxElement;
+    };
+    interface HTMLKizunaToggleButtonElement extends Components.KizunaToggleButton, HTMLStencilElement {
+    }
+    var HTMLKizunaToggleButtonElement: {
+        prototype: HTMLKizunaToggleButtonElement;
+        new (): HTMLKizunaToggleButtonElement;
     };
     interface HTMLElementTagNameMap {
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
-        "kizuna-toggle": HTMLKizunaToggleElement;
+        "kizuna-textbox": HTMLKizunaTextboxElement;
+        "kizuna-toggle-button": HTMLKizunaToggleButtonElement;
     }
 }
 declare namespace LocalJSX {
     interface KizunaAvatar {
-        "appearance"?: string;
+        "classes"?: { [key: string]: any };
         "image"?: string;
         "indicator"?: boolean;
+        "name"?: string;
         "rounded"?: string;
-        "size"?: string | number;
+        "size"?: string;
         "status"?: string;
         "toolkit"?: string;
     }
     interface KizunaButton {
+        "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "handleOnClick"?: Function;
         "icon"?: string;
@@ -84,19 +105,30 @@ declare namespace LocalJSX {
     }
     interface KizunaCheckbox {
         "checked"?: boolean;
+        "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "name"?: string;
         "value"?: string;
     }
-    interface KizunaToggle {
+    interface KizunaTextbox {
+        "classes"?: { [key: string]: any };
+        "id"?: string;
+        "label"?: string;
+        "name"?: string;
+        "placeholder"?: string;
+        "value"?: string;
+    }
+    interface KizunaToggleButton {
         "checked"?: boolean;
+        "classes"?: { [key: string]: any };
         "disabled"?: boolean;
     }
     interface IntrinsicElements {
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
         "kizuna-checkbox": KizunaCheckbox;
-        "kizuna-toggle": KizunaToggle;
+        "kizuna-textbox": KizunaTextbox;
+        "kizuna-toggle-button": KizunaToggleButton;
     }
 }
 export { LocalJSX as JSX };
@@ -106,7 +138,8 @@ declare module "@stencil/core" {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
-            "kizuna-toggle": LocalJSX.KizunaToggle & JSXBase.HTMLAttributes<HTMLKizunaToggleElement>;
+            "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;
+            "kizuna-toggle-button": LocalJSX.KizunaToggleButton & JSXBase.HTMLAttributes<HTMLKizunaToggleButtonElement>;
         }
     }
 }

@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'kizuna-button',
   styleUrl: 'kizuna-button.css',
-  shadow: true,
+  shadow: false,
 })
 export class KizunaButton {
   @Prop() type: string;
@@ -11,6 +11,7 @@ export class KizunaButton {
   @Prop() icon: string;
   @Prop() text: string = 'Button Text';
   @Prop() handleOnClick: Function;
+  @Prop() classes: { [key: string]: any };
 
   private getBtnType = () => {
     if (this.type?.toLowerCase() === 'primary') {
@@ -36,15 +37,9 @@ export class KizunaButton {
 
   render() {
     return (
-      <div>
-        <button
-          class={`btn ${this.getBtnType()} ${this.getBtnDisabledClassName()}`}
-          onClick={() => this.handleOnClick}
-        >
-          {this.icon && <span class="btn-icon" innerHTML={this.icon} />}{' '}
-          {this.text}
-        </button>
-      </div>
+      <button disabled={this.disabled} class={`btn ${this.classes?.btnWrapper} ${this.getBtnType()} ${this.getBtnDisabledClassName()}`} onClick={() => this.handleOnClick}>
+        {this.icon && <span class={`btn-icon ${this.classes?.icon}`} innerHTML={this.icon} />} {this.text}
+      </button>
     );
   }
 }

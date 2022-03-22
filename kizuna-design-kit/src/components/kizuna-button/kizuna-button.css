@@ -1,7 +1,3 @@
-:host {
-  display: block;
-}
-
 .btn {
   background-color: var(--white);
   padding: 5px 20px;

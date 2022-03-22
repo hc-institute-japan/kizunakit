@@ -7,15 +7,16 @@
 
 ## Properties
 
-| Property     | Attribute    | Description | Type               | Default     |
-| ------------ | ------------ | ----------- | ------------------ | ----------- |
-| `appearance` | `appearance` |             | `string`           | `undefined` |
-| `image`      | `image`      |             | `string`           | `undefined` |
-| `indicator`  | `indicator`  |             | `boolean`          | `undefined` |
-| `rounded`    | `rounded`    |             | `string`           | `undefined` |
-| `size`       | `size`       |             | `number \| string` | `undefined` |
-| `status`     | `status`     |             | `string`           | `undefined` |
-| `toolkit`    | `toolkit`    |             | `string`           | `undefined` |
+| Property    | Attribute   | Description | Type                      | Default     |
+| ----------- | ----------- | ----------- | ------------------------- | ----------- |
+| `classes`   | --          |             | `{ [key: string]: any; }` | `undefined` |
+| `image`     | `image`     |             | `string`                  | `undefined` |
+| `indicator` | `indicator` |             | `boolean`                 | `undefined` |
+| `name`      | `name`      |             | `string`                  | `undefined` |
+| `rounded`   | `rounded`   |             | `string`                  | `undefined` |
+| `size`      | `size`      |             | `string`                  | `undefined` |
+| `status`    | `status`    |             | `string`                  | `undefined` |
+| `toolkit`   | `toolkit`   |             | `string`                  | `undefined` |
 
 
 ----------------------------------------------

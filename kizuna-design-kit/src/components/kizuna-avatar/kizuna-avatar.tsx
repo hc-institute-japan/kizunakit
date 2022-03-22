@@ -1,43 +1,43 @@
 import { Component, h, Prop } from '@stencil/core';
+import nameFormatter from '../../util/name-formatter';
 
 @Component({
   tag: 'kizuna-avatar',
   styleUrl: 'kizuna-avatar.css',
-  shadow: true,
+  shadow: false,
 })
 export class KizunaAvatar {
-  @Prop() size: string | number;
-
+  @Prop() size: string;
   @Prop() image: string;
-
-  @Prop() appearance: string;
-
   @Prop() status: string;
-
   @Prop() indicator: boolean;
-
   @Prop() rounded: string;
-
   @Prop() toolkit: string;
+  @Prop() name: string;
+  @Prop() classes: { [key: string]: any };
 
   // Functions
-  private setIndicator = (): string => {
-    if (this.size === 'lg') {
+  private getIndicatorSize = (): string => {
+    if (this.size?.toLowerCase() === 'lg') {
       return 'ind-lg';
-    } else if (this.size === 'xl') {
+    } else if (this.size?.toLowerCase() === 'xl') {
       return 'ind-xl';
     } else {
       return 'ind-md';
     }
   };
 
-  private setRoundedSize = (): string => {
-    if (this.rounded === 'sm') {
-      return 'rounded-sm';
-    } else if (this.rounded === 'md') {
-      return 'rounded-md';
-    } else if (this.rounded === 'lg') {
-      return 'rounded-lg';
+  private getAvatarImage = (): HTMLElement => {
+    if (this.image) {
+      return <img class="image" src={this.image} />;
+    } else {
+      return <span>{nameFormatter(this.name)}</span>;
+    }
+  };
+
+  private getImageContainerType = (): string => {
+    if (!this.image) {
+      return 'bordered-avatar';
     } else {
       return '';
     }
@@ -45,25 +45,22 @@ export class KizunaAvatar {
 
   render() {
     return (
-      <div>
-        <div class={`avatar ${this.size}`}>
-          <div
-            class={`image-container ${
-              this.appearance === 'square' ? 'square' : 'circle'
-            } ${this.appearance === 'square' && this.setRoundedSize()}`}
-          >
-            <img class="image" src={this.image} />
-          </div>
-          {this.size !== 'sm' &&
-            this.size !== 'xs' &&
-            this.appearance !== 'square' &&
-            this.indicator && (
-              <div
-                class={`indicator ${this.setIndicator()} ${this.status}`}
-              ></div>
-            )}
+      <div class={`avatar ${this.size} ${this.classes?.avatarWrapper}`}>
+        <div
+          class={`image-container ${this.getImageContainerType()} ${
+            this.classes?.imageWrapper
+          }`}
+        >
+          {' '}
+          {this.getAvatarImage()}
         </div>
-        {/* <span class="toolkit">asdasdaasdasdasdsd</span> */}
+        {this.indicator && (
+          <div
+            class={`indicator ${this.getIndicatorSize()} ${this.status} ${
+              this.classes?.indicator
+            }`}
+          />
+        )}
       </div>
     );
   }
