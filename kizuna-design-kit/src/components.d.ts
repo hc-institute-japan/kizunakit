@@ -38,6 +38,7 @@ export namespace Components {
         "name": string;
         "placeholder": string;
         "value": string;
+        "variant": string;
     }
     interface KizunaToggleButton {
         "checked": boolean;
@@ -117,6 +118,7 @@ declare namespace LocalJSX {
         "name"?: string;
         "placeholder"?: string;
         "value"?: string;
+        "variant"?: string;
     }
     interface KizunaToggleButton {
         "checked"?: boolean;

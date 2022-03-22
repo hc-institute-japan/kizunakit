@@ -1,4 +1,4 @@
-input[type='text'] {
+.textfield[type='text'] {
   width: 100%;
   padding: 12px 15px;
   margin: 8px 0;
@@ -9,8 +9,8 @@ input[type='text'] {
   outline: none;
 }
 
-input[type='text']:focus,
-input:focus {
+.textfield[type='text']:focus,
+.textfield:focus {
   border-width: 1px;
   border-style: solid;
   border-color: var(--primary);
@@ -19,4 +19,15 @@ input:focus {
 label {
   display: block;
   font-size: 14px;
+}
+
+.textfield-standard {
+  border: none !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+.textfield-standard:focus {
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-color: var(--primary) !important;
 }

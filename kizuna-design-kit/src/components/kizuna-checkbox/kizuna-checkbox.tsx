@@ -14,7 +14,7 @@ export class KizunaCheckbox {
 
   render() {
     return (
-      <label class={`container ${this.classes?.checkboxWrapper}`}>
+      <label class={`checkbox-container ${this.classes?.checkboxWrapper}`}>
         {this.value}
         <input
           class={`${this.classes?.input}`}

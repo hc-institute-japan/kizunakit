@@ -61,17 +61,82 @@
           </tr>
         </table>
 
-        <div class="toggle-button-wrapper">
+        <div class="wrapper">
           <h2 class="title">Toggle Button</h2>
-          <kizuna-toggle></kizuna-toggle>
-          <kizuna-toggle checked></kizuna-toggle>
+          <kizuna-toggle-button></kizuna-toggle-button>
+          <kizuna-toggle-button checked></kizuna-toggle-button>
          </div>
          
-         <div class="checkbox-wrapper">
+         <div class="wrapper">
           <h2 class="title">Checkbox</h2>
           <kizuna-checkbox value="Charlie Chan" name="Charlie Chan"></kizuna-checkbox>
           <kizuna-checkbox value="Charlie Chan" name="Charlie Chan" checked></kizuna-checkbox>
          </div>
+
+         <div class="wrapper">
+          <h2 class="title">Avatars</h2>
+          <div class="avatars-content">
+              <kizuna-avatar
+              size="xl"
+              image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
+              status="online"
+              indicator
+            ></kizuna-avatar>
+  
+              <kizuna-avatar
+                size="lg"
+                image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
+                status="offline"
+                indicator
+              ></kizuna-avatar>
+  
+              <kizuna-avatar
+                size="md"
+                image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
+                status="away"
+                indicator
+              ></kizuna-avatar>
+  
+  
+              <kizuna-avatar
+                size="md"
+                image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
+              ></kizuna-avatar>
+              <!-- no images -->
+              <kizuna-avatar
+              size="xl"
+              name="Elisse Cruise"
+              status="online"
+              indicator
+            ></kizuna-avatar>
+  
+              <kizuna-avatar
+                size="lg"
+                name="Elisse Cruise"
+                status="offline"
+                indicator
+              ></kizuna-avatar>
+  
+              <kizuna-avatar
+                size="md"
+                name="Marcus Gopez"
+                status="away"
+                indicator
+              ></kizuna-avatar>
+  
+              <kizuna-avatar
+                size="md"
+                name="Marcus Donald Gopez"
+              ></kizuna-avatar>
+          </div> 
+        </div>
+  
+        <div class="wrapper textbox">
+          <h2 class="title">Textbox</h2>
+          <kizuna-textbox placeholder="First Name" name="firstName" variant="standard" label="FirstName"></kizuna-textbox>
+          <br>
+          <kizuna-textbox placeholder="First Name" name="firstName" label="First Name"></kizuna-textbox>
+      </div>
     </div>
   </body>
 </html>

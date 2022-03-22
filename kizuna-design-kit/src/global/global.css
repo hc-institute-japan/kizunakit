@@ -37,10 +37,6 @@ p {
   margin: 0;
 }
 
-.button-container {
-  padding-top: 15px;
-}
-
 table {
   width: 450px;
   text-align: center;
@@ -63,11 +59,6 @@ th {
   font-weight: 400;
 }
 
-.toggle-button-wrapper,
-.checkbox-wrapper {
-  margin: 40px 0;
-}
-
 .container {
   max-width: 1280px;
   margin-right: auto;
@@ -75,6 +66,25 @@ th {
   padding: 0 2rem;
   width: 100%;
   position: relative;
+}
+
+.wrapper,
+.wrapper,
+.wrapper {
+  margin: 40px 0;
+}
+.textbox {
+  width: 400px;
+}
+.avatars-content {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.avatars-content > * {
+  margin: 12px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -105,4 +115,12 @@ th {
   .container {
     max-width: 540px;
   }
+}
+
+/* Overrides */
+.btn-wrapper-global {
+  border: 10px solid red !important;
+  background-color: blue;
+  width: 300px;
+  height: 100px;
 }
