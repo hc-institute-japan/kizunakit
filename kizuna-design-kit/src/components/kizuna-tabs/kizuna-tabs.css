@@ -1,3 +1,28 @@
 :host {
   display: block;
 }
+
+.tabWrapper {
+  border: 2px solid red;
+  display: flex;
+}
+
+.tabMenu {
+  flex: 1;
+  border: 2px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.isActive {
+  color: red;
+}
+
+.tabDarkMode {
+  background-color: black;
+  color: white;
+}
+.tabMenus {
+  display: flex;
+}

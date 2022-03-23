@@ -32,6 +32,13 @@ export namespace Components {
         "value": string;
     }
     interface KizunaTabs {
+        "classes": { [key: string]: string };
+        "darkmode": boolean;
+        "disabled": boolean;
+        "menus": Array<{ [key: string]: string }>;
+        "name": string;
+        "onClick": Function;
+        "value": string;
     }
     interface KizunaTextbox {
         "classes": { [key: string]: any };
@@ -121,6 +128,13 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface KizunaTabs {
+        "classes"?: { [key: string]: string };
+        "darkmode"?: boolean;
+        "disabled"?: boolean;
+        "menus"?: Array<{ [key: string]: string }>;
+        "name"?: string;
+        "onClick"?: Function;
+        "value"?: string;
     }
     interface KizunaTextbox {
         "classes"?: { [key: string]: any };

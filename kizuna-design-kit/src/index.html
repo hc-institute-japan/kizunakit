@@ -17,6 +17,16 @@
   </head>
   <body>
     <div class="container">
+
+      <div>
+        <h2 class="title" >Tabs</h2>
+        <kizuna-tabs value="menu2" ></kizuna-tabs>
+      </div>
+
+      <div>
+        <h2 class="title" >Tabs</h2>
+        <kizuna-tabs darkmode value="menu3"></kizuna-tabs>
+      </div>
       <!-- <div class="title"><h3>Avatars</h3></div>
       <div class="content space-between">
         <kizuna-avatar
@@ -137,6 +147,37 @@
           <br>
           <kizuna-textbox placeholder="First Name" name="firstName" label="First Name"></kizuna-textbox>
       </div>
+
+
+      <script>
+        // For Testing only
+        const tabs1 = document.getElementsByTagName('kizuna-tabs')[0]
+        //change values of tabs here
+        tabs1.menus =  [
+                        { name: 'Menu1', value: 'menu1' },
+                        { name: 'Menu2', value: 'menu2' },
+                        { name: 'Menu3', value: 'menu3' },
+                        { name: 'Menu4', value: 'menu4' },
+                      ];
+
+        tabs1.onClick = (e, value) => console.log({e, value})
+
+
+
+        const tabs2 = document.getElementsByTagName('kizuna-tabs')[1]
+        //change values of tabs here
+        tabs2.menus =  [
+                        { name: 'Menu1', value: 'menu1' },
+                        { name: 'Menu2', value: 'menu2' },
+                        { name: 'Menu3', value: 'menu3' },
+                        { name: 'Menu4', value: 'menu4' },
+                        { name: 'Menu5', value: 'menu5' },
+                        { name: 'Menu6', value: 'menu6' },
+                      ];
+
+        tabs2.onClick = (e, value) => console.log({e, value})
+      </script>
+
     </div>
   </body>
 </html>
