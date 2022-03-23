@@ -20,7 +20,7 @@ export class KizunaTabs {
   };
 
   private renderMenus = () => {
-    const menusMarkup = this.menus.map((menu, index) => {
+    const menusMarkup = this.menus?.map((menu, index) => {
       const isMenuActive = this.value === menu?.value;
       return (
         <div

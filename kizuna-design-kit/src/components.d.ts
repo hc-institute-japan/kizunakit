@@ -31,6 +31,10 @@ export namespace Components {
         "name": string;
         "value": string;
     }
+    interface KizunaPopover {
+        "buttonText": string;
+        "darkmode": boolean;
+    }
     interface KizunaTabs {
         "classes": { [key: string]: string };
         "darkmode": boolean;
@@ -74,6 +78,12 @@ declare global {
         prototype: HTMLKizunaCheckboxElement;
         new (): HTMLKizunaCheckboxElement;
     };
+    interface HTMLKizunaPopoverElement extends Components.KizunaPopover, HTMLStencilElement {
+    }
+    var HTMLKizunaPopoverElement: {
+        prototype: HTMLKizunaPopoverElement;
+        new (): HTMLKizunaPopoverElement;
+    };
     interface HTMLKizunaTabsElement extends Components.KizunaTabs, HTMLStencilElement {
     }
     var HTMLKizunaTabsElement: {
@@ -96,6 +106,7 @@ declare global {
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
+        "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
         "kizuna-textbox": HTMLKizunaTextboxElement;
         "kizuna-toggle-button": HTMLKizunaToggleButtonElement;
@@ -127,6 +138,10 @@ declare namespace LocalJSX {
         "name"?: string;
         "value"?: string;
     }
+    interface KizunaPopover {
+        "buttonText"?: string;
+        "darkmode"?: boolean;
+    }
     interface KizunaTabs {
         "classes"?: { [key: string]: string };
         "darkmode"?: boolean;
@@ -154,6 +169,7 @@ declare namespace LocalJSX {
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
         "kizuna-checkbox": KizunaCheckbox;
+        "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
         "kizuna-textbox": KizunaTextbox;
         "kizuna-toggle-button": KizunaToggleButton;
@@ -166,6 +182,7 @@ declare module "@stencil/core" {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
+            "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;
             "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;
             "kizuna-toggle-button": LocalJSX.KizunaToggleButton & JSXBase.HTMLAttributes<HTMLKizunaToggleButtonElement>;

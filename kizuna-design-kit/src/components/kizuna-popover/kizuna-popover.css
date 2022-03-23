@@ -1,0 +1,20 @@
+.popoverWrapper {
+  background: var(--white);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1.35rem;
+}
+
+.popoverDarkmode {
+  background: var(--dark-primary-bg);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  color: var(--dark-primary-text);
+}
+
+.toggleButton {
+  padding: 1rem 2rem;
+  border: 1px solid gray;
+  width: 15rem;
+  border-radius: 5px;
+  margin: 1rem;
+}
