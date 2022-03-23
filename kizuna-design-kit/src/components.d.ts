@@ -31,6 +31,14 @@ export namespace Components {
         "name": string;
         "value": string;
     }
+    interface KizunaListItem {
+        "classes": { [key: string]: any };
+        "disabled": boolean;
+        "handleOnClick": Function;
+        "icon": string;
+        "text": string;
+        "type": string;
+    }
     interface KizunaPopover {
         "buttonText": string;
         "darkmode": boolean;
@@ -80,6 +88,12 @@ declare global {
         prototype: HTMLKizunaCheckboxElement;
         new (): HTMLKizunaCheckboxElement;
     };
+    interface HTMLKizunaListItemElement extends Components.KizunaListItem, HTMLStencilElement {
+    }
+    var HTMLKizunaListItemElement: {
+        prototype: HTMLKizunaListItemElement;
+        new (): HTMLKizunaListItemElement;
+    };
     interface HTMLKizunaPopoverElement extends Components.KizunaPopover, HTMLStencilElement {
     }
     var HTMLKizunaPopoverElement: {
@@ -108,6 +122,7 @@ declare global {
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
+        "kizuna-list-item": HTMLKizunaListItemElement;
         "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
         "kizuna-textbox": HTMLKizunaTextboxElement;
@@ -139,6 +154,14 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "name"?: string;
         "value"?: string;
+    }
+    interface KizunaListItem {
+        "classes"?: { [key: string]: any };
+        "disabled"?: boolean;
+        "handleOnClick"?: Function;
+        "icon"?: string;
+        "text"?: string;
+        "type"?: string;
     }
     interface KizunaPopover {
         "buttonText"?: string;
@@ -173,6 +196,7 @@ declare namespace LocalJSX {
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
         "kizuna-checkbox": KizunaCheckbox;
+        "kizuna-list-item": KizunaListItem;
         "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
         "kizuna-textbox": KizunaTextbox;
@@ -186,6 +210,7 @@ declare module "@stencil/core" {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
+            "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;
             "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;
             "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;

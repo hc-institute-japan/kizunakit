@@ -1,0 +1,10 @@
+.listItemWrapper {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.list-item-icon {
+  margin: 5px;
+}
