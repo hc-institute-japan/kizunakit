@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import ButtonsPage from "../pages/Buttons/Buttons.tsx";
-import HomePage from "../pages/Home.tsx";
+import ButtonsPage from "../pages/Buttons/Buttons";
+import HomePage from "../pages/Home";
 
 const appRoutes = (
   <Routes>

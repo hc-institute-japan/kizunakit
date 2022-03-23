@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { KizunaButton } from 'kizuna-react-kit';
-import styles from './Buttons.module.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { KizunaButton } from "kizuna-react-kit";
+import styles from "./Buttons.module.css";
 
 const ButtonsPage = () => {
   return (

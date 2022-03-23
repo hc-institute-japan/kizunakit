@@ -15,6 +15,7 @@
 | `name`        | `name`        |             | `string`                  | `undefined` |
 | `placeholder` | `placeholder` |             | `string`                  | `undefined` |
 | `value`       | `value`       |             | `string`                  | `undefined` |
+| `variant`     | `variant`     |             | `string`                  | `undefined` |
 
 
 ----------------------------------------------
