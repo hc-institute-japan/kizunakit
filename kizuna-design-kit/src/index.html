@@ -18,26 +18,16 @@
   <body>
     <div class="container">
 
-      <div>
+      <div class="wrapper tabs"> 
         <h2 class="title" >Tabs</h2>
-        <kizuna-tabs value="menu2" ></kizuna-tabs>
+        <kizuna-tabs value="tab1" ></kizuna-tabs>
       </div>
 
-      <div>
+      <div class="wrapper tabs">
         <h2 class="title" >Tabs</h2>
         <kizuna-tabs darkmode value="menu3"></kizuna-tabs>
       </div>
-      <!-- <div class="title"><h3>Avatars</h3></div>
-      <div class="content space-between">
-        <kizuna-avatar
-          size="md"
-          appearance="square"
-          rounded="lg"
-          image="https://media.wired.co.uk/photos/606d9c691e0ddb19555fb809/4:3/w_2664,h_1998,c_limit/dog-unsolicited.jpg"
-          indicator
-          status="away"
-        ></kizuna-avatar>
-      </div> -->
+
       <div class="button-container">
         <h1 class="title">Button</h1>
         <div>
@@ -154,10 +144,10 @@
         const tabs1 = document.getElementsByTagName('kizuna-tabs')[0]
         //change values of tabs here
         tabs1.menus =  [
-                        { name: 'Menu1', value: 'menu1' },
-                        { name: 'Menu2', value: 'menu2' },
-                        { name: 'Menu3', value: 'menu3' },
-                        { name: 'Menu4', value: 'menu4' },
+                        { name: 'Tab1', value: 'tab1' },
+                        { name: 'Tab2', value: 'tab2' },
+                        { name: 'Tab3', value: 'tab3' },
+                        { name: 'Tab4', value: 'tab4' },
                       ];
 
         tabs1.onClick = (e, value) => console.log({e, value})
@@ -171,8 +161,7 @@
                         { name: 'Menu2', value: 'menu2' },
                         { name: 'Menu3', value: 'menu3' },
                         { name: 'Menu4', value: 'menu4' },
-                        { name: 'Menu5', value: 'menu5' },
-                        { name: 'Menu6', value: 'menu6' },
+    
                       ];
 
         tabs2.onClick = (e, value) => console.log({e, value})
