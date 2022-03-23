@@ -9,12 +9,46 @@ export class KizunaPopover {
   @Prop() buttonText: string = 'test';
   @Prop() darkmode: boolean;
   @State() open: boolean = false;
-  //   @Prop() text: string = 'Button Text';
-  //   @Prop() handleOnClick: Function;
-  //   @Prop() classes: { [key: string]: any };
+
+  listsItems = [
+    {
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
+      name: 'Settings',
+    },
+    {
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
+      name: 'Message Request',
+    },
+    {
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
+      name: 'Blocked',
+    },
+    {
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
+      name: 'Report an issue',
+    },
+    {
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
+      name: 'Logout',
+    },
+  ];
 
   _togglePopover = () => {
     this.open = !this.open;
+  };
+
+  _renderListItems = () => {
+    const markup = this.listsItems?.map((item, index) => {
+      return (
+        <kizuna-list-item
+          key={index}
+          text={item?.name}
+          icon={item.icon}
+        ></kizuna-list-item>
+      );
+    });
+
+    return markup;
   };
 
   render() {
@@ -26,10 +60,7 @@ export class KizunaPopover {
 
         {this.open && (
           <div class={`popoverWrapper ${this.darkmode && 'popoverDarkmode'}`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet alias
-            dicta dolores necessitatibus, consequuntur earum vero fugit corporis
-            vel aut asperiores accusantium sit fuga voluptas veritatis laborum
-            tempora. Assumenda, id?
+            {this._renderListItems()}
           </div>
         )}
       </div>
