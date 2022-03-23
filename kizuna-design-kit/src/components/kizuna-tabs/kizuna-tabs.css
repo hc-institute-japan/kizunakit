@@ -14,6 +14,7 @@
   align-items: center;
   padding: 15px;
   cursor: pointer;
+  color: var(--secondary-text);
 }
 .tabMenu:hover {
   color: var(--primary);
@@ -22,6 +23,7 @@
   color: var(--primary);
   border-bottom-color: var(--primary);
   transition: all 0.5s linear;
+  font-weight: 500;
 }
 
 .tabDarkMode {
