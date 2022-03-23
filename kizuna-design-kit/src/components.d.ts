@@ -31,6 +31,8 @@ export namespace Components {
         "name": string;
         "value": string;
     }
+    interface KizunaTabs {
+    }
     interface KizunaTextbox {
         "classes": { [key: string]: any };
         "id": string;
@@ -65,6 +67,12 @@ declare global {
         prototype: HTMLKizunaCheckboxElement;
         new (): HTMLKizunaCheckboxElement;
     };
+    interface HTMLKizunaTabsElement extends Components.KizunaTabs, HTMLStencilElement {
+    }
+    var HTMLKizunaTabsElement: {
+        prototype: HTMLKizunaTabsElement;
+        new (): HTMLKizunaTabsElement;
+    };
     interface HTMLKizunaTextboxElement extends Components.KizunaTextbox, HTMLStencilElement {
     }
     var HTMLKizunaTextboxElement: {
@@ -81,6 +89,7 @@ declare global {
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
+        "kizuna-tabs": HTMLKizunaTabsElement;
         "kizuna-textbox": HTMLKizunaTextboxElement;
         "kizuna-toggle-button": HTMLKizunaToggleButtonElement;
     }
@@ -111,6 +120,8 @@ declare namespace LocalJSX {
         "name"?: string;
         "value"?: string;
     }
+    interface KizunaTabs {
+    }
     interface KizunaTextbox {
         "classes"?: { [key: string]: any };
         "id"?: string;
@@ -129,6 +140,7 @@ declare namespace LocalJSX {
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
         "kizuna-checkbox": KizunaCheckbox;
+        "kizuna-tabs": KizunaTabs;
         "kizuna-textbox": KizunaTextbox;
         "kizuna-toggle-button": KizunaToggleButton;
     }
@@ -140,6 +152,7 @@ declare module "@stencil/core" {
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
+            "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;
             "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;
             "kizuna-toggle-button": LocalJSX.KizunaToggleButton & JSXBase.HTMLAttributes<HTMLKizunaToggleButtonElement>;
         }
