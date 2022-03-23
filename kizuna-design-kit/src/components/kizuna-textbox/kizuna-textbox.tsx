@@ -12,6 +12,8 @@ export class KizunaTextbox {
   @Prop() placeholder: string;
   @Prop() label: string;
   @Prop() variant: string;
+  @Prop() icon: string;
+  @Prop() isFocus: boolean = false;
   @Prop() classes: { [key: string]: any };
 
   private getTextFieldVariant = () => {
@@ -26,8 +28,7 @@ export class KizunaTextbox {
 
   render() {
     return (
-      <div>
-        <label class={`${this.classes?.labelWrapper} `}>{this.label}</label>
+      <div class="textboxWrapper">
         <input
           class={`textfield ${this.getTextFieldVariant()} ${
             this.classes?.input
@@ -38,6 +39,9 @@ export class KizunaTextbox {
           placeholder={this.placeholder}
           value={this.value}
         />
+        <label class={`labelWrapper ${this.classes?.labelWrapper}`}>
+          {this.label}
+        </label>
       </div>
     );
   }

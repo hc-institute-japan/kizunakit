@@ -46,7 +46,9 @@ export namespace Components {
     }
     interface KizunaTextbox {
         "classes": { [key: string]: any };
+        "icon": string;
         "id": string;
+        "isFocus": boolean;
         "label": string;
         "name": string;
         "placeholder": string;
@@ -153,7 +155,9 @@ declare namespace LocalJSX {
     }
     interface KizunaTextbox {
         "classes"?: { [key: string]: any };
+        "icon"?: string;
         "id"?: string;
+        "isFocus"?: boolean;
         "label"?: string;
         "name"?: string;
         "placeholder"?: string;

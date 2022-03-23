@@ -18,12 +18,12 @@
   <body>
     <div class="container">
 
-      <div>
+      <div class="wrapper tabs"> 
         <h2 class="title" >Tabs</h2>
-        <kizuna-tabs value="menu2" ></kizuna-tabs>
+        <kizuna-tabs value="tab1" ></kizuna-tabs>
       </div>
 
-      <div>
+      <div class="wrapper tabs">
         <h2 class="title" >Tabs</h2>
         <kizuna-tabs darkmode value="menu3"></kizuna-tabs>
       </div>
@@ -149,7 +149,7 @@
   
         <div class="wrapper textbox">
           <h2 class="title">Textbox</h2>
-          <kizuna-textbox placeholder="First Name" name="firstName" variant="standard" label="FirstName"></kizuna-textbox>
+          <kizuna-textbox placeholder="First Name" name="firstName" variant="standard" label="First Name" ></kizuna-textbox>
           <br>
           <kizuna-textbox placeholder="First Name" name="firstName" label="First Name"></kizuna-textbox>
       </div>
@@ -160,10 +160,10 @@
         const tabs1 = document.getElementsByTagName('kizuna-tabs')[0]
         //change values of tabs here
         tabs1.menus =  [
-                        { name: 'Menu1', value: 'menu1' },
-                        { name: 'Menu2', value: 'menu2' },
-                        { name: 'Menu3', value: 'menu3' },
-                        { name: 'Menu4', value: 'menu4' },
+                        { name: 'Tab1', value: 'tab1' },
+                        { name: 'Tab2', value: 'tab2' },
+                        { name: 'Tab3', value: 'tab3' },
+                        { name: 'Tab4', value: 'tab4' },
                       ];
 
         tabs1.onClick = (e, value) => console.log({e, value})
@@ -177,8 +177,7 @@
                         { name: 'Menu2', value: 'menu2' },
                         { name: 'Menu3', value: 'menu3' },
                         { name: 'Menu4', value: 'menu4' },
-                        { name: 'Menu5', value: 'menu5' },
-                        { name: 'Menu6', value: 'menu6' },
+    
                       ];
 
         tabs2.onClick = (e, value) => console.log({e, value})

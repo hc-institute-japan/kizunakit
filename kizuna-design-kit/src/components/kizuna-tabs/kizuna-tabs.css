@@ -3,25 +3,32 @@
 }
 
 .tabWrapper {
-  border: 2px solid red;
   display: flex;
 }
 
 .tabMenu {
   flex: 1;
-  border: 2px solid blue;
+  border-bottom: 3px solid #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  color: var(--secondary-text);
 }
-
+.tabMenu:hover {
+  color: var(--primary);
+}
 .isActive {
-  color: red;
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  transition: all 0.5s linear;
+  font-weight: 500;
 }
 
 .tabDarkMode {
-  background-color: black;
-  color: white;
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
 }
 .tabMenus {
   display: flex;
