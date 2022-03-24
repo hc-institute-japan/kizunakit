@@ -11,6 +11,8 @@ defineCustomElements();
 export const KizunaAvatar = /*@__PURE__*/createReactComponent<JSX.KizunaAvatar, HTMLKizunaAvatarElement>('kizuna-avatar');
 export const KizunaButton = /*@__PURE__*/createReactComponent<JSX.KizunaButton, HTMLKizunaButtonElement>('kizuna-button');
 export const KizunaCheckbox = /*@__PURE__*/createReactComponent<JSX.KizunaCheckbox, HTMLKizunaCheckboxElement>('kizuna-checkbox');
+export const KizunaIcon = /*@__PURE__*/createReactComponent<JSX.KizunaIcon, HTMLKizunaIconElement>('kizuna-icon');
+export const KizunaListItem = /*@__PURE__*/createReactComponent<JSX.KizunaListItem, HTMLKizunaListItemElement>('kizuna-list-item');
 export const KizunaPopover = /*@__PURE__*/createReactComponent<JSX.KizunaPopover, HTMLKizunaPopoverElement>('kizuna-popover');
 export const KizunaTabs = /*@__PURE__*/createReactComponent<JSX.KizunaTabs, HTMLKizunaTabsElement>('kizuna-tabs');
 export const KizunaTextbox = /*@__PURE__*/createReactComponent<JSX.KizunaTextbox, HTMLKizunaTextboxElement>('kizuna-textbox');
