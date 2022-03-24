@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop, State } from '@stencil/core';
+import { Component, Element, h, Prop } from '@stencil/core';
 import * as Icons from './assets';
 
 @Component({
@@ -10,12 +10,14 @@ export class KizunaIcon {
   @Element() host: HTMLDivElement;
   @Prop() name: string = '';
   @Prop() size: string;
+  @Prop() classes: { [key: string]: any };
 
   render() {
     return (
-      <div>
-        <i class="icon-container" innerHTML={Icons.getIcon(this?.name)}></i>
-      </div>
+      <i
+        class={`icon-container ${this.classes?.root}`}
+        innerHTML={Icons.getIcon(this?.name?.toLowerCase())}
+      ></i>
     );
   }
 }

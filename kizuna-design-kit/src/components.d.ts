@@ -32,6 +32,7 @@ export namespace Components {
         "value": string;
     }
     interface KizunaIcon {
+        "classes": { [key: string]: any };
         "name": string;
         "size": string;
     }
@@ -167,6 +168,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface KizunaIcon {
+        "classes"?: { [key: string]: any };
         "name"?: string;
         "size"?: string;
     }
