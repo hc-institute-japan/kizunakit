@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class KizunaButton {
   @Prop() type: string;
   @Prop() disabled: boolean;
-  @Prop() icon: string;
+  @Prop() icon: Element;
   @Prop() text: string = 'Button Text';
   @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
@@ -37,8 +37,17 @@ export class KizunaButton {
 
   render() {
     return (
-      <button disabled={this.disabled} class={`btn ${this.classes?.btnWrapper} ${this.getBtnType()} ${this.getBtnDisabledClassName()}`} onClick={() => this.handleOnClick}>
-        {this.icon && <span class={`btn-icon ${this.classes?.icon}`} innerHTML={this.icon} />} {this.text}
+      <button
+        disabled={this.disabled}
+        class={`btn ${
+          this.classes?.btnWrapper
+        } ${this.getBtnType()} ${this.getBtnDisabledClassName()}`}
+        onClick={() => this.handleOnClick}
+      >
+        {this.icon && (
+          <span class={`btn-icon ${this.classes?.icon}`}>{this?.icon}</span>
+        )}
+        {this.text}
       </button>
     );
   }

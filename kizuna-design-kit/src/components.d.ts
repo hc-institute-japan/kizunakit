@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface KizunaApp {
+    }
     interface KizunaAvatar {
         "classes": { [key: string]: any };
         "image": string;
@@ -20,7 +22,7 @@ export namespace Components {
         "classes": { [key: string]: any };
         "disabled": boolean;
         "handleOnClick": Function;
-        "icon": string;
+        "icon": Element;
         "text": string;
         "type": string;
     }
@@ -40,13 +42,14 @@ export namespace Components {
         "classes": { [key: string]: any };
         "disabled": boolean;
         "handleOnClick": Function;
-        "icon": string;
+        "icon": Element;
         "text": string;
         "type": string;
     }
     interface KizunaPopover {
         "buttonText": string;
         "darkmode": boolean;
+        "itemList": Array<{ [key: string]: any }>;
     }
     interface KizunaTabs {
         "classes": { [key: string]: string };
@@ -75,6 +78,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLKizunaAppElement extends Components.KizunaApp, HTMLStencilElement {
+    }
+    var HTMLKizunaAppElement: {
+        prototype: HTMLKizunaAppElement;
+        new (): HTMLKizunaAppElement;
+    };
     interface HTMLKizunaAvatarElement extends Components.KizunaAvatar, HTMLStencilElement {
     }
     var HTMLKizunaAvatarElement: {
@@ -130,6 +139,7 @@ declare global {
         new (): HTMLKizunaToggleButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "kizuna-app": HTMLKizunaAppElement;
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
@@ -142,6 +152,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface KizunaApp {
+    }
     interface KizunaAvatar {
         "classes"?: { [key: string]: any };
         "image"?: string;
@@ -156,7 +168,7 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "handleOnClick"?: Function;
-        "icon"?: string;
+        "icon"?: Element;
         "text"?: string;
         "type"?: string;
     }
@@ -176,13 +188,14 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "handleOnClick"?: Function;
-        "icon"?: string;
+        "icon"?: Element;
         "text"?: string;
         "type"?: string;
     }
     interface KizunaPopover {
         "buttonText"?: string;
         "darkmode"?: boolean;
+        "itemList"?: Array<{ [key: string]: any }>;
     }
     interface KizunaTabs {
         "classes"?: { [key: string]: string };
@@ -210,6 +223,7 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
     }
     interface IntrinsicElements {
+        "kizuna-app": KizunaApp;
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
         "kizuna-checkbox": KizunaCheckbox;
@@ -225,6 +239,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "kizuna-app": LocalJSX.KizunaApp & JSXBase.HTMLAttributes<HTMLKizunaAppElement>;
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
