@@ -6,7 +6,6 @@ import {
   EventEmitter,
   State,
   Event,
-  forceUpdate,
 } from '@stencil/core';
 import { CalendarEntry } from '../../util/calendar-entry';
 import { Calendar } from '../../util/calendar';
@@ -98,6 +97,7 @@ export class KizunaPopover {
 
   dayChangedHandler(calendarEntry: CalendarEntry): void {
     this.dayChanged.emit(calendarEntry);
+    this.onChange(this.selectedDate);
   }
 
   daySelectedHandler = (day, isPreviousDate, isNextMonthDate): void => {
@@ -145,7 +145,6 @@ export class KizunaPopover {
 
   monthChangedHandler(calendarEntry: CalendarEntry): void {
     this.monthChanged.emit(calendarEntry);
-    this.onChange(this.selectedDate);
   }
 
   switchToPreviousMonth = (): void => {
@@ -251,8 +250,8 @@ export class KizunaPopover {
     this.date = { ...currentDate };
 
     this.setCalendarDetails();
-    this.monthChangedHandler(currentDate);
-    this.dayChangedHandler(currentDate);
+    this.monthChangedHandler(this.date);
+    this.dayChangedHandler(this.date);
   };
 
   _toggleCalendar = () => {
