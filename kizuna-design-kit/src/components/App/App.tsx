@@ -33,14 +33,25 @@ export class App {
       <div>
         <div class="wrapper tabs">
           <h2 class="title">Calendar</h2>
-          <kizuna-calendar></kizuna-calendar>
+          <kizuna-calendar
+            onChange={data => console.log(data)}
+          ></kizuna-calendar>
         </div>
 
         <div class="wrapper tabs">
           <h2 class="title">Tabs</h2>
-          <kizuna-tabs value="tab1" menus={tabMenus}></kizuna-tabs>
+          <kizuna-tabs
+            value="tab1"
+            menus={tabMenus}
+            // on-click={(data, value) => console.log(data, value)}
+          ></kizuna-tabs>
           <br />
-          <kizuna-tabs darkmode value="tab3" menus={tabMenus}></kizuna-tabs>
+          <kizuna-tabs
+            darkmode
+            value="tab3"
+            menus={tabMenus}
+            // onClick={data => console.log(data)}
+          ></kizuna-tabs>
         </div>
 
         <div>

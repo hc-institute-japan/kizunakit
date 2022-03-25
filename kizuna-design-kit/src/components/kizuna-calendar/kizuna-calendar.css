@@ -1,10 +1,9 @@
 .calendar {
   width: 50%;
   padding: 1rem;
-}
-
-.calendar > * {
-  line-height: 3.5rem;
+  background: var(--white);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 header {
@@ -17,8 +16,45 @@ header {
 
 .calendar span {
   flex-grow: 30;
-  width: calc(100% / 7);
+  width: 35px;
+  height: 35px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-container {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.active {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calendar header span:first-child,
@@ -36,34 +72,18 @@ header {
   flex-wrap: wrap;
 }
 
-.days-in-month span {
-  cursor: pointer;
-  position: relative;
-}
-
 .days-in-month i {
-  padding: 0.4rem;
   font-style: normal;
   position: relative;
   width: 100%;
-}
-
-.days-in-month i.padding-single-digit {
-  padding: 0.8rem 1.1rem;
 }
 
 .date-disabled {
   opacity: 0.2;
 }
 
-.material .days-in-month i.active {
-  border: 2px solid #000;
-  border-radius: 50%;
-  padding: 0.4rem;
-}
-
-.material .days-in-month i.selected {
-  background: #902dc6;
-  color: #fff;
-  border-radius: 50%;
+.calender-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }

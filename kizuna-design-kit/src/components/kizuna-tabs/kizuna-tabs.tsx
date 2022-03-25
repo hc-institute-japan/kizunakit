@@ -12,7 +12,7 @@ export class KizunaTabs {
   @Prop() menus: Array<{ [key: string]: string }>;
   @Prop() disabled: boolean;
   @Prop() classes: { [key: string]: string };
-  @Prop() onClick: Function;
+  @Prop() onClick: any;
 
   _onClickHandler = (event: Event, clickedMenu: string) => {
     this.value = clickedMenu;

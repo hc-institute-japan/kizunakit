@@ -14,7 +14,6 @@ export class KizunaListItem {
   @Prop() classes: { [key: string]: any };
 
   render() {
-    console.log(this.icon);
     return (
       <div
         class={`listItemWrapper ${this.classes?.listItemWrapper}`}

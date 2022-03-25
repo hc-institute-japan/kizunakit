@@ -31,11 +31,12 @@ export class KizunaPopover {
     'December',
   ];
   @Prop() showFillDays = true;
-  @Prop() handleChange: Function;
+  @Prop() onChange: Function;
 
   @State() date = Calendar.getToday();
   @State() daysInMonth: number[];
   @State() selectedDate: CalendarEntry;
+  @State() open: boolean = true;
 
   @Event({
     eventName: 'dayChanged',
@@ -78,6 +79,7 @@ export class KizunaPopover {
 
     this.startOfMonth = calendar.getStartOfMonth();
     this.endOfMonth = calendar.daysInCalendar - calendar.getEndOfMonth();
+    this.setSelectedToCurrentDate();
   }
 
   getValidDate(): CalendarEntry {
@@ -138,6 +140,7 @@ export class KizunaPopover {
 
   monthChangedHandler(calendarEntry: CalendarEntry): void {
     this.monthChanged.emit(calendarEntry);
+    this.onChange(this.selectedDate);
   }
 
   switchToPreviousMonth = (): void => {
@@ -170,16 +173,13 @@ export class KizunaPopover {
     this.monthChangedHandler(this.date);
   };
 
-  getDigitClassNames = (
+  getDateClassNames = (
     day: number,
     month: number,
     year: number,
     index: number,
   ): string => {
     let classNameDigit = [];
-    if (day.toString().length === 1) {
-      classNameDigit.push('padding-single-digit');
-    }
 
     if (this.isToday(day, month, year, index)) {
       classNameDigit.push('active');
@@ -212,56 +212,86 @@ export class KizunaPopover {
     );
   }
 
+  _renderDaysInMonth = () => {
+    return this.daysInMonth.map((day, index) => {
+      const classNameDigit = this.getDateClassNames(
+        day,
+        this.date.month,
+        this.date.year,
+        index,
+      );
+
+      const isPreviousDate = index < this.startOfMonth;
+      const isNextMonthDate = index >= this.endOfMonth;
+      const isDateDisabled = isPreviousDate || isNextMonthDate;
+
+      return (
+        <span
+          class={`date-container`}
+          onClick={() =>
+            this.daySelectedHandler(day, isPreviousDate, isNextMonthDate)
+          }
+        >
+          <i class={`${classNameDigit} ${isDateDisabled && 'date-disabled'}`}>
+            {day}
+          </i>
+        </span>
+      );
+    });
+  };
+
+  setSelectedToCurrentDate = () => {
+    const currentDate = this.getValidDate();
+
+    this.selectedDate = {
+      day: currentDate.day,
+      month: currentDate.month,
+      year: currentDate.year,
+    };
+
+    this.dayChangedHandler(this.selectedDate);
+  };
+
+  _toggleCalendar = () => {
+    this.open = !this.open;
+  };
+
   render() {
     const date = this.getValidDate();
 
     return (
-      <div class="calendar material">
-        <header>
-          <span onClick={this.switchToPreviousMonth}>{'<'}</span>
-          <span>
-            {this.monthNames[date.month - 1]} {date.year}
-          </span>
-          <span onClick={this.switchToNextMonth}>{'>'}</span>
-        </header>
+      <div>
+        <span onClick={this._toggleCalendar}>
+          <kizuna-icon name="calendar" />
+        </span>
 
-        <div class="day-names">
-          {this.dayNames.map(dayName => (
-            <span>{dayName}</span>
-          ))}
-        </div>
-
-        <div class="days-in-month">
-          {this.daysInMonth.map((day, index) => {
-            const classNameDigit = this.getDigitClassNames(
-              day,
-              date.month,
-              date.year,
-              index,
-            );
-
-            const isPreviousDate = index < this.startOfMonth;
-            const isNextMonthDate = index >= this.endOfMonth;
-            const isDateDisabled = isPreviousDate || isNextMonthDate;
-
-            return (
-              <span
-                class={`date-container`}
-                onClick={() =>
-                  this.daySelectedHandler(day, isPreviousDate, isNextMonthDate)
-                }
-              >
-                <i
-                  class={`${classNameDigit} ${
-                    isDateDisabled && 'date-disabled'
-                  }`}
-                >
-                  {day}
-                </i>
+        {this.open && (
+          <div class="calendar">
+            <header>
+              <span onClick={this.switchToPreviousMonth}>{'<'}</span>
+              <span>
+                {this.monthNames[date.month - 1]} {date.year}
               </span>
-            );
-          })}
-        </div>
+              <span onClick={this.switchToNextMonth}>{'>'}</span>
+            </header>
+
+            <div class="day-names">
+              {this.dayNames.map(dayName => (
+                <span>{dayName}</span>
+              ))}
+            </div>
+
+            <div class="days-in-month">{this._renderDaysInMonth()}</div>
+
+            <div class="calender-buttons">
+              <kizuna-button
+                text="Today"
+                type="primary"
+                onClick={this.setSelectedToCurrentDate}
+              ></kizuna-button>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
