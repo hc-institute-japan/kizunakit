@@ -32,6 +32,11 @@ export class App {
     return (
       <div>
         <div class="wrapper tabs">
+          <h2 class="title">Calendar</h2>
+          <kizuna-calendar></kizuna-calendar>
+        </div>
+
+        <div class="wrapper tabs">
           <h2 class="title">Tabs</h2>
           <kizuna-tabs value="tab1" menus={tabMenus}></kizuna-tabs>
           <br />

@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { CalendarEntry } from "./util/calendar-entry";
 export namespace Components {
     interface KizunaApp {
     }
@@ -25,6 +26,12 @@ export namespace Components {
         "icon": Element;
         "text": string;
         "type": string;
+    }
+    interface KizunaCalendar {
+        "dayNames": string[];
+        "handleChange": Function;
+        "monthNames": string[];
+        "showFillDays": boolean;
     }
     interface KizunaCheckbox {
         "checked": boolean;
@@ -96,6 +103,12 @@ declare global {
         prototype: HTMLKizunaButtonElement;
         new (): HTMLKizunaButtonElement;
     };
+    interface HTMLKizunaCalendarElement extends Components.KizunaCalendar, HTMLStencilElement {
+    }
+    var HTMLKizunaCalendarElement: {
+        prototype: HTMLKizunaCalendarElement;
+        new (): HTMLKizunaCalendarElement;
+    };
     interface HTMLKizunaCheckboxElement extends Components.KizunaCheckbox, HTMLStencilElement {
     }
     var HTMLKizunaCheckboxElement: {
@@ -142,6 +155,7 @@ declare global {
         "kizuna-app": HTMLKizunaAppElement;
         "kizuna-avatar": HTMLKizunaAvatarElement;
         "kizuna-button": HTMLKizunaButtonElement;
+        "kizuna-calendar": HTMLKizunaCalendarElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
         "kizuna-icon": HTMLKizunaIconElement;
         "kizuna-list-item": HTMLKizunaListItemElement;
@@ -171,6 +185,14 @@ declare namespace LocalJSX {
         "icon"?: Element;
         "text"?: string;
         "type"?: string;
+    }
+    interface KizunaCalendar {
+        "dayNames"?: string[];
+        "handleChange"?: Function;
+        "monthNames"?: string[];
+        "onDayChanged"?: (event: CustomEvent<CalendarEntry>) => void;
+        "onMonthChanged"?: (event: CustomEvent<CalendarEntry>) => void;
+        "showFillDays"?: boolean;
     }
     interface KizunaCheckbox {
         "checked"?: boolean;
@@ -226,6 +248,7 @@ declare namespace LocalJSX {
         "kizuna-app": KizunaApp;
         "kizuna-avatar": KizunaAvatar;
         "kizuna-button": KizunaButton;
+        "kizuna-calendar": KizunaCalendar;
         "kizuna-checkbox": KizunaCheckbox;
         "kizuna-icon": KizunaIcon;
         "kizuna-list-item": KizunaListItem;
@@ -242,6 +265,7 @@ declare module "@stencil/core" {
             "kizuna-app": LocalJSX.KizunaApp & JSXBase.HTMLAttributes<HTMLKizunaAppElement>;
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
+            "kizuna-calendar": LocalJSX.KizunaCalendar & JSXBase.HTMLAttributes<HTMLKizunaCalendarElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
             "kizuna-icon": LocalJSX.KizunaIcon & JSXBase.HTMLAttributes<HTMLKizunaIconElement>;
             "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;

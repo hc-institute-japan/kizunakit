@@ -1,0 +1,69 @@
+.calendar {
+  width: 50%;
+  padding: 1rem;
+}
+
+.calendar > * {
+  line-height: 3.5rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.calendar span {
+  flex-grow: 30;
+  width: calc(100% / 7);
+  text-align: center;
+}
+
+.calendar header span:first-child,
+.calendar header span:last-child {
+  flex-grow: 0.1;
+  cursor: pointer;
+}
+
+.day-names {
+  display: flex;
+}
+
+.days-in-month {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days-in-month span {
+  cursor: pointer;
+  position: relative;
+}
+
+.days-in-month i {
+  padding: 0.4rem;
+  font-style: normal;
+  position: relative;
+  width: 100%;
+}
+
+.days-in-month i.padding-single-digit {
+  padding: 0.8rem 1.1rem;
+}
+
+.date-disabled {
+  opacity: 0.2;
+}
+
+.material .days-in-month i.active {
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+
+.material .days-in-month i.selected {
+  background: #902dc6;
+  color: #fff;
+  border-radius: 50%;
+}
