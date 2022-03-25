@@ -6,6 +6,7 @@ import {
   EventEmitter,
   State,
   Event,
+  forceUpdate,
 } from '@stencil/core';
 import { CalendarEntry } from '../../util/calendar-entry';
 import { Calendar } from '../../util/calendar';
@@ -69,8 +70,13 @@ export class KizunaPopover {
   }
 
   componentWillLoad() {
-    this.setCalendarDetails();
+    this._initCalendar();
   }
+
+  _initCalendar = () => {
+    this.setCalendarDetails();
+    this.setSelectedToCurrentDate();
+  };
 
   setCalendarDetails(): void {
     const date = this.getValidDate();
@@ -79,7 +85,6 @@ export class KizunaPopover {
 
     this.startOfMonth = calendar.getStartOfMonth();
     this.endOfMonth = calendar.daysInCalendar - calendar.getEndOfMonth();
-    this.setSelectedToCurrentDate();
   }
 
   getValidDate(): CalendarEntry {
@@ -127,14 +132,14 @@ export class KizunaPopover {
       }
 
       this.switchToNextMonth();
-    } else {
-      this.selectedDate = {
-        day,
-        month: this.date.month,
-        year: this.date.year,
-      };
     }
+    this.selectedDate = {
+      day,
+      month: this.date.month,
+      year: this.date.year,
+    };
 
+    this.date = { ...this.selectedDate };
     this.dayChangedHandler(this.selectedDate);
   };
 
@@ -241,15 +246,13 @@ export class KizunaPopover {
   };
 
   setSelectedToCurrentDate = () => {
-    const currentDate = this.getValidDate();
+    const currentDate = Calendar.getToday();
 
-    this.selectedDate = {
-      day: currentDate.day,
-      month: currentDate.month,
-      year: currentDate.year,
-    };
+    this.date = { ...currentDate };
 
-    this.dayChangedHandler(this.selectedDate);
+    this.setCalendarDetails();
+    this.monthChangedHandler(currentDate);
+    this.dayChangedHandler(currentDate);
   };
 
   _toggleCalendar = () => {
