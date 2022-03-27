@@ -70,12 +70,12 @@ export class App {
           <h2 class="title">Popovers</h2>
           <kizuna-popover
             button-text="Toggle Popover"
-            item-list={this.popoverListItems}
+            itemList={this.popoverListItems}
           ></kizuna-popover>
           <kizuna-popover
             button-text="Toggle Popover (Dark mode)"
             darkmode
-            item-list={this.popoverListItems}
+            itemList={this.popoverListItems}
           ></kizuna-popover>
         </div>
 

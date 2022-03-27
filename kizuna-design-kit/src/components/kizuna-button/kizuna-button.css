@@ -55,3 +55,16 @@
 .btn-icon {
   margin: 5px;
 }
+
+.btn-primary .btn-icon .icon-container svg path {
+  stroke: var(--white);
+}
+
+.btn-secondary .btn-icon .icon-container svg path {
+  stroke: var(--primary);
+}
+
+.primary-disabled .btn-icon .icon-container svg path,
+.secondary-disabled .btn-icon .icon-container svg path {
+  stroke: rgba(0, 0, 0, 0.3);
+}
