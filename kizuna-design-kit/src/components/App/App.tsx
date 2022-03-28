@@ -32,6 +32,16 @@ export class App {
     return (
       <div>
         <div class="wrapper">
+          <h2 class="title">Badge</h2>
+          <kizuna-badge
+            text="Admin"
+            icon={<kizuna-icon name="circle" />}
+          ></kizuna-badge>
+          <br />
+
+          <kizuna-badge icon={<kizuna-icon name="circle" />}></kizuna-badge>
+        </div>
+        <div class="wrapper">
           <h2 class="title">Calendar</h2>
           <div class="calendar-display-content">
             <kizuna-calendar

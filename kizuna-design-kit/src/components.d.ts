@@ -19,6 +19,11 @@ export namespace Components {
         "status": string;
         "toolkit": string;
     }
+    interface KizunaBadge {
+        "classes": { [key: string]: any };
+        "icon": Element;
+        "text": string;
+    }
     interface KizunaButton {
         "classes": { [key: string]: any };
         "disabled": boolean;
@@ -100,6 +105,12 @@ declare global {
         prototype: HTMLKizunaAvatarElement;
         new (): HTMLKizunaAvatarElement;
     };
+    interface HTMLKizunaBadgeElement extends Components.KizunaBadge, HTMLStencilElement {
+    }
+    var HTMLKizunaBadgeElement: {
+        prototype: HTMLKizunaBadgeElement;
+        new (): HTMLKizunaBadgeElement;
+    };
     interface HTMLKizunaButtonElement extends Components.KizunaButton, HTMLStencilElement {
     }
     var HTMLKizunaButtonElement: {
@@ -157,6 +168,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "kizuna-app": HTMLKizunaAppElement;
         "kizuna-avatar": HTMLKizunaAvatarElement;
+        "kizuna-badge": HTMLKizunaBadgeElement;
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-calendar": HTMLKizunaCalendarElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
@@ -180,6 +192,11 @@ declare namespace LocalJSX {
         "size"?: string;
         "status"?: string;
         "toolkit"?: string;
+    }
+    interface KizunaBadge {
+        "classes"?: { [key: string]: any };
+        "icon"?: Element;
+        "text"?: string;
     }
     interface KizunaButton {
         "classes"?: { [key: string]: any };
@@ -253,6 +270,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "kizuna-app": KizunaApp;
         "kizuna-avatar": KizunaAvatar;
+        "kizuna-badge": KizunaBadge;
         "kizuna-button": KizunaButton;
         "kizuna-calendar": KizunaCalendar;
         "kizuna-checkbox": KizunaCheckbox;
@@ -270,6 +288,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "kizuna-app": LocalJSX.KizunaApp & JSXBase.HTMLAttributes<HTMLKizunaAppElement>;
             "kizuna-avatar": LocalJSX.KizunaAvatar & JSXBase.HTMLAttributes<HTMLKizunaAvatarElement>;
+            "kizuna-badge": LocalJSX.KizunaBadge & JSXBase.HTMLAttributes<HTMLKizunaBadgeElement>;
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-calendar": LocalJSX.KizunaCalendar & JSXBase.HTMLAttributes<HTMLKizunaCalendarElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
