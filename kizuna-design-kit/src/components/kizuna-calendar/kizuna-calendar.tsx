@@ -33,6 +33,7 @@ export class KizunaPopover {
   @Prop() showFillDays = true;
   @Prop() onChange: Function;
   @Prop() position: string;
+  @Prop() value: string;
 
   @State() date = Calendar.getToday();
   @State() daysInMonth: number[];
@@ -75,7 +76,7 @@ export class KizunaPopover {
 
   _initCalendar = () => {
     this.setCalendarDetails();
-    this.setSelectedToCurrentDate();
+    this.setInitialSelectedDate();
   };
 
   setCalendarDetails(): void {
@@ -245,10 +246,22 @@ export class KizunaPopover {
     });
   };
 
-  setSelectedToCurrentDate = () => {
-    const currentDate = Calendar.getToday();
+  setInitialSelectedDate = () => {
+    const newSelectedDate = this?.value
+      ? this._convertDateStringToCalendarDateObj()
+      : Calendar.getToday();
 
-    this.date = { ...currentDate };
+    this.date = { ...newSelectedDate };
+
+    this.setCalendarDetails();
+    this.monthChangedHandler(this.date);
+    this.dayChangedHandler(this.date);
+  };
+
+  setSelectedToCurrentDate = () => {
+    const newSelectedDate = Calendar.getToday();
+
+    this.date = { ...newSelectedDate };
 
     this.setCalendarDetails();
     this.monthChangedHandler(this.date);
@@ -271,6 +284,14 @@ export class KizunaPopover {
       default:
         return '';
     }
+  };
+
+  _convertDateStringToCalendarDateObj = () => {
+    return {
+      day: new Date(this?.value).getDate(),
+      month: new Date(this?.value).getMonth() + 1,
+      year: new Date(this?.value).getFullYear(),
+    };
   };
 
   render() {

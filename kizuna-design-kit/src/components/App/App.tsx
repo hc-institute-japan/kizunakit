@@ -36,10 +36,12 @@ export class App {
           <div class="calendar-display-content">
             <kizuna-calendar
               onChange={data => console.log(data)}
+              value="Fri Mar 4 2022 21:31:58 GMT+0800 (Philippine Standard Time)"
             ></kizuna-calendar>
             <kizuna-calendar
               position="center"
               onChange={data => console.log(data)}
+              value="Fri Mar 18 2022 21:31:58 GMT+0800 (Philippine Standard Time)"
             ></kizuna-calendar>
             <kizuna-calendar
               position="right"
