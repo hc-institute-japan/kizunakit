@@ -1,8 +1,29 @@
+.popoverMainContainer {
+  position: relative;
+  width: fit-content;
+}
+
 .popoverWrapper {
   background: var(--white);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1.35rem;
+  position: absolute;
+  z-index: 10;
+  width: fit-content;
+}
+
+.popover-left-align-calendar {
+  left: 0;
+}
+
+.popover-right-align-calendar {
+  right: 0;
+}
+
+.popover-center-align-calendar {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .popoverDarkmode {
@@ -16,5 +37,4 @@
   border: 1px solid gray;
   width: 15rem;
   border-radius: 5px;
-  margin: 1rem;
 }

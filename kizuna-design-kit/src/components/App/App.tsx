@@ -31,11 +31,21 @@ export class App {
   render() {
     return (
       <div>
-        <div class="wrapper tabs">
+        <div class="wrapper">
           <h2 class="title">Calendar</h2>
-          <kizuna-calendar
-            onChange={data => console.log(data)}
-          ></kizuna-calendar>
+          <div class="calendar-display-content">
+            <kizuna-calendar
+              onChange={data => console.log(data)}
+            ></kizuna-calendar>
+            <kizuna-calendar
+              position="center"
+              onChange={data => console.log(data)}
+            ></kizuna-calendar>
+            <kizuna-calendar
+              position="right"
+              onChange={data => console.log(data)}
+            ></kizuna-calendar>
+          </div>
         </div>
 
         <div class="wrapper tabs">
@@ -73,9 +83,31 @@ export class App {
             itemList={this.popoverListItems}
           ></kizuna-popover>
           <kizuna-popover
+            button-text="Toggle Popover"
+            position="center"
+            itemList={this.popoverListItems}
+          ></kizuna-popover>{' '}
+          <kizuna-popover
+            button-text="Toggle Popover"
+            itemList={this.popoverListItems}
+            position="right"
+          ></kizuna-popover>
+          <kizuna-popover
             button-text="Toggle Popover (Dark mode)"
             darkmode
             itemList={this.popoverListItems}
+          ></kizuna-popover>
+          <kizuna-popover
+            button-text="Toggle Popover (Dark mode)"
+            darkmode
+            position="center"
+            itemList={this.popoverListItems}
+          ></kizuna-popover>
+          <kizuna-popover
+            button-text="Toggle Popover (Dark mode)"
+            darkmode
+            itemList={this.popoverListItems}
+            position="right"
           ></kizuna-popover>
         </div>
 

@@ -10,9 +10,24 @@ export class KizunaPopover {
   @Prop() darkmode: boolean;
   @Prop() itemList: Array<{ [key: string]: any }>;
   @State() open: boolean = false;
+  @Prop() position: string;
 
   _togglePopover = () => {
     this.open = !this.open;
+  };
+
+  _getPositionClassName = () => {
+    switch (this.position) {
+      case 'left':
+        return 'popover-left-align-calendar';
+      case 'right':
+        return 'popover-right-align-calendar';
+      case 'center':
+        return 'popover-center-align-calendar';
+
+      default:
+        return '';
+    }
   };
 
   _renderListItems = () => {
@@ -29,13 +44,17 @@ export class KizunaPopover {
 
   render() {
     return (
-      <div>
+      <div class="popoverMainContainer">
         <div onClick={this._togglePopover} class={`toggleButton`}>
           {this?.buttonText}
         </div>
 
         {this.open && (
-          <div class={`popoverWrapper ${this.darkmode && 'popoverDarkmode'}`}>
+          <div
+            class={`popoverWrapper ${
+              this.darkmode && 'popoverDarkmode'
+            } ${this._getPositionClassName()}`}
+          >
             {this._renderListItems()}
           </div>
         )}

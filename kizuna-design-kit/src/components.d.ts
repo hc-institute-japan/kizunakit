@@ -31,6 +31,7 @@ export namespace Components {
         "dayNames": string[];
         "monthNames": string[];
         "onChange": Function;
+        "position": string;
         "showFillDays": boolean;
     }
     interface KizunaCheckbox {
@@ -57,6 +58,7 @@ export namespace Components {
         "buttonText": string;
         "darkmode": boolean;
         "itemList": Array<{ [key: string]: any }>;
+        "position": string;
     }
     interface KizunaTabs {
         "classes": { [key: string]: string };
@@ -192,6 +194,7 @@ declare namespace LocalJSX {
         "onChange"?: Function;
         "onDayChanged"?: (event: CustomEvent<CalendarEntry>) => void;
         "onMonthChanged"?: (event: CustomEvent<CalendarEntry>) => void;
+        "position"?: string;
         "showFillDays"?: boolean;
     }
     interface KizunaCheckbox {
@@ -218,6 +221,7 @@ declare namespace LocalJSX {
         "buttonText"?: string;
         "darkmode"?: boolean;
         "itemList"?: Array<{ [key: string]: any }>;
+        "position"?: string;
     }
     interface KizunaTabs {
         "classes"?: { [key: string]: string };

@@ -32,6 +32,7 @@ export class KizunaPopover {
   ];
   @Prop() showFillDays = true;
   @Prop() onChange: Function;
+  @Prop() position: string;
 
   @State() date = Calendar.getToday();
   @State() daysInMonth: number[];
@@ -258,17 +259,31 @@ export class KizunaPopover {
     this.open = !this.open;
   };
 
+  _getPositionClassName = () => {
+    switch (this.position) {
+      case 'left':
+        return 'left-align-calendar';
+      case 'right':
+        return 'right-align-calendar';
+      case 'center':
+        return 'center-align-calendar';
+
+      default:
+        return '';
+    }
+  };
+
   render() {
     const date = this.getValidDate();
 
     return (
-      <div>
+      <div class="calendar-wrapper">
         <span onClick={this._toggleCalendar}>
           <kizuna-icon name="calendar" />
         </span>
 
         {this.open && (
-          <div class="calendar">
+          <div class={`calendar ${this._getPositionClassName()}`}>
             <header>
               <span onClick={this.switchToPreviousMonth}>{'<'}</span>
               <span>

@@ -121,10 +121,7 @@ th {
   }
 }
 
-/* Overrides */
-.btn-wrapper-global {
-  border: 10px solid red !important;
-  background-color: blue;
-  width: 300px;
-  height: 100px;
+.calendar-display-content {
+  display: flex;
+  justify-content: space-around;
 }
