@@ -58,6 +58,7 @@ export namespace Components {
     interface KizunaListItem {
         "classes": { [key: string]: any };
         "disabled": boolean;
+        "divider": boolean;
         "handleOnClick": Function;
         "icon": Element;
         "text": string;
@@ -257,6 +258,7 @@ declare namespace LocalJSX {
     interface KizunaListItem {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
+        "divider"?: boolean;
         "handleOnClick"?: Function;
         "icon"?: Element;
         "text"?: string;

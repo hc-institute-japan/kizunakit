@@ -12,6 +12,7 @@ export class KizunaListItem {
   @Prop() text: string = 'List Item Text';
   @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
+  @Prop() divider: boolean;
 
   render() {
     return (
@@ -27,7 +28,7 @@ export class KizunaListItem {
           )}
           {this.text}
         </div>
-        <kizuna-divider></kizuna-divider>
+        {this.divider && <kizuna-divider />}
       </slot>
     );
   }

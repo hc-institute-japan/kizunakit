@@ -46,11 +46,13 @@ export class App {
 
   _renderListItems = () => {
     return this.popoverListItems?.map((item, index) => {
+      const isLastItem = this.popoverListItems.length === index + 1;
       return (
         <kizuna-list-item
           key={index}
           text={item?.name}
           icon={item.icon}
+          divider={!isLastItem}
         ></kizuna-list-item>
       );
     });
@@ -133,6 +135,7 @@ export class App {
           <kizuna-list-item
             text="List Item"
             onClick={() => alert('handle click here')}
+            divider
           ></kizuna-list-item>
           <kizuna-list-item
             text="List Item with Icon"
