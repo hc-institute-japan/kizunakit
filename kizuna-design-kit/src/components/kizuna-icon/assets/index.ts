@@ -41,7 +41,7 @@ import rightArrow from './right-arrow.svg';
 import right from './right.svg';
 import search from './search.svg';
 import send from './send.svg';
-import settings from './right.svg';
+import settings from './settings.svg';
 import strikethrough from './strikethrough.svg';
 import trash from './trash.svg';
 import underline from './underline.svg';

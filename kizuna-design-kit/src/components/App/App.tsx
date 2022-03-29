@@ -156,8 +156,8 @@ export class App {
           <h2 class="title">Icons</h2>
           <kizuna-icon name="search"></kizuna-icon>
           <kizuna-icon name="settings"></kizuna-icon>
-          <kizuna-icon name="Emoticon"></kizuna-icon>
-          <kizuna-icon name="CaLenDar"></kizuna-icon>
+          <kizuna-icon name="emoticon"></kizuna-icon>
+          <kizuna-icon name="calendar"></kizuna-icon>
           <kizuna-icon name="trash"></kizuna-icon>
         </div>
 
