@@ -76,7 +76,7 @@ export class App {
           <kizuna-modal
             open={this.openModal}
             onClose={this._handleCloseModal}
-            closeIcon={<kizuna-icon name="settings" />} //when icon library is complete, change to X icon
+            closeIcon={<kizuna-icon name="close" />}
           >
             <h1>Hello world!</h1>
             <div>This is a modal!</div>

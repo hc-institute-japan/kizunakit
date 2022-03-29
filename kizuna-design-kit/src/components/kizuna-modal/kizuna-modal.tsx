@@ -33,8 +33,7 @@ export class MyComponent {
             class={`modal-close-icon ${this.classes?.closeIcon}`}
             onClick={this._handleClose}
           >
-            {/* when icon library is complete, change to default icon to X icon*/}
-            {this.closeIcon || <kizuna-icon name="settings" />}
+            {this.closeIcon || <kizuna-icon name="close" />}
           </span>
           <div class={`modal-window__content ${this.classes?.modalContent}`}>
             <slot></slot>
