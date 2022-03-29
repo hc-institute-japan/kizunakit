@@ -1,6 +1,6 @@
 .popoverMainContainer {
-  position: relative;
   width: fit-content;
+  display: block;
 }
 
 .popoverWrapper {
@@ -11,6 +11,7 @@
   position: absolute;
   z-index: 10;
   width: fit-content;
+  min-width: 200px;
 }
 
 .popover-left-align-calendar {
@@ -37,4 +38,10 @@
   border: 1px solid gray;
   width: 15rem;
   border-radius: 5px;
+  display: block;
+}
+
+.hidden-slot {
+  display: none;
+  border: 2px solid red;
 }

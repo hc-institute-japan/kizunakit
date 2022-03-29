@@ -6,6 +6,12 @@ import { tabMenus } from './App.data';
 })
 export class App {
   @State() openModal: boolean = false;
+  @State() open1Popover: boolean = false;
+  @State() open2Popover: boolean = false;
+  @State() open3Popover: boolean = false;
+  @State() open4Popover: boolean = false;
+  @State() open5Popover: boolean = false;
+  @State() open6Popover: boolean = false;
 
   popoverListItems = [
     {
@@ -38,10 +44,27 @@ export class App {
     this.openModal = false;
   };
 
+  _renderListItems = () => {
+    return this.popoverListItems?.map((item, index) => {
+      return (
+        <kizuna-list-item
+          key={index}
+          text={item?.name}
+          icon={item.icon}
+        ></kizuna-list-item>
+      );
+    });
+  };
+
+  _togglePopover = (number: number) => {
+    const popoverName = `open${number}Popover`;
+    this[popoverName] = !this[popoverName];
+  };
+
   render() {
     return (
       <div>
-        <div class="wrapper">
+        <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
 
           <kizuna-button
@@ -119,37 +142,98 @@ export class App {
 
         <div>
           <h2 class="title">Popovers</h2>
-          <kizuna-popover
-            button-text="Toggle Popover"
-            itemList={this.popoverListItems}
-          ></kizuna-popover>
-          <kizuna-popover
-            button-text="Toggle Popover"
-            position="center"
-            itemList={this.popoverListItems}
-          ></kizuna-popover>{' '}
-          <kizuna-popover
-            button-text="Toggle Popover"
-            itemList={this.popoverListItems}
-            position="right"
-          ></kizuna-popover>
-          <kizuna-popover
-            button-text="Toggle Popover (Dark mode)"
-            darkmode
-            itemList={this.popoverListItems}
-          ></kizuna-popover>
-          <kizuna-popover
-            button-text="Toggle Popover (Dark mode)"
-            darkmode
-            position="center"
-            itemList={this.popoverListItems}
-          ></kizuna-popover>
-          <kizuna-popover
-            button-text="Toggle Popover (Dark mode)"
-            darkmode
-            itemList={this.popoverListItems}
-            position="right"
-          ></kizuna-popover>
+          {/* 1 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 1 - Left Align"
+              onClick={() => this._togglePopover(1)}
+            ></kizuna-button>
+            <kizuna-popover open={this['open1Popover']}>
+              {this._renderListItems()}
+            </kizuna-popover>
+          </div>
+
+          <br />
+
+          {/* 2 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 2 - Center align"
+              onClick={() => this._togglePopover(2)}
+            ></kizuna-button>
+            <kizuna-popover open={this['open2Popover']} position="center">
+              <p>Add Popover content here</p>
+            </kizuna-popover>
+          </div>
+
+          <br />
+
+          {/* 3 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 3 - Right Align"
+              onClick={() => this._togglePopover(3)}
+              classes={{
+                btnWrapper: 'popoverToggleButton',
+              }}
+            ></kizuna-button>
+            <kizuna-popover open={this['open3Popover']} position="right">
+              {this._renderListItems()}
+            </kizuna-popover>
+          </div>
+
+          <br />
+
+          {/* 4 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 4 - Left Align -  Dark mode"
+              onClick={() => this._togglePopover(4)}
+            ></kizuna-button>
+            <kizuna-popover open={this['open4Popover']} darkmode>
+              {this._renderListItems()}
+            </kizuna-popover>
+          </div>
+
+          <br />
+
+          {/* 5 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 5 - Center align - Dark mode"
+              onClick={() => this._togglePopover(5)}
+            ></kizuna-button>
+            <kizuna-popover
+              open={this['open5Popover']}
+              position="center"
+              darkmode
+            >
+              <p>Add Popover content here</p>
+            </kizuna-popover>
+          </div>
+
+          <br />
+
+          {/* 6 */}
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Toggle Popover 6 - Right Align - Dark mode"
+              onClick={() => this._togglePopover(6)}
+            ></kizuna-button>
+            <kizuna-popover
+              open={this['open6Popover']}
+              position="right"
+              darkmode
+            >
+              {this._renderListItems()}
+            </kizuna-popover>
+          </div>
         </div>
 
         <div>

@@ -1,4 +1,4 @@
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'kizuna-popover',
@@ -6,10 +6,8 @@ import { Component, h, Prop, State } from '@stencil/core';
   shadow: false,
 })
 export class KizunaPopover {
-  @Prop() buttonText: string = 'test';
   @Prop() darkmode: boolean;
-  @Prop() itemList: Array<{ [key: string]: any }>;
-  @State() open: boolean = false;
+  @Prop({ mutable: true }) open: boolean = false;
   @Prop() position: string;
 
   _togglePopover = () => {
@@ -30,34 +28,18 @@ export class KizunaPopover {
     }
   };
 
-  _renderListItems = () => {
-    return this.itemList?.map((item, index) => {
-      return (
-        <kizuna-list-item
-          key={index}
-          text={item?.name}
-          icon={item.icon}
-        ></kizuna-list-item>
-      );
-    });
-  };
-
   render() {
     return (
-      <div class="popoverMainContainer">
-        <div onClick={this._togglePopover} class={`toggleButton`}>
-          {this?.buttonText}
-        </div>
-
-        {this.open && (
+      <div class={`popoverMainContainer ${!this.open && 'hidden-slot'}`}>
+        <div>
           <div
             class={`popoverWrapper ${
               this.darkmode && 'popoverDarkmode'
-            } ${this._getPositionClassName()}`}
+            } ${this._getPositionClassName()} `}
           >
-            {this._renderListItems()}
+            <slot></slot>
           </div>
-        )}
+        </div>
       </div>
     );
   }

@@ -125,3 +125,13 @@ th {
   display: flex;
   justify-content: space-around;
 }
+
+.modalContainer {
+  max-width: 250px;
+}
+
+/* For toggle buttons */
+.popoverToggleButtonContainer {
+  width: 450px;
+  position: relative;
+}

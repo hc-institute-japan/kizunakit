@@ -68,9 +68,8 @@ export namespace Components {
         "transparent": boolean;
     }
     interface KizunaPopover {
-        "buttonText": string;
         "darkmode": boolean;
-        "itemList": Array<{ [key: string]: any }>;
+        "open": boolean;
         "position": string;
     }
     interface KizunaTabs {
@@ -258,9 +257,8 @@ declare namespace LocalJSX {
         "transparent"?: boolean;
     }
     interface KizunaPopover {
-        "buttonText"?: string;
         "darkmode"?: boolean;
-        "itemList"?: Array<{ [key: string]: any }>;
+        "open"?: boolean;
         "position"?: string;
     }
     interface KizunaTabs {
