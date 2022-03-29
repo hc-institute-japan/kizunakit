@@ -60,13 +60,6 @@ export namespace Components {
         "text": string;
         "type": string;
     }
-    interface KizunaModal {
-        "classes": { [key: string]: any };
-        "closeIcon": Element;
-        "onClose": Function;
-        "open": any;
-        "transparent": boolean;
-    }
     interface KizunaPopover {
         "buttonText": string;
         "darkmode": boolean;
@@ -148,12 +141,6 @@ declare global {
         prototype: HTMLKizunaListItemElement;
         new (): HTMLKizunaListItemElement;
     };
-    interface HTMLKizunaModalElement extends Components.KizunaModal, HTMLStencilElement {
-    }
-    var HTMLKizunaModalElement: {
-        prototype: HTMLKizunaModalElement;
-        new (): HTMLKizunaModalElement;
-    };
     interface HTMLKizunaPopoverElement extends Components.KizunaPopover, HTMLStencilElement {
     }
     var HTMLKizunaPopoverElement: {
@@ -187,7 +174,6 @@ declare global {
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
         "kizuna-icon": HTMLKizunaIconElement;
         "kizuna-list-item": HTMLKizunaListItemElement;
-        "kizuna-modal": HTMLKizunaModalElement;
         "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
         "kizuna-textbox": HTMLKizunaTextboxElement;
@@ -250,13 +236,6 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: string;
     }
-    interface KizunaModal {
-        "classes"?: { [key: string]: any };
-        "closeIcon"?: Element;
-        "onClose"?: Function;
-        "open"?: any;
-        "transparent"?: boolean;
-    }
     interface KizunaPopover {
         "buttonText"?: string;
         "darkmode"?: boolean;
@@ -297,7 +276,6 @@ declare namespace LocalJSX {
         "kizuna-checkbox": KizunaCheckbox;
         "kizuna-icon": KizunaIcon;
         "kizuna-list-item": KizunaListItem;
-        "kizuna-modal": KizunaModal;
         "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
         "kizuna-textbox": KizunaTextbox;
@@ -316,7 +294,6 @@ declare module "@stencil/core" {
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
             "kizuna-icon": LocalJSX.KizunaIcon & JSXBase.HTMLAttributes<HTMLKizunaIconElement>;
             "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;
-            "kizuna-modal": LocalJSX.KizunaModal & JSXBase.HTMLAttributes<HTMLKizunaModalElement>;
             "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;
             "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;
