@@ -47,6 +47,9 @@ export namespace Components {
         "name": string;
         "value": string;
     }
+    interface KizunaDivider {
+        "classes": { [key: string]: any };
+    }
     interface KizunaIcon {
         "classes": { [key: string]: any };
         "name": string;
@@ -135,6 +138,12 @@ declare global {
         prototype: HTMLKizunaCheckboxElement;
         new (): HTMLKizunaCheckboxElement;
     };
+    interface HTMLKizunaDividerElement extends Components.KizunaDivider, HTMLStencilElement {
+    }
+    var HTMLKizunaDividerElement: {
+        prototype: HTMLKizunaDividerElement;
+        new (): HTMLKizunaDividerElement;
+    };
     interface HTMLKizunaIconElement extends Components.KizunaIcon, HTMLStencilElement {
     }
     var HTMLKizunaIconElement: {
@@ -184,6 +193,7 @@ declare global {
         "kizuna-button": HTMLKizunaButtonElement;
         "kizuna-calendar": HTMLKizunaCalendarElement;
         "kizuna-checkbox": HTMLKizunaCheckboxElement;
+        "kizuna-divider": HTMLKizunaDividerElement;
         "kizuna-icon": HTMLKizunaIconElement;
         "kizuna-list-item": HTMLKizunaListItemElement;
         "kizuna-modal": HTMLKizunaModalElement;
@@ -235,6 +245,9 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "name"?: string;
         "value"?: string;
+    }
+    interface KizunaDivider {
+        "classes"?: { [key: string]: any };
     }
     interface KizunaIcon {
         "classes"?: { [key: string]: any };
@@ -293,6 +306,7 @@ declare namespace LocalJSX {
         "kizuna-button": KizunaButton;
         "kizuna-calendar": KizunaCalendar;
         "kizuna-checkbox": KizunaCheckbox;
+        "kizuna-divider": KizunaDivider;
         "kizuna-icon": KizunaIcon;
         "kizuna-list-item": KizunaListItem;
         "kizuna-modal": KizunaModal;
@@ -312,6 +326,7 @@ declare module "@stencil/core" {
             "kizuna-button": LocalJSX.KizunaButton & JSXBase.HTMLAttributes<HTMLKizunaButtonElement>;
             "kizuna-calendar": LocalJSX.KizunaCalendar & JSXBase.HTMLAttributes<HTMLKizunaCalendarElement>;
             "kizuna-checkbox": LocalJSX.KizunaCheckbox & JSXBase.HTMLAttributes<HTMLKizunaCheckboxElement>;
+            "kizuna-divider": LocalJSX.KizunaDivider & JSXBase.HTMLAttributes<HTMLKizunaDividerElement>;
             "kizuna-icon": LocalJSX.KizunaIcon & JSXBase.HTMLAttributes<HTMLKizunaIconElement>;
             "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;
             "kizuna-modal": LocalJSX.KizunaModal & JSXBase.HTMLAttributes<HTMLKizunaModalElement>;

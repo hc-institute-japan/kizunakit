@@ -30,7 +30,7 @@
 .popoverDarkmode {
   background: var(--dark-primary-bg);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
-  color: var(--dark-primary-text);
+  color: var(--dark-secondary-text);
 }
 
 .toggleButton {

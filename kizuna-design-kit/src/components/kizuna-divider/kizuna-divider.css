@@ -1,0 +1,8 @@
+.divider {
+  margin: 0px;
+  flex-shrink: 0;
+  border-width: 0px 0px thin;
+  border-style: solid;
+  border-color: rgba(131, 131, 131);
+  opacity: 0.2;
+}

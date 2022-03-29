@@ -15,17 +15,20 @@ export class KizunaListItem {
 
   render() {
     return (
-      <div
-        class={`listItemWrapper ${this.classes?.listItemWrapper}`}
-        onClick={() => this.handleOnClick}
-      >
-        {this.icon && (
-          <span class={`list-item-icon ${this.classes?.listItemIcon}`}>
-            {this.icon}
-          </span>
-        )}
-        {this.text}
-      </div>
+      <slot>
+        <div
+          class={`listItemWrapper ${this.classes?.listItemWrapper}`}
+          onClick={() => this.handleOnClick}
+        >
+          {this.icon && (
+            <span class={`list-item-icon ${this.classes?.listItemIcon}`}>
+              {this.icon}
+            </span>
+          )}
+          {this.text}
+        </div>
+        <kizuna-divider></kizuna-divider>
+      </slot>
     );
   }
 }
