@@ -1,10 +1,12 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 import { tabMenus } from './App.data';
 
 @Component({
   tag: 'kizuna-app',
 })
 export class App {
+  @State() openModal: boolean = false;
+
   popoverListItems = [
     {
       icon: <kizuna-icon name="settings"></kizuna-icon>,
@@ -28,9 +30,36 @@ export class App {
     },
   ];
 
+  _handleOpenModal = () => {
+    this.openModal = true;
+  };
+
+  _handleCloseModal = () => {
+    this.openModal = false;
+  };
+
   render() {
     return (
       <div>
+        <div class="wrapper">
+          <h2 class="title">Modal</h2>
+
+          <kizuna-button
+            type="secondary"
+            text="Click me to open modal"
+            onClick={this._handleOpenModal}
+          />
+
+          <kizuna-modal
+            open={this.openModal}
+            onClose={this._handleCloseModal}
+            closeIcon={<kizuna-icon name="settings" />} //when icon library is complete, change to X icon
+          >
+            <h1>Hello world!</h1>
+            <div>This is a modal!</div>
+          </kizuna-modal>
+        </div>
+
         <div class="wrapper">
           <h2 class="title">Badge</h2>
           <kizuna-badge

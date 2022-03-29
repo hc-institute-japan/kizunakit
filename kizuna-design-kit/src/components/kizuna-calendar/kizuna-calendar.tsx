@@ -38,7 +38,7 @@ export class KizunaPopover {
   @State() date = Calendar.getToday();
   @State() daysInMonth: number[];
   @State() selectedDate: CalendarEntry;
-  @State() open: boolean = true;
+  @State() open: boolean = false;
 
   @Event({
     eventName: 'dayChanged',
