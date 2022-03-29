@@ -2,7 +2,7 @@
   /* This is how you override it on a web app, leave empty to use default value */
   /* fill: transparent; */
   stroke-width: 2;
-  stroke: var(--primary-text);
+  /* stroke: var(--secondary-text); */
 }
 
 .icon-container svg {
