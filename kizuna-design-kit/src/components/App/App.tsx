@@ -236,13 +236,70 @@ export class App {
           </div>
         </div>
 
-        <div>
+        <div class="icons-container">
           <h2 class="title">Icons</h2>
-          <kizuna-icon name="search"></kizuna-icon>
-          <kizuna-icon name="settings"></kizuna-icon>
-          <kizuna-icon name="emoticon"></kizuna-icon>
+          <kizuna-icon name="addContact"></kizuna-icon>
+          <kizuna-icon name="addContact"></kizuna-icon>
+          <kizuna-icon name="addContact"></kizuna-icon>
+          <kizuna-icon name="addContact"></kizuna-icon>
+          <kizuna-icon name="addContact"></kizuna-icon>
+          <kizuna-icon name="add"></kizuna-icon>
+          <kizuna-icon name="attach"></kizuna-icon>
+          <kizuna-icon name="blocked"></kizuna-icon>
+          <kizuna-icon name="bold"></kizuna-icon>
+
+          <kizuna-icon name="briefcase"></kizuna-icon>
           <kizuna-icon name="calendar"></kizuna-icon>
+          <kizuna-icon name="call"></kizuna-icon>
+          <kizuna-icon name="calendar"></kizuna-icon>
+          <kizuna-icon name="cameraOff"></kizuna-icon>
+
+          <kizuna-icon name="camera"></kizuna-icon>
+          <kizuna-icon name="caution"></kizuna-icon>
+          <kizuna-icon name="chat"></kizuna-icon>
+          <kizuna-icon name="check"></kizuna-icon>
+          <kizuna-icon name="circle"></kizuna-icon>
+
+          <kizuna-icon name="close"></kizuna-icon>
+          <kizuna-icon name="contacts"></kizuna-icon>
+          <kizuna-icon name="copy"></kizuna-icon>
+          <kizuna-icon name="create"></kizuna-icon>
+          <kizuna-icon name="dottedMenuHorizontal"></kizuna-icon>
+
+          <kizuna-icon name="dottedMenuVertical"></kizuna-icon>
+          <kizuna-icon name="down"></kizuna-icon>
+          <kizuna-icon name="emoticon"></kizuna-icon>
+          <kizuna-icon name="emptyNotification"></kizuna-icon>
+          <kizuna-icon name="end"></kizuna-icon>
+
+          <kizuna-icon name="file"></kizuna-icon>
+          <kizuna-icon name="gif"></kizuna-icon>
+          <kizuna-icon name="information"></kizuna-icon>
+          <kizuna-icon name="italic"></kizuna-icon>
+          <kizuna-icon name="left"></kizuna-icon>
+
+          <kizuna-icon name="leftArrow"></kizuna-icon>
+          <kizuna-icon name="link"></kizuna-icon>
+          <kizuna-icon name="menu"></kizuna-icon>
+          <kizuna-icon name="message"></kizuna-icon>
+          <kizuna-icon name="mic"></kizuna-icon>
+
+          <kizuna-icon name="micOff"></kizuna-icon>
+          <kizuna-icon name="pin"></kizuna-icon>
+          <kizuna-icon name="pin2"></kizuna-icon>
+          <kizuna-icon name="remove"></kizuna-icon>
+          <kizuna-icon name="reply"></kizuna-icon>
+
+          <kizuna-icon name="right"></kizuna-icon>
+          <kizuna-icon name="rightArrow"></kizuna-icon>
+          <kizuna-icon name="search"></kizuna-icon>
+          <kizuna-icon name="send"></kizuna-icon>
+          <kizuna-icon name="settings"></kizuna-icon>
+
+          <kizuna-icon name="strikethrough"></kizuna-icon>
           <kizuna-icon name="trash"></kizuna-icon>
+          <kizuna-icon name="underline"></kizuna-icon>
+          <kizuna-icon name="up"></kizuna-icon>
         </div>
 
         <div class="button-container">
