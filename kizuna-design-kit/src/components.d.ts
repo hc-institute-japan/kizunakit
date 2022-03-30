@@ -86,6 +86,7 @@ export namespace Components {
         "value": string;
     }
     interface KizunaTextbox {
+        "align": string;
         "classes": { [key: string]: any };
         "icon": string;
         "id": string;
@@ -286,6 +287,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface KizunaTextbox {
+        "align"?: string;
         "classes"?: { [key: string]: any };
         "icon"?: string;
         "id"?: string;

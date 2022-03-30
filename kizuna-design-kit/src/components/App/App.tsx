@@ -477,6 +477,29 @@ export class App {
             name="firstName"
             label="First Name"
           ></kizuna-textbox>
+
+          <br />
+          <kizuna-textbox
+            placeholder="Left Align Textbox"
+            name="firstName"
+            label="First Name"
+            align="left"
+          ></kizuna-textbox>
+
+          <br />
+          <kizuna-textbox
+            placeholder="Center Align Textbox"
+            name="firstName"
+            label="First Name"
+            align="center"
+          ></kizuna-textbox>
+          <br />
+          <kizuna-textbox
+            placeholder="Center Right Textbox"
+            name="firstName"
+            label="First Name"
+            align="right"
+          ></kizuna-textbox>
         </div>
       </div>
     );

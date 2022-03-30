@@ -54,3 +54,15 @@ label ~ .textfield:focus {
   display: flex;
   flex-direction: column-reverse;
 }
+
+.textfield-center-align {
+  text-align: center;
+}
+
+.textfield-left-align {
+  text-align: left;
+}
+
+.textfield-right-align {
+  text-align: right;
+}

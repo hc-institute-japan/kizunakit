@@ -15,6 +15,7 @@ export class KizunaTextbox {
   @Prop() icon: string;
   @Prop() isFocus: boolean = false;
   @Prop() classes: { [key: string]: any };
+  @Prop() align: string;
 
   private getTextFieldVariant = () => {
     if (this.variant?.toLowerCase() === 'standard') {
@@ -26,13 +27,23 @@ export class KizunaTextbox {
     }
   };
 
+  private _getTextAlign = () => {
+    if (this.align === 'center') {
+      return 'textfield-center-align';
+    } else if (this.align === 'right') {
+      return 'textfield-right-align';
+    } else {
+      return 'textfield-left-align';
+    }
+  };
+
   render() {
     return (
       <div class="textboxWrapper">
         <input
           class={`textfield ${this.getTextFieldVariant()} ${
             this.classes?.input
-          }`}
+          } ${this._getTextAlign()}`}
           type="text"
           id={this.id}
           name={this.name}
