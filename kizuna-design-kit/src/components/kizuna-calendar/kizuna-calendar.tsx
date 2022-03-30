@@ -84,6 +84,8 @@ export class KizunaPopover {
     const calendar = new Calendar(date.year, date.month);
     this.daysInMonth = calendar.getCalendarDays();
 
+    this.selectedDate = { ...this.selectedDate };
+
     this.startOfMonth = calendar.getStartOfMonth();
     this.endOfMonth = calendar.daysInCalendar - calendar.getEndOfMonth();
   }
@@ -306,11 +308,15 @@ export class KizunaPopover {
         {this.open && (
           <div class={`calendar ${this._getPositionClassName()}`}>
             <header>
-              <span onClick={this.switchToPreviousMonth}>{'<'}</span>
+              <span onClick={this.switchToPreviousMonth}>
+                <kizuna-icon name="left"></kizuna-icon>
+              </span>
               <span>
                 {this.monthNames[date.month - 1]} {date.year}
               </span>
-              <span onClick={this.switchToNextMonth}>{'>'}</span>
+              <span onClick={this.switchToNextMonth}>
+                <kizuna-icon name="right"></kizuna-icon>
+              </span>
             </header>
 
             <div class="day-names">
