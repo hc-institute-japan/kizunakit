@@ -12,6 +12,7 @@ export class App {
   @State() open4Popover: boolean = false;
   @State() open5Popover: boolean = false;
   @State() open6Popover: boolean = false;
+  @State() open7Popover: boolean = false;
 
   popoverListItems = [
     {
@@ -83,6 +84,19 @@ export class App {
   render() {
     return (
       <div>
+        <div class="wrapper">
+          <h2 class="title">Text Editor</h2>
+          <div class="popoverToggleButtonContainer">
+            <kizuna-button
+              type="secondary"
+              text="Text Editor"
+              onClick={() => this._togglePopover(7)}
+            ></kizuna-button>
+            <kizuna-text-editor
+              open={this['open7Popover']}
+            ></kizuna-text-editor>
+          </div>
+        </div>
         <div class="wrapper">
           <h2 class="title">Message box</h2>
           <div class="margin-all-side">

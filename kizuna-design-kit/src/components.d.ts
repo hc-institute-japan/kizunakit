@@ -100,6 +100,11 @@ export namespace Components {
         "onClick": any;
         "value": string;
     }
+    interface KizunaTextEditor {
+        "darkmode": boolean;
+        "open": boolean;
+        "position": string;
+    }
     interface KizunaTextbox {
         "align": string;
         "classes": { [key: string]: any };
@@ -205,6 +210,12 @@ declare global {
         prototype: HTMLKizunaTabsElement;
         new (): HTMLKizunaTabsElement;
     };
+    interface HTMLKizunaTextEditorElement extends Components.KizunaTextEditor, HTMLStencilElement {
+    }
+    var HTMLKizunaTextEditorElement: {
+        prototype: HTMLKizunaTextEditorElement;
+        new (): HTMLKizunaTextEditorElement;
+    };
     interface HTMLKizunaTextboxElement extends Components.KizunaTextbox, HTMLStencilElement {
     }
     var HTMLKizunaTextboxElement: {
@@ -232,6 +243,7 @@ declare global {
         "kizuna-modal": HTMLKizunaModalElement;
         "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
+        "kizuna-text-editor": HTMLKizunaTextEditorElement;
         "kizuna-textbox": HTMLKizunaTextboxElement;
         "kizuna-toggle-button": HTMLKizunaToggleButtonElement;
     }
@@ -332,6 +344,11 @@ declare namespace LocalJSX {
         "onClick"?: any;
         "value"?: string;
     }
+    interface KizunaTextEditor {
+        "darkmode"?: boolean;
+        "open"?: boolean;
+        "position"?: string;
+    }
     interface KizunaTextbox {
         "align"?: string;
         "classes"?: { [key: string]: any };
@@ -366,6 +383,7 @@ declare namespace LocalJSX {
         "kizuna-modal": KizunaModal;
         "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
+        "kizuna-text-editor": KizunaTextEditor;
         "kizuna-textbox": KizunaTextbox;
         "kizuna-toggle-button": KizunaToggleButton;
     }
@@ -388,6 +406,7 @@ declare module "@stencil/core" {
             "kizuna-modal": LocalJSX.KizunaModal & JSXBase.HTMLAttributes<HTMLKizunaModalElement>;
             "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;
+            "kizuna-text-editor": LocalJSX.KizunaTextEditor & JSXBase.HTMLAttributes<HTMLKizunaTextEditorElement>;
             "kizuna-textbox": LocalJSX.KizunaTextbox & JSXBase.HTMLAttributes<HTMLKizunaTextboxElement>;
             "kizuna-toggle-button": LocalJSX.KizunaToggleButton & JSXBase.HTMLAttributes<HTMLKizunaToggleButtonElement>;
         }

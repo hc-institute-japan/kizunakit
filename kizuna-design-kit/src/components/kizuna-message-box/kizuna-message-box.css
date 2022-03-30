@@ -38,13 +38,14 @@
   margin-left: -12px;
 }
 
-/* .delivered-icon-colors svg path {
-  stroke: blue;
+.delivered-icon-colors svg path {
+  stroke: var(--secondary-text);
+  opacity: 0.4;
 }
 
 .seen-icon-colors svg path {
-  stroke: red;
-} */
+  stroke: var(--primary-text);
+}
 
 .sent-message {
   background-color: #f5f5f5;
