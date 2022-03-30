@@ -1,0 +1,21 @@
+.message-react {
+  background-color: var(--white);
+  color: var(--secondary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 35px;
+  padding: 10px;
+  /* border: 1px solid red; */
+}
+
+.message-react .count {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.message-react .react-emoji .icon-container svg {
+  width: 18px;
+}

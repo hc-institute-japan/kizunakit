@@ -24,11 +24,13 @@ import emoticon from './emoticon.svg';
 import emptyNotification from './empty-notification.svg';
 import file from './file.svg';
 import gif from './gif.svg';
+import heart from './heart.svg';
 import information from './information.svg';
 import italic from './italic.svg';
 import leftArrow from './left-arrow.svg';
 import left from './left.svg';
 import link from './link.svg';
+import like from './like.svg';
 import menu from './menu.svg';
 import message from './message.svg';
 import mic from './mic.svg';
@@ -44,6 +46,7 @@ import send from './send.svg';
 import settings from './settings.svg';
 import strikethrough from './strikethrough.svg';
 import trash from './trash.svg';
+
 import underline from './underline.svg';
 import up from './up.svg';
 
@@ -74,11 +77,13 @@ const icons = {
   end,
   file,
   gif,
+  heart,
   information,
   italic,
   left,
   leftArrow,
   link,
+  like,
   menu,
   message,
   mic,

@@ -15,7 +15,11 @@ export class KizunaBadge {
         {this.icon && (
           <span class={`badge-icon ${this.classes?.icon}`}>{this?.icon}</span>
         )}
-        {this.text ? <span class="text">{this.text}</span> : ''}
+        {this.text ? (
+          <span class={`text ${this.classes?.text}`}>{this.text}</span>
+        ) : (
+          ''
+        )}
       </span>
     );
   }

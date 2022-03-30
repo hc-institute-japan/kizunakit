@@ -8,6 +8,6 @@ import { Component, h, Prop } from '@stencil/core';
 export class KizunaDivider {
   @Prop() classes: { [key: string]: any };
   render() {
-    return <hr class={`divider ${this.classes?.dividerWrapper}`} />;
+    return <hr class={`divider ${this.classes?.divider}`} />;
   }
 }

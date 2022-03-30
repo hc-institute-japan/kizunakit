@@ -73,6 +73,11 @@ export namespace Components {
         "sent": boolean;
         "time": string;
     }
+    interface KizunaMessageReact {
+        "classes": { [key: string]: any };
+        "count": Number;
+        "emoji": Element;
+    }
     interface KizunaModal {
         "classes": { [key: string]: any };
         "closeIcon": Element;
@@ -175,6 +180,12 @@ declare global {
         prototype: HTMLKizunaMessageBoxElement;
         new (): HTMLKizunaMessageBoxElement;
     };
+    interface HTMLKizunaMessageReactElement extends Components.KizunaMessageReact, HTMLStencilElement {
+    }
+    var HTMLKizunaMessageReactElement: {
+        prototype: HTMLKizunaMessageReactElement;
+        new (): HTMLKizunaMessageReactElement;
+    };
     interface HTMLKizunaModalElement extends Components.KizunaModal, HTMLStencilElement {
     }
     var HTMLKizunaModalElement: {
@@ -216,6 +227,7 @@ declare global {
         "kizuna-icon": HTMLKizunaIconElement;
         "kizuna-list-item": HTMLKizunaListItemElement;
         "kizuna-message-box": HTMLKizunaMessageBoxElement;
+        "kizuna-message-react": HTMLKizunaMessageReactElement;
         "kizuna-modal": HTMLKizunaModalElement;
         "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
@@ -292,6 +304,11 @@ declare namespace LocalJSX {
         "sent"?: boolean;
         "time"?: string;
     }
+    interface KizunaMessageReact {
+        "classes"?: { [key: string]: any };
+        "count"?: Number;
+        "emoji"?: Element;
+    }
     interface KizunaModal {
         "classes"?: { [key: string]: any };
         "closeIcon"?: Element;
@@ -343,6 +360,7 @@ declare namespace LocalJSX {
         "kizuna-icon": KizunaIcon;
         "kizuna-list-item": KizunaListItem;
         "kizuna-message-box": KizunaMessageBox;
+        "kizuna-message-react": KizunaMessageReact;
         "kizuna-modal": KizunaModal;
         "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
@@ -364,6 +382,7 @@ declare module "@stencil/core" {
             "kizuna-icon": LocalJSX.KizunaIcon & JSXBase.HTMLAttributes<HTMLKizunaIconElement>;
             "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;
             "kizuna-message-box": LocalJSX.KizunaMessageBox & JSXBase.HTMLAttributes<HTMLKizunaMessageBoxElement>;
+            "kizuna-message-react": LocalJSX.KizunaMessageReact & JSXBase.HTMLAttributes<HTMLKizunaMessageReactElement>;
             "kizuna-modal": LocalJSX.KizunaModal & JSXBase.HTMLAttributes<HTMLKizunaModalElement>;
             "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;

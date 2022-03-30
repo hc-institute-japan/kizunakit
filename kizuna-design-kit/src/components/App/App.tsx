@@ -123,6 +123,23 @@ export class App {
               darkmode
             />
           </div>
+
+          <div class="wrapper">
+            <h2 class="title">React Message Emoji</h2>
+            <kizuna-message-react
+              emoji={<kizuna-icon name="heart" />}
+              count={3}
+            />
+            <br />
+            <kizuna-message-react emoji={<kizuna-icon name="heart" />} />
+            <br />
+            <kizuna-message-react
+              emoji={<kizuna-icon name="like" />}
+              count={7}
+            />
+            <br />
+            <kizuna-message-react emoji={<kizuna-icon name="like" />} />
+          </div>
         </div>
         <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
