@@ -490,7 +490,7 @@ export class App {
           <kizuna-textbox
             placeholder="Center Align Textbox"
             name="firstName"
-            label="First Name"
+            // label="First Name"
             align="center"
           ></kizuna-textbox>
           <br />

@@ -33,6 +33,10 @@
   color: var(--dark-secondary-text);
 }
 
+.popoverDarkmode path {
+  stroke: var(--dark-secondary-text);
+}
+
 .toggleButton {
   padding: 1rem 2rem;
   border: 1px solid gray;
