@@ -1,8 +1,9 @@
 .message-box-wrapper {
   max-width: 350px;
-  padding: 10px;
+  padding: 12px;
   background-color: var(--white);
   border-radius: 10px;
+  position: relative;
 }
 
 .message-content {
@@ -50,4 +51,15 @@
 
 .received-message-darkmode {
   background-color: rgba(228, 130, 33, 0.2);
+}
+
+.reactions-container {
+  display: flex;
+  position: absolute;
+  bottom: -1.7rem;
+  right: 0;
+}
+
+.reaction-container {
+  margin: 0 2px;
 }

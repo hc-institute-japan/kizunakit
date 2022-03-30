@@ -69,7 +69,7 @@ export namespace Components {
         "darkmode": boolean;
         "message": string;
         "messageStatus": string;
-        "reactionList": Array<{ [key: string]: string }>;
+        "reactionList": Array<{ [key: string]: any }>;
         "sent": boolean;
         "time": string;
     }
@@ -300,7 +300,7 @@ declare namespace LocalJSX {
         "darkmode"?: boolean;
         "message"?: string;
         "messageStatus"?: string;
-        "reactionList"?: Array<{ [key: string]: string }>;
+        "reactionList"?: Array<{ [key: string]: any }>;
         "sent"?: boolean;
         "time"?: string;
     }

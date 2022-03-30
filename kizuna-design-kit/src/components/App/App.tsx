@@ -36,6 +36,23 @@ export class App {
     },
   ];
 
+  messageReactItems = [
+    {
+      icon: 'heart',
+    },
+    {
+      icon: 'like',
+    },
+    {
+      icon: 'like',
+      count: 10,
+    },
+    {
+      icon: 'heart',
+      count: 3,
+    },
+  ];
+
   _handleOpenModal = () => {
     this.openModal = true;
   };
@@ -124,22 +141,27 @@ export class App {
             />
           </div>
 
-          <div class="wrapper">
-            <h2 class="title">React Message Emoji</h2>
-            <kizuna-message-react
-              emoji={<kizuna-icon name="heart" />}
-              count={3}
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Message box with reactions"
+              time="3:14pm"
+              darkmode
+              reactionList={this.messageReactItems}
             />
-            <br />
-            <kizuna-message-react emoji={<kizuna-icon name="heart" />} />
-            <br />
-            <kizuna-message-react
-              emoji={<kizuna-icon name="like" />}
-              count={7}
-            />
-            <br />
-            <kizuna-message-react emoji={<kizuna-icon name="like" />} />
           </div>
+        </div>{' '}
+        <div class="wrapper">
+          <h2 class="title">React Message Emoji</h2>
+          <kizuna-message-react
+            emoji={<kizuna-icon name="heart" />}
+            count={3}
+          />
+          <br />
+          <kizuna-message-react emoji={<kizuna-icon name="heart" />} />
+          <br />
+          <kizuna-message-react emoji={<kizuna-icon name="like" />} count={7} />
+          <br />
+          <kizuna-message-react emoji={<kizuna-icon name="like" />} />
         </div>
         <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
@@ -159,7 +181,6 @@ export class App {
             <div>This is a modal!</div>
           </kizuna-modal>
         </div>
-
         <div class="wrapper">
           <h2 class="title">Badge</h2>
           <kizuna-badge
@@ -188,7 +209,6 @@ export class App {
             ></kizuna-calendar>
           </div>
         </div>
-
         <div class="wrapper tabs">
           <h2 class="title">Tabs</h2>
           <kizuna-tabs
@@ -204,7 +224,6 @@ export class App {
             // onClick={data => console.log(data)}
           ></kizuna-tabs>
         </div>
-
         <div>
           <h2 class="title">List Items</h2>
           <kizuna-list-item
@@ -217,7 +236,6 @@ export class App {
             icon={<kizuna-icon name="settings" />}
           ></kizuna-list-item>
         </div>
-
         <div>
           <h2 class="title">Popovers</h2>
           {/* 1 */}
@@ -313,7 +331,6 @@ export class App {
             </kizuna-popover>
           </div>
         </div>
-
         <div class="icons-container">
           <h2 class="title">Icons</h2>
           <kizuna-icon name="addContact"></kizuna-icon>
@@ -379,7 +396,6 @@ export class App {
           <kizuna-icon name="underline"></kizuna-icon>
           <kizuna-icon name="up"></kizuna-icon>
         </div>
-
         <div class="button-container">
           <h1 class="title">Button</h1>
           <div>
@@ -464,13 +480,11 @@ export class App {
             </table>
           </div>
         </div>
-
         <div class="wrapper">
           <h2 class="title">Toggle Button</h2>
           <kizuna-toggle-button></kizuna-toggle-button>
           <kizuna-toggle-button checked></kizuna-toggle-button>
         </div>
-
         <div class="wrapper">
           <h2 class="title">Checkbox</h2>
           <kizuna-checkbox
@@ -483,7 +497,6 @@ export class App {
             checked
           ></kizuna-checkbox>
         </div>
-
         <div class="wrapper">
           <h2 class="title">Avatars</h2>
           <div class="avatars-content">
@@ -537,7 +550,6 @@ export class App {
             <kizuna-avatar size="md" name="Marcus Donald Gopez"></kizuna-avatar>
           </div>
         </div>
-
         <div class="wrapper textbox">
           <h2 class="title">Textbox</h2>
           <kizuna-textbox

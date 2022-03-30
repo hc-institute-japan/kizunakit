@@ -12,7 +12,7 @@ export class KizunaMessageBox {
   @Prop() messageStatus: string;
   @Prop() darkmode: boolean;
   @Prop() sent: boolean;
-  @Prop() reactionList: Array<{ [key: string]: string }>;
+  @Prop() reactionList: Array<{ [key: string]: any }>;
 
   _renderMessageStatus = () => {
     if (this.messageStatus === 'sent') {
@@ -59,6 +59,19 @@ export class KizunaMessageBox {
     }
   };
 
+  _renderReactions = () => {
+    return this.reactionList?.map((reaction, index) => {
+      return (
+        <span key={index} class="reaction-container">
+          <kizuna-message-react
+            emoji={<kizuna-icon name={reaction.icon} />}
+            count={reaction.count}
+          />
+        </span>
+      );
+    });
+  };
+
   _getWrapperClassName = () => {
     if (this.sent) {
       if (this.darkmode) {
@@ -84,6 +97,8 @@ export class KizunaMessageBox {
           {this._renderMessageStatus()}
           <span class="message-time">{this.time}</span>
         </div>
+
+        <div class="reactions-container">{this._renderReactions()}</div>
       </div>
     );
   }
