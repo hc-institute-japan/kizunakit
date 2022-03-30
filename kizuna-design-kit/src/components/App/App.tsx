@@ -470,12 +470,15 @@ export class App {
             name="firstName"
             variant="standard"
             label="First Name"
+            startIconName="search"
+            onChange={data => console.log({ text: data })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
-            placeholder="First Name"
+            placeholder="First Name (No Start Icon) "
             name="firstName"
             label="First Name"
+            onChange={data => console.log({ text: data })}
           ></kizuna-textbox>
 
           <br />
@@ -484,6 +487,8 @@ export class App {
             name="firstName"
             label="First Name"
             align="left"
+            startIconName="search"
+            onChange={data => console.log({ text: data })}
           ></kizuna-textbox>
 
           <br />
@@ -492,6 +497,8 @@ export class App {
             name="firstName"
             label="First Name"
             align="center"
+            startIconName="search"
+            onChange={data => console.log({ text: data })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
@@ -499,6 +506,8 @@ export class App {
             name="firstName"
             label="First Name"
             align="right"
+            startIconName="search"
+            onChange={data => console.log({ text: data })}
           ></kizuna-textbox>
         </div>
       </div>

@@ -1,3 +1,7 @@
+.textboxWrapper {
+  position: relative;
+}
+
 .textfield[type='text'] {
   width: 100%;
   padding: 12px 15px;
@@ -65,4 +69,30 @@ label ~ .textfield:focus {
 
 .textfield-right-align {
   text-align: right;
+}
+
+.start-icon {
+  position: absolute;
+  bottom: 18px;
+  left: 8px;
+}
+
+.end-icon {
+  position: absolute;
+  right: 5px;
+  bottom: 18px;
+  cursor: pointer;
+}
+
+.start-icon svg path,
+.end-icon svg path {
+  stroke: var(--primary);
+}
+
+.padding-start {
+  padding-left: 35px !important;
+}
+
+.padding-end {
+  padding-right: 35px !important;
 }

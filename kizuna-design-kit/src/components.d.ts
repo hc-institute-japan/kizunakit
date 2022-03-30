@@ -93,7 +93,9 @@ export namespace Components {
         "isFocus": boolean;
         "label": string;
         "name": string;
+        "onChange": Function;
         "placeholder": string;
+        "startIconName": string;
         "value": string;
         "variant": string;
     }
@@ -294,7 +296,9 @@ declare namespace LocalJSX {
         "isFocus"?: boolean;
         "label"?: string;
         "name"?: string;
+        "onChange"?: Function;
         "placeholder"?: string;
+        "startIconName"?: string;
         "value"?: string;
         "variant"?: string;
     }
