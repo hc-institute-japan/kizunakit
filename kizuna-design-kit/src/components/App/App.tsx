@@ -337,10 +337,7 @@ export class App {
         </div>
         <div class="icons-container">
           <h2 class="title">Icons</h2>
-          <kizuna-icon name="addContact"></kizuna-icon>
-          <kizuna-icon name="addContact"></kizuna-icon>
-          <kizuna-icon name="addContact"></kizuna-icon>
-          <kizuna-icon name="addContact"></kizuna-icon>
+
           <kizuna-icon name="addContact"></kizuna-icon>
           <kizuna-icon name="add"></kizuna-icon>
           <kizuna-icon name="attach"></kizuna-icon>
