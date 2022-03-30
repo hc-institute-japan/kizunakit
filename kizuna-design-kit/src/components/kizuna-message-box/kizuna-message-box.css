@@ -4,38 +4,47 @@
   background-color: var(--white);
   border-radius: 10px;
   position: relative;
+  width: fit-content;
 }
 
 .message-content {
+  color: var(--primary-text);
+  font-weight: 400;
 }
 
 .message-metadata {
   display: flex;
   justify-content: right;
+  align-items: center;
+  margin-top: 8px;
 }
 
 .message-time {
   margin-left: 4px;
+  font-size: 12px;
+  color: var(--primary-text);
+  opacity: 0.6;
 }
 
 .message-status-indicator {
   display: flex;
 }
 
-.message-indicator-icon {
+.message-indicator-icon svg {
+  width: 16px !important;
 }
 
 .overlap-icon {
   margin-left: -12px;
 }
 
-.delivered-icon-colors svg path {
+/* .delivered-icon-colors svg path {
   stroke: blue;
 }
 
 .seen-icon-colors svg path {
   stroke: red;
-}
+} */
 
 .sent-message {
   background-color: #f5f5f5;
