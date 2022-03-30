@@ -7,8 +7,13 @@
   width: fit-content;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 35px;
-  padding: 10px;
+  padding: 6px 8px;
   /* border: 1px solid red; */
+}
+
+.messageReactDarkMode {
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
 }
 
 .message-react .count {

@@ -76,6 +76,7 @@ export namespace Components {
     interface KizunaMessageReact {
         "classes": { [key: string]: any };
         "count": Number;
+        "darkmode": boolean;
         "emoji": Element;
     }
     interface KizunaModal {
@@ -307,6 +308,7 @@ declare namespace LocalJSX {
     interface KizunaMessageReact {
         "classes"?: { [key: string]: any };
         "count"?: Number;
+        "darkmode"?: boolean;
         "emoji"?: Element;
     }
     interface KizunaModal {

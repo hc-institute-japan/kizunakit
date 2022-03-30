@@ -9,9 +9,14 @@ export class KizunaMessageReact {
   @Prop() classes: { [key: string]: any };
   @Prop() emoji: Element;
   @Prop() count: Number;
+  @Prop() darkmode: boolean;
   render() {
     return (
-      <span class={`message-react ${this.classes?.messageReactWrapper}`}>
+      <span
+        class={`message-react ${this.darkmode && 'messageReactDarkMode'} ${
+          this.classes?.messageReactWrapper
+        }`}
+      >
         {this.emoji && (
           <span class={`react-emoji ${this.classes?.emoji}`}>
             {this?.emoji}

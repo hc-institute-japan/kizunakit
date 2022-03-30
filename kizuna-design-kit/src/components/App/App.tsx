@@ -137,7 +137,6 @@ export class App {
               message="Sample sent message (Dark mode)"
               time="3:14pm"
               sent
-              darkmode
             />
           </div>
 
@@ -159,9 +158,13 @@ export class App {
           <br />
           <kizuna-message-react emoji={<kizuna-icon name="heart" />} />
           <br />
-          <kizuna-message-react emoji={<kizuna-icon name="like" />} count={7} />
+          <kizuna-message-react
+            emoji={<kizuna-icon name="like" />}
+            count={7}
+            darkmode
+          />
           <br />
-          <kizuna-message-react emoji={<kizuna-icon name="like" />} />
+          <kizuna-message-react emoji={<kizuna-icon name="like" />} darkmode />
         </div>
         <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
