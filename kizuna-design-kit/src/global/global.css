@@ -135,3 +135,7 @@ th {
   width: 450px;
   position: relative;
 }
+
+.margin-all-side {
+  margin: 2rem;
+}

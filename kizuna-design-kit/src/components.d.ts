@@ -64,6 +64,15 @@ export namespace Components {
         "text": string;
         "type": string;
     }
+    interface KizunaMessageBox {
+        "classes": { [key: string]: any };
+        "darkmode": boolean;
+        "message": string;
+        "messageStatus": string;
+        "reactionList": Array<{ [key: string]: string }>;
+        "sent": boolean;
+        "time": string;
+    }
     interface KizunaModal {
         "classes": { [key: string]: any };
         "closeIcon": Element;
@@ -160,6 +169,12 @@ declare global {
         prototype: HTMLKizunaListItemElement;
         new (): HTMLKizunaListItemElement;
     };
+    interface HTMLKizunaMessageBoxElement extends Components.KizunaMessageBox, HTMLStencilElement {
+    }
+    var HTMLKizunaMessageBoxElement: {
+        prototype: HTMLKizunaMessageBoxElement;
+        new (): HTMLKizunaMessageBoxElement;
+    };
     interface HTMLKizunaModalElement extends Components.KizunaModal, HTMLStencilElement {
     }
     var HTMLKizunaModalElement: {
@@ -200,6 +215,7 @@ declare global {
         "kizuna-divider": HTMLKizunaDividerElement;
         "kizuna-icon": HTMLKizunaIconElement;
         "kizuna-list-item": HTMLKizunaListItemElement;
+        "kizuna-message-box": HTMLKizunaMessageBoxElement;
         "kizuna-modal": HTMLKizunaModalElement;
         "kizuna-popover": HTMLKizunaPopoverElement;
         "kizuna-tabs": HTMLKizunaTabsElement;
@@ -267,6 +283,15 @@ declare namespace LocalJSX {
         "text"?: string;
         "type"?: string;
     }
+    interface KizunaMessageBox {
+        "classes"?: { [key: string]: any };
+        "darkmode"?: boolean;
+        "message"?: string;
+        "messageStatus"?: string;
+        "reactionList"?: Array<{ [key: string]: string }>;
+        "sent"?: boolean;
+        "time"?: string;
+    }
     interface KizunaModal {
         "classes"?: { [key: string]: any };
         "closeIcon"?: Element;
@@ -317,6 +342,7 @@ declare namespace LocalJSX {
         "kizuna-divider": KizunaDivider;
         "kizuna-icon": KizunaIcon;
         "kizuna-list-item": KizunaListItem;
+        "kizuna-message-box": KizunaMessageBox;
         "kizuna-modal": KizunaModal;
         "kizuna-popover": KizunaPopover;
         "kizuna-tabs": KizunaTabs;
@@ -337,6 +363,7 @@ declare module "@stencil/core" {
             "kizuna-divider": LocalJSX.KizunaDivider & JSXBase.HTMLAttributes<HTMLKizunaDividerElement>;
             "kizuna-icon": LocalJSX.KizunaIcon & JSXBase.HTMLAttributes<HTMLKizunaIconElement>;
             "kizuna-list-item": LocalJSX.KizunaListItem & JSXBase.HTMLAttributes<HTMLKizunaListItemElement>;
+            "kizuna-message-box": LocalJSX.KizunaMessageBox & JSXBase.HTMLAttributes<HTMLKizunaMessageBoxElement>;
             "kizuna-modal": LocalJSX.KizunaModal & JSXBase.HTMLAttributes<HTMLKizunaModalElement>;
             "kizuna-popover": LocalJSX.KizunaPopover & JSXBase.HTMLAttributes<HTMLKizunaPopoverElement>;
             "kizuna-tabs": LocalJSX.KizunaTabs & JSXBase.HTMLAttributes<HTMLKizunaTabsElement>;

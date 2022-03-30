@@ -1,0 +1,53 @@
+.message-box-wrapper {
+  max-width: 350px;
+  padding: 10px;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.message-content {
+}
+
+.message-metadata {
+  display: flex;
+  justify-content: right;
+}
+
+.message-time {
+  margin-left: 4px;
+}
+
+.message-status-indicator {
+  display: flex;
+}
+
+.message-indicator-icon {
+}
+
+.overlap-icon {
+  margin-left: -12px;
+}
+
+.delivered-icon-colors svg path {
+  stroke: blue;
+}
+
+.seen-icon-colors svg path {
+  stroke: red;
+}
+
+.sent-message {
+  background-color: #f5f5f5;
+}
+
+.sent-message-darkmode {
+  background-color: var(--primary);
+}
+
+.received-message {
+  background-color: rgba(228, 130, 33, 0.2);
+}
+
+.received-message-darkmode {
+  background-color: rgba(228, 130, 33, 0.2);
+}

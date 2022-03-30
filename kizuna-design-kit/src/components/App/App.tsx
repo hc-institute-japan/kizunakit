@@ -66,6 +66,64 @@ export class App {
   render() {
     return (
       <div>
+        <div class="wrapper">
+          <h2 class="title">Message box</h2>
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample message box with 'sent' message status lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+              time="3:14pm"
+              messageStatus="sent"
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample message box with 'delivered' message status lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumloreumlorem ipsumlorem ipsum"
+              time="3:14pm"
+              messageStatus="delivered"
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample message box with 'seen' message status lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+              time="3:14pm"
+              messageStatus="seen"
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample received message with no message status"
+              time="3:14pm"
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample received message with no message status (dark mode)"
+              time="3:14pm"
+              darkmode
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample sent message"
+              time="3:14pm"
+              sent
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Sample sent message (Dark mode)"
+              time="3:14pm"
+              sent
+              darkmode
+            />
+          </div>
+        </div>
         <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
 
