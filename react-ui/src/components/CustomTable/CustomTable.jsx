@@ -17,10 +17,10 @@ const CustomTable = (props: any) => {
       return props?.data?.map(data => {
         return (
           <tr className={styles.tableHeaders}>
-            <td className={styles.tableHeader}>{data.name}</td>
-            <td className={styles.tableHeader}>{data.type}</td>
-            <td className={styles.tableHeader}>{data.defaultValue}</td>
-            <td className={styles.tableHeader}>{data.description}</td>
+            <td className={styles.tableData}>{data.name}</td>
+            <td className={styles.tableData}>{data.type}</td>
+            <td className={styles.tableData}>{data.defaultValue}</td>
+            <td className={styles.tableData}>{data.description}</td>
           </tr>
         );
       });
@@ -28,8 +28,8 @@ const CustomTable = (props: any) => {
       return props?.data?.map(data => {
         return (
           <tr className={styles.tableHeaders}>
-            <td className={styles.tableHeader}>{data.name}</td>
-            <td className={styles.tableHeader}>{data.description}</td>
+            <td className={styles.tableData}>{data.name}</td>
+            <td className={styles.tableData}>{data.description}</td>
           </tr>
         );
       });

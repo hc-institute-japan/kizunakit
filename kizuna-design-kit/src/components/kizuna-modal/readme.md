@@ -10,7 +10,7 @@
 | Property      | Attribute     | Description | Type                      | Default     |
 | ------------- | ------------- | ----------- | ------------------------- | ----------- |
 | `classes`     | --            |             | `{ [key: string]: any; }` | `undefined` |
-| `closeIcon`   | --            |             | `Element`                 | `undefined` |
+| `closeIcon`   | `close-icon`  |             | `string`                  | `undefined` |
 | `onClose`     | --            |             | `Function`                | `undefined` |
 | `open`        | `open`        |             | `any`                     | `undefined` |
 | `transparent` | `transparent` |             | `boolean`                 | `false`     |

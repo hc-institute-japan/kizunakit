@@ -4,11 +4,27 @@
 }
 
 .tableHeaders {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
 }
 
+.tableData,
 .tableHeader {
   flex: 1;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
+  text-align: center;
+  color: var(--secondary-text);
+  font-weight: 300;
+  padding: 0.5rem;
+}
+
+.tableHeader {
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-bottom-color: var(--secondary-text);
+}
+
+.tableHeader {
+  color: var(--primary-text);
+  font-weight: 400;
 }
