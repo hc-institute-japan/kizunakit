@@ -143,6 +143,14 @@ const ButtonsPage = () => {
           <KizunaDivider classes={{ divider: styles.dividerMargin }} />
 
           <h1 className={styles.title}>EXAMPLE</h1>
+
+          <code>{`<KizunaButton
+                    type="primary"
+                    text="Custom Styles"
+                    classes={{
+                      btnWrapper: styles.customButton,
+                    }}
+                  />`}</code>
         </div>
       )}
     </div>
