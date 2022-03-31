@@ -29,7 +29,7 @@
   font-weight: 400;
 }
 
-.tableData:nth-child(2) {
+.highlightedTableData {
   color: var(--primary);
   font-weight: 500;
 }

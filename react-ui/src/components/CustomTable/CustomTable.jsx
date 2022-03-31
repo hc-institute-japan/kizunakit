@@ -18,7 +18,11 @@ const CustomTable = (props: any) => {
         return (
           <tr className={styles.tableHeaders}>
             <td className={styles.tableData}>{data.name}</td>
-            <td className={styles.tableData}>{data.type}</td>
+            <td
+              className={`${styles.tableData} ${styles.highlightedTableData}`}
+            >
+              {data.type}
+            </td>
             <td className={styles.tableData}>{data.defaultValue}</td>
             <td className={styles.tableData}>{data.description}</td>
           </tr>

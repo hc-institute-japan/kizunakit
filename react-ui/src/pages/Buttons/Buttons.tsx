@@ -15,26 +15,33 @@ const ButtonsPage = () => {
       name: 'type',
       type: "'primary' | 'secondary'",
       defaultValue: '',
-      description: 'setsetset',
+      description: 'This sets the deafult appearance of the button.',
     },
     {
       name: 'icon',
       type: 'string',
       defaultValue: '',
-      description: 'testse',
+      description:
+        '[OPTIONAL] When provided, an icon will be visible beside the button text.',
     },
-    { name: 'text', type: 'string', defaultValue: '', description: '' },
+    {
+      name: 'text',
+      type: 'string',
+      defaultValue: '',
+      description: 'The text of the button.',
+    },
     {
       name: 'disabled',
       type: 'boolean',
       defaultValue: 'false',
-      description: '',
+      description: 'The disabled state of the button.',
     },
     {
       name: 'classes',
       type: 'object',
       defaultValue: '',
-      description: '',
+      description:
+        'A object of custom class names of the component. Please refer to CSS tab for more information.',
     },
     {
       name: 'handleOnClick',
@@ -46,11 +53,10 @@ const ButtonsPage = () => {
 
   const CSS_DATA = [
     {
-      name: 'name1',
-      description: 'setsetset',
+      name: 'btnWrapper',
+      description: 'Overides the styling for the main wrapper of the button',
     },
-    { name: 'name2', description: 'testse' },
-    { name: 'name3', type: 'boolean', description: '' },
+    { name: 'icon', description: 'Overides the styling for the icon wrapper' },
   ];
 
   return (
@@ -145,6 +151,50 @@ const ButtonsPage = () => {
               </div>
             </div>
           </div>
+          <KizunaDivider classes={{ divider: styles.dividerMargin }} />
+          <h1 className={styles.title}>EXAMPLE</h1>
+          <code>{`<KizunaButton type="primary" text="Primary Button" />`}</code>{' '}
+          <br />
+          <code>{`<KizunaButton type="secondary" text="Secondary Button" />`}</code>{' '}
+          <br />
+          <code>{`                  <KizunaButton
+                    type="primary"
+                    text="Primary "
+                    icon={'addContact'}
+                  />`}</code>{' '}
+          <br />
+          <code>{`                  <KizunaButton
+                    type="secondary"
+                    text="Secondary "
+                    icon={'addContact'}
+                  />`}</code>{' '}
+          <br />
+          <code>{`<KizunaButton type="primary" text="Disabled" disabled />`}</code>{' '}
+          <br />
+          <code>{`<KizunaButton type="secondary" text="Disabled" disabled />`}</code>{' '}
+          <br />
+          <code>{`                  <KizunaButton
+                    type="primary"
+                    text="Disabled"
+                    disabled
+                    icon={'addContact'}
+                  />`}</code>{' '}
+          <br />
+          <code>{`                  <KizunaButton
+                    type="secondary"
+                    text="Disabled"
+                    disabled
+                    icon={'addContact'}
+                  />`}</code>{' '}
+          <br />
+          <code>{`                  <KizunaButton
+                    type="primary"
+                    text="Custom Styles"
+                    classes={{
+                      btnWrapper: styles.customButton,
+                    }}
+                  />`}</code>{' '}
+          <br />
         </div>
       )}
       {selected === 'api' && (
@@ -159,16 +209,21 @@ const ButtonsPage = () => {
           <h1 className={styles.title}>CSS</h1>
           <p>Use these class names to override styling</p>
           <CustomTable type="CSS" data={CSS_DATA} />
-
           <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-
           <h1 className={styles.title}>EXAMPLE</h1>
-
           <code>{`<KizunaButton
                     type="primary"
                     text="Custom Styles"
                     classes={{
                       btnWrapper: styles.customButton,
+                    }}
+                  />`}</code>{' '}
+          <br />
+          <code>{`<KizunaButton
+                    type="primary"
+                    text="Custom Styles"
+                    classes={{
+                      icon: styles.customIcon,
                     }}
                   />`}</code>
         </div>
