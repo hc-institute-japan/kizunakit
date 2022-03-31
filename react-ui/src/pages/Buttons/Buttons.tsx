@@ -1,8 +1,12 @@
 import { KizunaButton } from 'kizuna-react-kit';
 import styles from './Buttons.module.css';
 import CustomTable from '../../components/CustomTable/CustomTable';
+import CustomTabs from '../../components/Tabs/Tabs';
+import { useState } from 'react';
 
 const ButtonsPage = () => {
+  const [selected, setSelected] = useState('examples');
+
   const API_DATA = [
     {
       name: 'name1',
@@ -28,7 +32,7 @@ const ButtonsPage = () => {
     <div>
       <h1>BUTTONS PAGE </h1>
 
-      <hr />
+      <CustomTabs value={selected} onClickHandler={setSelected} />
 
       <div>
         <h3>Primary button</h3>
