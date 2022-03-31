@@ -12,14 +12,36 @@ const ButtonsPage = () => {
 
   const API_DATA = [
     {
-      name: 'name1',
-      type: 'string',
+      name: 'type',
+      type: "'primary' | 'secondary'",
       defaultValue: '',
       description: 'setsetset',
     },
-    { name: 'name2', type: 'string', defaultValue: '', description: 'testse' },
-    { name: 'name3', type: 'boolean', defaultValue: '', description: '' },
-    { name: 'name4', type: 'object', defaultValue: '', description: '' },
+    {
+      name: 'icon',
+      type: 'string',
+      defaultValue: '',
+      description: 'testse',
+    },
+    { name: 'text', type: 'string', defaultValue: '', description: '' },
+    {
+      name: 'disabled',
+      type: 'boolean',
+      defaultValue: 'false',
+      description: '',
+    },
+    {
+      name: 'classes',
+      type: 'object',
+      defaultValue: '',
+      description: '',
+    },
+    {
+      name: 'handleOnClick',
+      type: 'function',
+      defaultValue: '',
+      description: '',
+    },
   ];
 
   const CSS_DATA = [

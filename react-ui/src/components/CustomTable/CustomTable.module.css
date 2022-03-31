@@ -28,3 +28,8 @@
   color: var(--primary-text);
   font-weight: 400;
 }
+
+.tableData:nth-child(2) {
+  color: var(--primary);
+  font-weight: 500;
+}
