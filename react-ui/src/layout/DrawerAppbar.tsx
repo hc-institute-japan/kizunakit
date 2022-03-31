@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import { Link } from 'react-router-dom';
+import Toolbar from '@mui/material/Toolbar';
 import styles from './DrawerAppbar.module.css';
 import AppbarComponent from '../components/Appbar/Appbar';
 import DrawerComponent from '../components/Drawer/Drawer';
@@ -46,6 +47,7 @@ const ResponsiveDrawer = (props: any) => {
             width: { sm: `calc(100% - ${drawerWidth}px)` },
           }}
         >
+          {/* <Toolbar /> */}
           {props?.children}
         </Box>
       </Box>
