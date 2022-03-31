@@ -11,8 +11,9 @@
 | --------------- | ---------- | ----------- | ------------------------- | ------------------ |
 | `classes`       | --         |             | `{ [key: string]: any; }` | `undefined`        |
 | `disabled`      | `disabled` |             | `boolean`                 | `undefined`        |
+| `divider`       | `divider`  |             | `boolean`                 | `undefined`        |
 | `handleOnClick` | --         |             | `Function`                | `undefined`        |
-| `icon`          | `icon`     |             | `string`                  | `undefined`        |
+| `icon`          | --         |             | `Element`                 | `undefined`        |
 | `text`          | `text`     |             | `string`                  | `'List Item Text'` |
 | `type`          | `type`     |             | `string`                  | `undefined`        |
 
@@ -21,12 +22,17 @@
 
 ### Used by
 
- - [kizuna-popover](../kizuna-popover)
+ - [kizuna-app](../App)
+
+### Depends on
+
+- [kizuna-divider](../kizuna-divider)
 
 ### Graph
 ```mermaid
 graph TD;
-  kizuna-popover --> kizuna-list-item
+  kizuna-list-item --> kizuna-divider
+  kizuna-app --> kizuna-list-item
   style kizuna-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -12,10 +12,25 @@
 | `classes`       | --         |             | `{ [key: string]: any; }` | `undefined`     |
 | `disabled`      | `disabled` |             | `boolean`                 | `undefined`     |
 | `handleOnClick` | --         |             | `Function`                | `undefined`     |
-| `icon`          | `icon`     |             | `string`                  | `undefined`     |
+| `icon`          | --         |             | `Element`                 | `undefined`     |
 | `text`          | `text`     |             | `string`                  | `'Button Text'` |
 | `type`          | `type`     |             | `string`                  | `undefined`     |
 
+
+## Dependencies
+
+### Used by
+
+ - [kizuna-app](../App)
+ - [kizuna-calendar](../kizuna-calendar)
+
+### Graph
+```mermaid
+graph TD;
+  kizuna-app --> kizuna-button
+  kizuna-calendar --> kizuna-button
+  style kizuna-button fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

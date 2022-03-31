@@ -1,4 +1,4 @@
-# kizuna-toggle-button
+# kizuna-message-react
 
 
 
@@ -9,9 +9,10 @@
 
 | Property   | Attribute  | Description | Type                      | Default     |
 | ---------- | ---------- | ----------- | ------------------------- | ----------- |
-| `checked`  | `checked`  |             | `boolean`                 | `undefined` |
 | `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
-| `disabled` | `disabled` |             | `boolean`                 | `undefined` |
+| `count`    | --         |             | `Number`                  | `undefined` |
+| `darkmode` | `darkmode` |             | `boolean`                 | `undefined` |
+| `emoji`    | --         |             | `Element`                 | `undefined` |
 
 
 ## Dependencies
@@ -19,12 +20,14 @@
 ### Used by
 
  - [kizuna-app](../App)
+ - [kizuna-message-box](../kizuna-message-box)
 
 ### Graph
 ```mermaid
 graph TD;
-  kizuna-app --> kizuna-toggle-button
-  style kizuna-toggle-button fill:#f9f,stroke:#333,stroke-width:4px
+  kizuna-app --> kizuna-message-react
+  kizuna-message-box --> kizuna-message-react
+  style kizuna-message-react fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -7,22 +7,23 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type      | Default     |
-| ------------ | ------------- | ----------- | --------- | ----------- |
-| `buttonText` | `button-text` |             | `string`  | `'test'`    |
-| `darkmode`   | `darkmode`    |             | `boolean` | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `darkmode` | `darkmode` |             | `boolean` | `undefined` |
+| `open`     | `open`     |             | `boolean` | `false`     |
+| `position` | `position` |             | `string`  | `undefined` |
 
 
 ## Dependencies
 
-### Depends on
+### Used by
 
-- [kizuna-list-item](../kizuna-list-item)
+ - [kizuna-app](../App)
 
 ### Graph
 ```mermaid
 graph TD;
-  kizuna-popover --> kizuna-list-item
+  kizuna-app --> kizuna-popover
   style kizuna-popover fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
