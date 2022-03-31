@@ -13,7 +13,7 @@
 | `disabled`      | `disabled` |             | `boolean`                 | `undefined`        |
 | `divider`       | `divider`  |             | `boolean`                 | `undefined`        |
 | `handleOnClick` | --         |             | `Function`                | `undefined`        |
-| `icon`          | --         |             | `Element`                 | `undefined`        |
+| `icon`          | `icon`     |             | `string`                  | `undefined`        |
 | `text`          | `text`     |             | `string`                  | `'List Item Text'` |
 | `type`          | `type`     |             | `string`                  | `undefined`        |
 
@@ -26,11 +26,13 @@
 
 ### Depends on
 
+- [kizuna-icon](../kizuna-icon)
 - [kizuna-divider](../kizuna-divider)
 
 ### Graph
 ```mermaid
 graph TD;
+  kizuna-list-item --> kizuna-icon
   kizuna-list-item --> kizuna-divider
   kizuna-app --> kizuna-list-item
   style kizuna-list-item fill:#f9f,stroke:#333,stroke-width:4px

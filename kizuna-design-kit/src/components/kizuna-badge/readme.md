@@ -10,7 +10,7 @@
 | Property  | Attribute | Description | Type                      | Default     |
 | --------- | --------- | ----------- | ------------------------- | ----------- |
 | `classes` | --        |             | `{ [key: string]: any; }` | `undefined` |
-| `icon`    | --        |             | `Element`                 | `undefined` |
+| `icon`    | `icon`    |             | `string`                  | `undefined` |
 | `text`    | `text`    |             | `string`                  | `undefined` |
 
 
@@ -20,9 +20,14 @@
 
  - [kizuna-app](../App)
 
+### Depends on
+
+- [kizuna-icon](../kizuna-icon)
+
 ### Graph
 ```mermaid
 graph TD;
+  kizuna-badge --> kizuna-icon
   kizuna-app --> kizuna-badge
   style kizuna-badge fill:#f9f,stroke:#333,stroke-width:4px
 ```

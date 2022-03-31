@@ -34,6 +34,7 @@
 graph TD;
   kizuna-message-box --> kizuna-icon
   kizuna-message-box --> kizuna-message-react
+  kizuna-message-react --> kizuna-icon
   kizuna-app --> kizuna-message-box
   style kizuna-message-box fill:#f9f,stroke:#333,stroke-width:4px
 ```
