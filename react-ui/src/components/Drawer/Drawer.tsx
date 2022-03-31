@@ -9,8 +9,6 @@ const DrawerComponent = (props: any) => {
 
   const drawerContent = (
     <div>
-      <p>Kizuna Design System</p>
-      {/* <Toolbar /> */}
       <Divider />
 
       <div className={styles.drawerListItems}>
@@ -55,6 +53,7 @@ const DrawerComponent = (props: any) => {
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: drawerWidth,
+            top: 'unset',
           },
         }}
       >
@@ -67,6 +66,7 @@ const DrawerComponent = (props: any) => {
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: drawerWidth,
+            top: 'unset',
           },
         }}
         open
