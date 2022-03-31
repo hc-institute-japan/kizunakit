@@ -13,11 +13,13 @@
   min-width: 150px;
   display: flex;
   justify-content: space-around;
+  top: -50px;
 }
 
 .format {
   text-align: center;
   padding: 2px;
+  cursor: pointer;
 }
 
 .format-selected {
@@ -27,4 +29,17 @@
 
 .format-selected .icon-container svg path {
   fill: white;
+}
+
+.text-editor-left-align {
+  left: 0;
+}
+
+.text-editor-right-align {
+  right: 0;
+}
+
+.text-editor-center-align {
+  left: 50%;
+  transform: translateX(-50%);
 }

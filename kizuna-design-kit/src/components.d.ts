@@ -103,8 +103,10 @@ export namespace Components {
     }
     interface KizunaTextEditor {
         "darkmode": boolean;
+        "onChange": Function;
         "open": boolean;
         "position": string;
+        "selected": string;
     }
     interface KizunaTextbox {
         "align": string;
@@ -348,8 +350,10 @@ declare namespace LocalJSX {
     }
     interface KizunaTextEditor {
         "darkmode"?: boolean;
+        "onChange"?: Function;
         "open"?: boolean;
         "position"?: string;
+        "selected"?: string;
     }
     interface KizunaTextbox {
         "align"?: string;

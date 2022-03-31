@@ -94,6 +94,9 @@ export class App {
             ></kizuna-button>
             <kizuna-text-editor
               open={this['open7Popover']}
+              selected="underline"
+              position="center"
+              onChange={data => console.log({ activeFormat: data })}
             ></kizuna-text-editor>
           </div>
         </div>
