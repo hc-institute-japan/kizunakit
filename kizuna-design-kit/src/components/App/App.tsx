@@ -84,6 +84,11 @@ export class App {
   render() {
     return (
       <div>
+        <kizuna-button
+          type="primary"
+          text="Label"
+          onClick={() => alert('handle click here')}
+        ></kizuna-button>
         <div class="wrapper">
           <h2 class="title">Text Editor</h2>
           <div class="popoverToggleButtonContainer">

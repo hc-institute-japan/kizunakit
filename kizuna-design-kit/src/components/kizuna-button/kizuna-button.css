@@ -2,9 +2,7 @@
   background-color: var(--white);
   padding: 5px 20px;
   height: 36px;
-  /* min-height: 32px; */
-  width: 100%;
-  min-width: 120px; /* for checking if needed */
+  min-width: 120px;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 400;

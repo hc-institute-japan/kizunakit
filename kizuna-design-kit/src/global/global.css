@@ -132,7 +132,7 @@ th {
 
 /* For toggle buttons */
 .popoverToggleButtonContainer {
-  width: 450px;
+  width: fit-content;
   position: relative;
 }
 
