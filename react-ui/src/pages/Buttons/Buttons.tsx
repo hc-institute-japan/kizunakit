@@ -160,7 +160,17 @@ const ButtonsPage = () => {
           <p>Use these class names to override styling</p>
           <CustomTable type="CSS" data={CSS_DATA} />
 
-          <h1 className={styles.title}>Example</h1>
+          <KizunaDivider classes={{ divider: styles.dividerMargin }} />
+
+          <h1 className={styles.title}>EXAMPLE</h1>
+
+          <code>{`<KizunaButton
+                    type="primary"
+                    text="Custom Styles"
+                    classes={{
+                      btnWrapper: styles.customButton,
+                    }}
+                  />`}</code>
         </div>
       )}
     </div>
