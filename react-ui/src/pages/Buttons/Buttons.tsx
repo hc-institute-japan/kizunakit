@@ -33,114 +33,118 @@ const ButtonsPage = () => {
 
   return (
     <div className={styles.buttonsPage}>
-      <div className={styles.buttonsExampleContainer}>
-        <h1 className={styles.title}>Buttons</h1>{' '}
-        <CustomTabs value={selected} onClickHandler={setSelected} />
-        <div className={styles.buttonsContainer}>
-          <div className={styles.wrapper}>
-            <h3>Default</h3>
-            <div className={styles.defaultContainer}>
-              <div>
-                <h4 className={styles.componentLabel}>Primary </h4>
-                <KizunaButton type="primary" text="Primary Button" />
+      <h1 className={styles.title}>Buttons</h1>{' '}
+      <CustomTabs value={selected} onClickHandler={setSelected} />
+      {selected === 'examples' && (
+        <div className={styles.buttonsExampleContainer}>
+          <div className={styles.buttonsContainer}>
+            <div className={styles.wrapper}>
+              <h3>Default</h3>
+              <div className={styles.defaultContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Primary </h4>
+                  <KizunaButton type="primary" text="Primary Button" />
+                </div>
+                <div>
+                  <h4 className={styles.componentLabel}>Secondary </h4>
+                  <KizunaButton type="secondary" text="Secondary Button" />
+                </div>
               </div>
-              <div>
-                <h4 className={styles.componentLabel}>Secondary </h4>
-                <KizunaButton type="secondary" text="Secondary Button" />
+
+              <h3 className={styles.labelwithIcon}>Button with Icon</h3>
+              <div className={styles.defaultContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Primary </h4>
+                  <KizunaButton
+                    type="primary"
+                    text="Primary "
+                    icon={'addContact'}
+                  />
+                </div>
+                <div>
+                  <h4 className={styles.componentLabel}>Secondary </h4>
+                  <KizunaButton
+                    type="secondary"
+                    text="Secondary "
+                    icon={'addContact'}
+                  />
+                </div>
               </div>
             </div>
 
-            <h3 className={styles.labelwithIcon}>Button with Icon</h3>
-            <div className={styles.defaultContainer}>
-              <div>
-                <h4 className={styles.componentLabel}>Primary </h4>
-                <KizunaButton
-                  type="primary"
-                  text="Primary "
-                  icon={'addContact'}
-                />
+            <div className={styles.wrapper}>
+              <h3>Disabled</h3>
+              <div className={styles.disabledContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Primary </h4>
+                  <KizunaButton type="primary" text="Disabled" disabled />
+                </div>
+                <div>
+                  <h4 className={styles.componentLabel}>Secondary </h4>
+                  <KizunaButton type="secondary" text="Disabled" disabled />
+                </div>
               </div>
-              <div>
-                <h4 className={styles.componentLabel}>Secondary </h4>
-                <KizunaButton
-                  type="secondary"
-                  text="Secondary "
-                  icon={'addContact'}
-                />
+              <h3 className={styles.labelwithIcon}>Disabled with Icon</h3>
+              <div className={styles.defaultContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Primary </h4>
+                  <KizunaButton
+                    type="primary"
+                    text="Disabled"
+                    disabled
+                    icon={'addContact'}
+                  />
+                </div>
+                <div>
+                  <h4 className={styles.componentLabel}>Secondary </h4>
+                  <KizunaButton
+                    type="secondary"
+                    text="Disabled"
+                    disabled
+                    icon={'addContact'}
+                  />
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className={styles.wrapper}>
-            <h3>Disabled</h3>
-            <div className={styles.disabledContainer}>
-              <div>
-                <h4 className={styles.componentLabel}>Primary </h4>
-                <KizunaButton type="primary" text="Disabled" disabled />
-              </div>
-              <div>
-                <h4 className={styles.componentLabel}>Secondary </h4>
-                <KizunaButton type="secondary" text="Disabled" disabled />
-              </div>
-            </div>
-            <h3 className={styles.labelwithIcon}>Disabled with Icon</h3>
-            <div className={styles.defaultContainer}>
-              <div>
-                <h4 className={styles.componentLabel}>Primary </h4>
-                <KizunaButton
-                  type="primary"
-                  text="Disabled"
-                  disabled
-                  icon={'addContact'}
-                />
-              </div>
-              <div>
-                <h4 className={styles.componentLabel}>Secondary </h4>
-                <KizunaButton
-                  type="secondary"
-                  text="Disabled"
-                  disabled
-                  icon={'addContact'}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.wrapper}>
-            <h3>Button with Custom Styles</h3>
-            <div className={styles.customStyleContainer}>
-              <div>
-                <h4 className={styles.componentLabel}>Custom Style </h4>
-                <KizunaButton
-                  type="primary"
-                  text="Custom Styles"
-                  classes={{
-                    btnWrapper: styles.customButton,
-                  }}
-                />
+            <div className={styles.wrapper}>
+              <h3>Button with Custom Styles</h3>
+              <div className={styles.customStyleContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Custom Style </h4>
+                  <KizunaButton
+                    type="primary"
+                    text="Custom Styles"
+                    classes={{
+                      btnWrapper: styles.customButton,
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
+      )}
       <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-
-      <div className={styles.apiContainer}>
-        <h1 className={styles.title}>API</h1>
-        <p>Use these Props to access features of the component</p>
-        <CustomTable type="API" data={API_DATA} />
-      </div>
-
+      {selected === 'api' && (
+        <div className={styles.apiContainer}>
+          <h1 className={styles.title}>API</h1>
+          <p>Use these Props to access features of the component</p>
+          <CustomTable type="API" data={API_DATA} />
+        </div>
+      )}
       <KizunaDivider classes={{ divider: styles.dividerMargin }} />
+      {selected === 'css' && (
+        <div>
+          <h1 className={styles.title}>CSS</h1>
+          <p>Use these class names to override styling</p>
+          <CustomTable type="CSS" data={CSS_DATA} />
 
-      <h1 className={styles.title}>CSS</h1>
-      <p>Use these class names to override styling</p>
-      <CustomTable type="CSS" data={CSS_DATA} />
+          <KizunaDivider classes={{ divider: styles.dividerMargin }} />
 
-      <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-
-      <h1 className={styles.title}>EXAMPLE</h1>
+          <h1 className={styles.title}>EXAMPLE</h1>
+        </div>
+      )}
     </div>
   );
 };
