@@ -1,4 +1,4 @@
-import addcontact from './add-participant.svg';
+import addcontact from './add-contact.svg';
 import add from './add.svg';
 import attach from './attach.svg';
 import blocked from './blocked.svg';

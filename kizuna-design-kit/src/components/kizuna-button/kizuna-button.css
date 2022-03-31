@@ -57,6 +57,14 @@
   margin: 5px;
 }
 
+.btn-icon .icon-container svg {
+  width: 18px;
+}
+
+.btn-icon .icon-container svg path {
+  stroke-width: 3;
+}
+
 .btn-primary .btn-icon .icon-container svg path {
   stroke: var(--white);
 }

@@ -444,7 +444,7 @@ export class App {
                     type="primary"
                     text="Label"
                     onClick={() => alert('handle click here')}
-                    icon={<kizuna-icon name="settings" />}
+                    icon={<kizuna-icon name="addContact" />}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -480,7 +480,7 @@ export class App {
                     type="secondary"
                     text="Label"
                     onClick={() => alert('handle click here')}
-                    icon={<kizuna-icon name="settings" />}
+                    icon={<kizuna-icon name="addContact" />}
                   ></kizuna-button>
                 </td>
                 <td>
