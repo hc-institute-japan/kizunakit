@@ -38,6 +38,7 @@ import micoff from './mic-off.svg';
 import pin from './pin.svg';
 import pin2 from './pin2.svg';
 import remove from './remove.svg';
+import removecontact from './remove-contact.svg';
 import reply from './reply.svg';
 import rightarrow from './right-arrow.svg';
 import right from './right.svg';
@@ -90,6 +91,7 @@ const icons = {
   pin,
   pin2,
   remove,
+  removecontact,
   reply,
   right,
   rightarrow,
