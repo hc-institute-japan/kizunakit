@@ -21,14 +21,14 @@ export namespace Components {
     }
     interface KizunaBadge {
         "classes": { [key: string]: any };
-        "icon": Element;
+        "icon": string;
         "text": string;
     }
     interface KizunaButton {
         "classes": { [key: string]: any };
         "disabled": boolean;
         "handleOnClick": Function;
-        "icon": Element;
+        "icon": string;
         "text": string;
         "type": string;
     }
@@ -61,7 +61,7 @@ export namespace Components {
         "disabled": boolean;
         "divider": boolean;
         "handleOnClick": Function;
-        "icon": Element;
+        "icon": string;
         "text": string;
         "type": string;
     }
@@ -78,11 +78,11 @@ export namespace Components {
         "classes": { [key: string]: any };
         "count": Number;
         "darkmode": boolean;
-        "emoji": Element;
+        "emoji": string;
     }
     interface KizunaModal {
         "classes": { [key: string]: any };
-        "closeIcon": Element;
+        "closeIcon": string;
         "onClose": Function;
         "open": any;
         "transparent": boolean;
@@ -266,14 +266,14 @@ declare namespace LocalJSX {
     }
     interface KizunaBadge {
         "classes"?: { [key: string]: any };
-        "icon"?: Element;
+        "icon"?: string;
         "text"?: string;
     }
     interface KizunaButton {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "handleOnClick"?: Function;
-        "icon"?: Element;
+        "icon"?: string;
         "text"?: string;
         "type"?: string;
     }
@@ -308,7 +308,7 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "divider"?: boolean;
         "handleOnClick"?: Function;
-        "icon"?: Element;
+        "icon"?: string;
         "text"?: string;
         "type"?: string;
     }
@@ -325,11 +325,11 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "count"?: Number;
         "darkmode"?: boolean;
-        "emoji"?: Element;
+        "emoji"?: string;
     }
     interface KizunaModal {
         "classes"?: { [key: string]: any };
-        "closeIcon"?: Element;
+        "closeIcon"?: string;
         "onClose"?: Function;
         "open"?: any;
         "transparent"?: boolean;

@@ -64,7 +64,7 @@ export class KizunaMessageBox {
       return (
         <span key={index} class="reaction-container">
           <kizuna-message-react
-            emoji={<kizuna-icon name={reaction.icon} />}
+            emoji={reaction.icon}
             count={reaction.count}
             darkmode={this.darkmode}
           />

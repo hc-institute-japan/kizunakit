@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 export class KizunaButton {
   @Prop() type: string;
   @Prop() disabled: boolean;
-  @Prop() icon: Element;
+  @Prop() icon: string;
   @Prop() text: string = 'Button Text';
   @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
@@ -45,7 +45,9 @@ export class KizunaButton {
         onClick={() => this.handleOnClick}
       >
         {this.icon && (
-          <span class={`btn-icon ${this.classes?.icon}`}>{this?.icon}</span>
+          <span class={`btn-icon ${this.classes?.icon}`}>
+            <kizuna-icon name={this.icon}></kizuna-icon>
+          </span>
         )}
         {this.text}
       </button>

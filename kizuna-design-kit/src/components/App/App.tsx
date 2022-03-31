@@ -16,23 +16,23 @@ export class App {
 
   popoverListItems = [
     {
-      icon: <kizuna-icon name="settings"></kizuna-icon>,
+      icon: 'settings',
       name: 'Settings',
     },
     {
-      icon: <kizuna-icon name="trash"></kizuna-icon>,
+      icon: 'trash',
       name: 'Message Request',
     },
     {
-      icon: <kizuna-icon name="calendar"></kizuna-icon>,
+      icon: 'calendar',
       name: 'Blocked',
     },
     {
-      icon: <kizuna-icon name="emoticon"></kizuna-icon>,
+      icon: 'emoticon',
       name: 'Report an issue',
     },
     {
-      icon: <kizuna-icon name="settings"></kizuna-icon>,
+      icon: 'settings',
       name: 'Logout',
     },
   ];
@@ -182,20 +182,13 @@ export class App {
         </div>{' '}
         <div class="wrapper">
           <h2 class="title">React Message Emoji</h2>
-          <kizuna-message-react
-            emoji={<kizuna-icon name="heart" />}
-            count={3}
-          />
+          <kizuna-message-react emoji={'heart'} count={3} />
           <br />
-          <kizuna-message-react emoji={<kizuna-icon name="heart" />} />
+          <kizuna-message-react emoji={'heart'} />
           <br />
-          <kizuna-message-react
-            emoji={<kizuna-icon name="like" />}
-            count={7}
-            darkmode
-          />
+          <kizuna-message-react emoji={'like'} count={7} darkmode />
           <br />
-          <kizuna-message-react emoji={<kizuna-icon name="like" />} darkmode />
+          <kizuna-message-react emoji={'like'} darkmode />
         </div>
         <div class="wrapper modalContainer">
           <h2 class="title">Modal</h2>
@@ -209,7 +202,7 @@ export class App {
           <kizuna-modal
             open={this.openModal}
             onClose={this._handleCloseModal}
-            closeIcon={<kizuna-icon name="close" />}
+            closeIcon={'close'}
           >
             <h1>Hello world!</h1>
             <div>This is a modal!</div>
@@ -217,13 +210,10 @@ export class App {
         </div>
         <div class="wrapper">
           <h2 class="title">Badge</h2>
-          <kizuna-badge
-            text="Admin"
-            icon={<kizuna-icon name="circle" />}
-          ></kizuna-badge>
+          <kizuna-badge text="Admin" icon={'circle'}></kizuna-badge>
           <br />
 
-          <kizuna-badge icon={<kizuna-icon name="circle" />}></kizuna-badge>
+          <kizuna-badge icon={'circle'}></kizuna-badge>
         </div>
         <div class="wrapper">
           <h2 class="title">Calendar</h2>
@@ -267,7 +257,7 @@ export class App {
           ></kizuna-list-item>
           <kizuna-list-item
             text="List Item with Icon"
-            icon={<kizuna-icon name="settings" />}
+            icon={'settings'}
           ></kizuna-list-item>
         </div>
         <div>
@@ -460,7 +450,7 @@ export class App {
                     type="primary"
                     text="Label"
                     onClick={() => alert('handle click here')}
-                    icon={<kizuna-icon name="addContact" />}
+                    icon={'addContact'}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -468,7 +458,7 @@ export class App {
                     type="primary"
                     disabled
                     text="Label"
-                    icon={<kizuna-icon name="settings" />}
+                    icon={'addContact'}
                   ></kizuna-button>
                 </td>
               </tr>
@@ -496,7 +486,7 @@ export class App {
                     type="secondary"
                     text="Label"
                     onClick={() => alert('handle click here')}
-                    icon={<kizuna-icon name="addContact" />}
+                    icon={'addContact'}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -504,7 +494,7 @@ export class App {
                     type="secondary"
                     text="Label"
                     disabled
-                    icon={<kizuna-icon name="settings" />}
+                    icon={'addContact'}
                   ></kizuna-button>
                 </td>
               </tr>

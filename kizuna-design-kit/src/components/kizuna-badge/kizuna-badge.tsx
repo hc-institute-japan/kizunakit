@@ -7,13 +7,15 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class KizunaBadge {
   @Prop() text: string;
-  @Prop() icon: Element;
+  @Prop() icon: string;
   @Prop() classes: { [key: string]: any };
   render() {
     return (
       <span class={`badge ${this.classes?.badgeWrapper}`}>
         {this.icon && (
-          <span class={`badge-icon ${this.classes?.icon}`}>{this?.icon}</span>
+          <span class={`badge-icon ${this.classes?.icon}`}>
+            <kizuna-icon name={this.icon}></kizuna-icon>
+          </span>
         )}
         {this.text ? (
           <span class={`text ${this.classes?.text}`}>{this.text}</span>

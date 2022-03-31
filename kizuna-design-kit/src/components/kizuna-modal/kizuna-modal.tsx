@@ -10,7 +10,7 @@ export class MyComponent {
   @Prop() transparent = false;
   @Prop() onClose: Function;
   @Prop() classes: { [key: string]: any };
-  @Prop() closeIcon: Element;
+  @Prop() closeIcon: string;
 
   _handleClose = () => {
     this.open = false;
@@ -33,7 +33,7 @@ export class MyComponent {
             class={`modal-close-icon ${this.classes?.closeIcon}`}
             onClick={this._handleClose}
           >
-            {this.closeIcon || <kizuna-icon name="close" />}
+            {<kizuna-icon name={this.closeIcon || 'close'}></kizuna-icon>}
           </span>
           <div class={`modal-window__content ${this.classes?.modalContent}`}>
             <slot></slot>

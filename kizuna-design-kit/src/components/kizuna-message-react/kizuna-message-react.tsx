@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class KizunaMessageReact {
   @Prop() classes: { [key: string]: any };
-  @Prop() emoji: Element;
+  @Prop() emoji: string;
   @Prop() count: Number;
   @Prop() darkmode: boolean;
   render() {
@@ -19,7 +19,7 @@ export class KizunaMessageReact {
       >
         {this.emoji && (
           <span class={`react-emoji ${this.classes?.emoji}`}>
-            {this?.emoji}
+            <kizuna-icon name={this.emoji}></kizuna-icon>
           </span>
         )}
 
