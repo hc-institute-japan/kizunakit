@@ -159,6 +159,14 @@ export class App {
             <kizuna-message-box
               message="Message box with reactions"
               time="3:14pm"
+              reactionList={this.messageReactItems}
+            />
+          </div>
+
+          <div class="margin-all-side">
+            <kizuna-message-box
+              message="Message box with reactions (dark mode)"
+              time="3:14pm"
               darkmode
               reactionList={this.messageReactItems}
             />
