@@ -22,7 +22,8 @@
 }
 
 .btn-primary:hover,
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn:hover {
   opacity: 0.8;
   cursor: pointer;
 }
