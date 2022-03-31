@@ -1,0 +1,14 @@
+.tableWrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tableHeaders {
+  border: 1px solid red;
+  display: flex;
+}
+
+.tableHeader {
+  flex: 1;
+  border: 1px solid blue;
+}
