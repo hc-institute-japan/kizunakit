@@ -125,7 +125,6 @@ const ButtonsPage = () => {
           </div>
         </div>
       )}
-      <KizunaDivider classes={{ divider: styles.dividerMargin }} />
       {selected === 'api' && (
         <div className={styles.apiContainer}>
           <h1 className={styles.title}>API</h1>
@@ -133,7 +132,6 @@ const ButtonsPage = () => {
           <CustomTable type="API" data={API_DATA} />
         </div>
       )}
-      <KizunaDivider classes={{ divider: styles.dividerMargin }} />
       {selected === 'css' && (
         <div>
           <h1 className={styles.title}>CSS</h1>
