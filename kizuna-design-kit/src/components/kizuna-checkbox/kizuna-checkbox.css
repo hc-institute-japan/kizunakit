@@ -3,9 +3,10 @@
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   cursor: pointer;
-
+  line-height: 2;
+  width: fit-content;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -69,4 +70,8 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.checkbox-container .checkbox-rounded {
+  border-radius: 50%;
 }

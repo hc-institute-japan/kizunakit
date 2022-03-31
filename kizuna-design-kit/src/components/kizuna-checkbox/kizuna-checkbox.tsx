@@ -10,6 +10,7 @@ export class KizunaCheckbox {
   @Prop() value: string;
   @Prop() checked: boolean;
   @Prop() disabled: boolean;
+  @Prop() rounded: boolean;
   @Prop() classes: { [key: string]: any };
 
   render() {
@@ -24,7 +25,11 @@ export class KizunaCheckbox {
           name={this.name}
           value={this.value}
         />
-        <span class={`checkmark ${this.classes?.checkmark}`}></span>
+        <span
+          class={`checkmark ${this.rounded ? 'checkbox-rounded' : ''} ${
+            this.classes?.checkmark
+          }`}
+        ></span>
       </label>
     );
   }

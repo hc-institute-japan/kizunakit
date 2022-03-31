@@ -45,6 +45,7 @@ export namespace Components {
         "classes": { [key: string]: any };
         "disabled": boolean;
         "name": string;
+        "rounded": boolean;
         "value": string;
     }
     interface KizunaDivider {
@@ -289,6 +290,7 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
         "name"?: string;
+        "rounded"?: boolean;
         "value"?: string;
     }
     interface KizunaDivider {

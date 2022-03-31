@@ -511,6 +511,17 @@ export class App {
             name="Charlie Chan"
             checked
           ></kizuna-checkbox>
+          <kizuna-checkbox
+            value="Charlie Chan"
+            name="Charlie Chan"
+            rounded
+          ></kizuna-checkbox>
+          <kizuna-checkbox
+            value="Charlie Chan"
+            name="Charlie Chan"
+            checked
+            rounded
+          ></kizuna-checkbox>
         </div>
         <div class="wrapper">
           <h2 class="title">Avatars</h2>
