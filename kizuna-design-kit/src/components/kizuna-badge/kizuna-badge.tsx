@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'kizuna-badge',
   styleUrl: 'kizuna-badge.css',
-  shadow: true,
+  shadow: false,
 })
 export class KizunaBadge {
   @Prop() text: string;
