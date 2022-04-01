@@ -21,6 +21,7 @@ export namespace Components {
     }
     interface KizunaBadge {
         "classes": { [key: string]: any };
+        "darkmode": boolean;
         "icon": string;
         "text": string;
     }
@@ -266,6 +267,7 @@ declare namespace LocalJSX {
     }
     interface KizunaBadge {
         "classes"?: { [key: string]: any };
+        "darkmode"?: boolean;
         "icon"?: string;
         "text"?: string;
     }

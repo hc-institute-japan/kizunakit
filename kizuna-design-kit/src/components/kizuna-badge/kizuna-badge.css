@@ -19,3 +19,8 @@
 .badge-icon .icon-container svg circle {
   fill: var(--primary);
 }
+
+.badge-dark {
+  background-color: var(--dark-secondary-bg);
+  color: var(--dark-primary-text);
+}

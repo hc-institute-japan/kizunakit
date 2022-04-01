@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property  | Attribute | Description | Type                      | Default     |
-| --------- | --------- | ----------- | ------------------------- | ----------- |
-| `classes` | --        |             | `{ [key: string]: any; }` | `undefined` |
-| `icon`    | `icon`    |             | `string`                  | `undefined` |
-| `text`    | `text`    |             | `string`                  | `undefined` |
+| Property   | Attribute  | Description | Type                      | Default     |
+| ---------- | ---------- | ----------- | ------------------------- | ----------- |
+| `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
+| `darkmode` | `darkmode` |             | `boolean`                 | `undefined` |
+| `icon`     | `icon`     |             | `string`                  | `undefined` |
+| `text`     | `text`     |             | `string`                  | `undefined` |
 
 
 ## Dependencies

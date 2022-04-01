@@ -9,9 +9,14 @@ export class KizunaBadge {
   @Prop() text: string;
   @Prop() icon: string;
   @Prop() classes: { [key: string]: any };
+  @Prop() darkmode: boolean;
   render() {
     return (
-      <span class={`badge ${this.classes?.badgeWrapper}`}>
+      <span
+        class={`badge ${this.darkmode && 'badge-dark'} ${
+          this.classes?.badgeWrapper
+        }`}
+      >
         {this.icon && (
           <span class={`badge-icon ${this.classes?.icon}`}>
             <kizuna-icon name={this.icon}></kizuna-icon>

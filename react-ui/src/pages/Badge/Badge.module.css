@@ -31,7 +31,8 @@
   margin: 1rem 0;
 }
 
-.badgeExamplesContainer .default {
+.badgeExamplesContainer .default,
+.badgeExamplesContainer .darkMode {
   margin-right: 4rem;
 }
 
@@ -48,4 +49,8 @@
 
 .dividerMargin {
   margin: 2rem 0;
+}
+
+.badgePage small {
+  color: var(--secondary-text);
 }

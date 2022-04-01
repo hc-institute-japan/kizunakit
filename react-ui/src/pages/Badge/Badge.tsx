@@ -25,6 +25,13 @@ const Badge = (props: any) => {
     },
 
     {
+      name: 'darkmode',
+      type: 'boolean',
+      defaultValue: '',
+      description: '',
+    },
+
+    {
       name: 'classes',
       type: 'object',
       defaultValue: '',
@@ -57,6 +64,15 @@ const Badge = (props: any) => {
                 <KizunaBadge icon={'heart'} text="Assistant" />
               </div>
 
+              <div className={styles.darkMode}>
+                <h3>Dark Mode</h3>
+                <KizunaBadge icon={'circle'} text="Admin" darkmode />
+                <br />
+                <KizunaBadge icon={'circle'} text="Observer" darkmode />
+                <br />
+                <KizunaBadge icon={'heart'} text="Assistant" darkmode />
+              </div>
+
               <div className={styles.customStyles}>
                 <h3>Custom Styles</h3>
                 <KizunaBadge
@@ -78,9 +94,22 @@ const Badge = (props: any) => {
             <h1 className={styles.title}>Examples</h1>
 
             <div className={styles.codeExampleContainer}>
+              <small>Default</small>
+
               <code>{'<KizunaBadge icon={"circle"} text="Admin" />'}</code>
               <code>{'<KizunaBadge icon={"circle"} text="Observer" />'}</code>
               <code>{'<KizunaBadge icon={"heart"} text="Assistant" />'}</code>
+              <small>Dark Mode</small>
+              <code>
+                {'<KizunaBadge icon={"circle"} text="Admin" /> darkmode'}
+              </code>
+              <code>
+                {'<KizunaBadge icon={"circle"} text="Observer" darkmode />'}
+              </code>
+              <code>
+                {'<KizunaBadge icon={"heart"} text="Assistant" darkmode />'}
+              </code>
+              <small>Custom Styles</small>
               <code>
                 {
                   '<KizunaBadge icon={"circle"} text="Assistant" classes={{ badgeWrapper: styles.customIconColor }}/>'
