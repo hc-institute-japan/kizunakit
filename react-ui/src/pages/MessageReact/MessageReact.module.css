@@ -1,3 +1,7 @@
+.messageReactPage .title {
+  font-weight: 400;
+}
+
 .messageReactExamplesContainer .default,
 .messageReactExamplesContainer .darkMode {
   display: flex;
