@@ -15,13 +15,13 @@ const MessageReact = (props: any) => {
       name: 'emoji',
       type: 'string',
       defaultValue: '',
-      description: '',
+      description: 'Name of the emoji you want to use',
     },
     {
       name: 'count',
       type: 'number',
       defaultValue: '',
-      description: '',
+      description: 'A number of reaction to be displayed',
     },
     {
       name: 'darkmode',
@@ -158,7 +158,11 @@ const MessageReact = (props: any) => {
             <h1 className={styles.title}>Example</h1>
 
             <div className={styles.codeExampleContainer}>
-              <code>{'code here'}</code>
+              <code>
+                {
+                  '<KizunaMessageReact emoji="like" count={10} darkmode  classes={{messageReactWrapper: style.customReactWrapper, emoji: styles.customEmojiIconStyles, count: styles.customCountStyles}}/>'
+                }
+              </code>
               <code>{'code here'}</code>
             </div>
           </div>
