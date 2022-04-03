@@ -1,0 +1,39 @@
+.textboxPage .title {
+  font-weight: 400;
+}
+
+.textboxExamplesContainer h3,
+.textboxExamplesContainer h4 {
+  font-weight: 400;
+}
+
+.textboxExamplesContainer {
+  display: flex;
+}
+
+.textboxExamplesContainer > div:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.textboxExamplesContainer > div {
+  width: 230px;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.textboxPage small {
+  color: var(--secondary-text);
+}
