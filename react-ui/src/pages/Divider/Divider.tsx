@@ -61,11 +61,6 @@ const Divider = (props: any) => {
                   '<KizunaDivider classes={{ divider: styles.dividerMargin }} />'
                 }
               </code>
-              <code>
-                {
-                  '<KizunaBadge text="Success" classes={{ badgeWrapper: styles.customBadge }}/>'
-                }
-              </code>
             </div>
           </div>
         )}
