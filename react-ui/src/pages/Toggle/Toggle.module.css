@@ -1,0 +1,69 @@
+.badgePage .title {
+  font-weight: 400;
+}
+
+.customIconColor svg circle {
+  fill: blue !important;
+}
+
+.customBadge {
+  background-color: green;
+  color: var(--white);
+  padding: 0 5px;
+}
+
+.customText {
+  margin-left: 0 !important;
+}
+
+.customBadge svg circle {
+  fill: pink !important;
+}
+
+.badgeExamplesContainer {
+  display: flex;
+}
+.badgeExamplesContainer h3 {
+  font-weight: 400;
+}
+
+.badgeExamplesContainer .default .badge {
+  margin: 1rem 0;
+}
+
+.badgeExamplesContainer .default,
+.badgeExamplesContainer .darkMode {
+  margin-right: 4rem;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.badgePage small {
+  color: var(--secondary-text);
+}
+
+/* custom styles */
+.customSlider {
+  background-color: #dde8c5;
+}
+
+.customInput:checked + .customSlider {
+  background: #b2ff12;
+}
+
+.customInput:checked + .customSlider:before {
+  background: #16ad00;
+}
