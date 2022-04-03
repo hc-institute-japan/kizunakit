@@ -24,6 +24,8 @@ export class KizunaTextbox {
   @State() inFocus: boolean = false;
   @Element() el: HTMLElement;
 
+  inputElement = document.getElementById(this.id);
+
   componentWillLoad() {
     window.addEventListener(
       'click',
@@ -31,6 +33,7 @@ export class KizunaTextbox {
         const target = e.target as HTMLElement;
         if (!this.el.contains(target)) {
           this.inFocus = false;
+          this.inputElement.blur();
         }
       },
       false,
@@ -65,12 +68,7 @@ export class KizunaTextbox {
   _handleChange = e => {
     this.value = e.target.value;
     this.onChange && this.onChange(this.value);
-    this._focusTextField();
-  };
-
-  _focusTextField = () => {
-    const element = document.getElementById(this.id);
-    element.focus();
+    this.inputElement.focus();
   };
 
   _handleEmoticonClear = () => {

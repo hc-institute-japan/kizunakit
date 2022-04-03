@@ -7,14 +7,16 @@
 
 ## Properties
 
-| Property       | Attribute        | Description | Type       | Default                                                                                                                                                                           |
-| -------------- | ---------------- | ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dayNames`     | --               |             | `string[]` | `['M', 'T', 'W', 'Th', 'F', 'Sa', 'Su']`                                                                                                                                          |
-| `monthNames`   | --               |             | `string[]` | `[     'January',     'February',     'March',     'April',     'May',     'June',     'July',     'August',     'September',     'October',     'November',     'December',   ]` |
-| `onChange`     | --               |             | `Function` | `undefined`                                                                                                                                                                       |
-| `position`     | `position`       |             | `string`   | `undefined`                                                                                                                                                                       |
-| `showFillDays` | `show-fill-days` |             | `boolean`  | `true`                                                                                                                                                                            |
-| `value`        | `value`          |             | `string`   | `undefined`                                                                                                                                                                       |
+| Property       | Attribute        | Description | Type                      | Default                                                                                                                                                                           |
+| -------------- | ---------------- | ----------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `classes`      | --               |             | `{ [key: string]: any; }` | `undefined`                                                                                                                                                                       |
+| `darkmode`     | `darkmode`       |             | `boolean`                 | `false`                                                                                                                                                                           |
+| `dayNames`     | --               |             | `string[]`                | `['M', 'T', 'W', 'Th', 'F', 'Sa', 'Su']`                                                                                                                                          |
+| `monthNames`   | --               |             | `string[]`                | `[     'January',     'February',     'March',     'April',     'May',     'June',     'July',     'August',     'September',     'October',     'November',     'December',   ]` |
+| `onChange`     | --               |             | `Function`                | `undefined`                                                                                                                                                                       |
+| `position`     | `position`       |             | `string`                  | `undefined`                                                                                                                                                                       |
+| `showFillDays` | `show-fill-days` |             | `boolean`                 | `true`                                                                                                                                                                            |
+| `value`        | `value`          |             | `string`                  | `undefined`                                                                                                                                                                       |
 
 
 ## Events
