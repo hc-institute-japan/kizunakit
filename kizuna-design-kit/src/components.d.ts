@@ -88,6 +88,7 @@ export namespace Components {
         "transparent": boolean;
     }
     interface KizunaPopover {
+        "classes": { [key: string]: any };
         "darkmode": boolean;
         "open": boolean;
         "position": string;
@@ -337,6 +338,7 @@ declare namespace LocalJSX {
         "transparent"?: boolean;
     }
     interface KizunaPopover {
+        "classes"?: { [key: string]: any };
         "darkmode"?: boolean;
         "open"?: boolean;
         "position"?: string;

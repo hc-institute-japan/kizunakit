@@ -9,6 +9,7 @@ export class KizunaPopover {
   @Prop() darkmode: boolean;
   @Prop({ mutable: true }) open: boolean = false;
   @Prop() position: string;
+  @Prop() classes: { [key: string]: any };
   // @Element() el: HTMLElement;
 
   // componentWillLoad() {
@@ -44,15 +45,17 @@ export class KizunaPopover {
 
   render() {
     return (
-      <div class={`popoverMainContainer ${!this.open && 'hidden-slot'}`}>
-        <div>
-          <div
-            class={`popoverWrapper ${
-              this.darkmode && 'popoverDarkmode'
-            } ${this._getPositionClassName()} `}
-          >
-            <slot></slot>
-          </div>
+      <div
+        class={`popoverMainContainer ${!this.open && 'hidden-slot'} ${
+          this.classes?.root
+        }`}
+      >
+        <div
+          class={`popoverWrapper ${
+            this.darkmode && 'popoverDarkmode'
+          } ${this._getPositionClassName()} ${this.classes?.contentWrapper}`}
+        >
+          <slot></slot>
         </div>
       </div>
     );

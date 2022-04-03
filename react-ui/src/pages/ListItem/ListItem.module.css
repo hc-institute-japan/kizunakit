@@ -1,5 +1,6 @@
 .popoverContainer {
   position: relative;
+  width: fit-content;
 }
 
 .exampleWrapper {

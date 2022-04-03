@@ -65,7 +65,7 @@ const ListItem = (props: any) => {
   return (
     <>
       <div>
-        <h1 className="title">Icons</h1>
+        <h1 className="title">List Item</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>

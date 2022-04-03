@@ -36,7 +36,7 @@ const Calendar = (props: any) => {
     },
     {
       name: 'position',
-      type: 'string',
+      type: 'left | center | right',
       defaultValue: 'left',
       description: 'Position alignment of the calendar',
     },
