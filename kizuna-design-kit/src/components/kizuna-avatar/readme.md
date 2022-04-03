@@ -16,7 +16,6 @@
 | `rounded`   | `rounded`   |             | `string`                  | `undefined` |
 | `size`      | `size`      |             | `string`                  | `undefined` |
 | `status`    | `status`    |             | `string`                  | `undefined` |
-| `toolkit`   | `toolkit`   |             | `string`                  | `undefined` |
 
 
 ## Dependencies

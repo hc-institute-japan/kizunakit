@@ -17,7 +17,6 @@ export namespace Components {
         "rounded": string;
         "size": string;
         "status": string;
-        "toolkit": string;
     }
     interface KizunaBadge {
         "classes": { [key: string]: any };
@@ -263,7 +262,6 @@ declare namespace LocalJSX {
         "rounded"?: string;
         "size"?: string;
         "status"?: string;
-        "toolkit"?: string;
     }
     interface KizunaBadge {
         "classes"?: { [key: string]: any };

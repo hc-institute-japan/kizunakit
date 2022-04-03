@@ -86,6 +86,7 @@ const Textbox = (props: any) => {
                     name="right"
                     placeholder="Align Right"
                     variant="outlined"
+                    align="right"
                   />
                 </div>
               </div>
