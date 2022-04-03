@@ -6,11 +6,9 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: false,
 })
 export class KizunaTabs {
-  @Prop() name: string;
   @Prop({ mutable: true }) value: string;
   @Prop() darkmode: boolean;
   @Prop() menus: Array<{ [key: string]: string }>;
-  @Prop() disabled: boolean;
   @Prop() classes: { [key: string]: string };
   @Prop() onClick: any;
 
