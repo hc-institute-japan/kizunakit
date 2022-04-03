@@ -14,7 +14,7 @@ const Badge = (props: any) => {
       name: 'text',
       type: 'string',
       defaultValue: '',
-      description: '',
+      description: 'The displayed text of the badge.',
     },
     {
       name: 'icon',
@@ -23,14 +23,12 @@ const Badge = (props: any) => {
       description:
         '[OPTIONAL] When provided, an icon will be visible beside the badge text.',
     },
-
     {
       name: 'darkmode',
       type: 'boolean',
-      defaultValue: '',
-      description: '',
+      defaultValue: 'false',
+      description: 'Set the dark mode of the component',
     },
-
     {
       name: 'classes',
       type: 'object',

@@ -1,0 +1,60 @@
+.calendarExamplesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem 0;
+}
+
+.calendarContainer {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.calendarTitle {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.calendars {
+  display: flex;
+}
+
+.calendarsWrapper {
+  text-align: center;
+}
+
+.wrapperTitle {
+  margin-bottom: 0;
+}
+
+.customCalendar {
+  background-color: #fbfff0;
+}
+
+.customCalendarName {
+  color: red;
+}
+
+.customIcons svg path {
+  stroke: red !important;
+}
+
+/* For Sample Codes */
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.codeExampleContainer code {
+  display: block;
+}
+
+.codeExampleContainer small {
+  color: var(--secondary-text);
+}

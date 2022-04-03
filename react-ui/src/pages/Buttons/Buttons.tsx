@@ -28,7 +28,7 @@ const ButtonsPage = () => {
       name: 'text',
       type: 'string',
       defaultValue: '',
-      description: 'The text of the button.',
+      description: 'The displayed text of the button.',
     },
     {
       name: 'disabled',

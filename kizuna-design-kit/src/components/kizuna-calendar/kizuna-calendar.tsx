@@ -315,7 +315,7 @@ export class KizunaPopover {
     const date = this.getValidDate();
 
     return (
-      <div class="calendar-wrapper">
+      <div class={`calendar-wrapper `}>
         <span onClick={this._toggleCalendar}>
           <kizuna-icon
             name="calendar"
@@ -327,19 +327,31 @@ export class KizunaPopover {
 
         {this.open && (
           <div
-            class={`calendar ${this._getPositionClassName()} ${
+            class={`calendar ${
+              this.classes?.root
+            } ${this._getPositionClassName()} ${
               this.darkmode && 'calendar-darkmode'
             }`}
           >
             <header>
               <span onClick={this.switchToPreviousMonth}>
-                <kizuna-icon name="left"></kizuna-icon>
+                <kizuna-icon
+                  name="left"
+                  classes={{
+                    root: this.classes?.headerLeftIcon,
+                  }}
+                ></kizuna-icon>
               </span>
-              <span>
+              <span class={`${this.classes?.monthName}`}>
                 {this.monthNames[date.month - 1]} {date.year}
               </span>
               <span onClick={this.switchToNextMonth}>
-                <kizuna-icon name="right"></kizuna-icon>
+                <kizuna-icon
+                  name="right"
+                  classes={{
+                    root: this.classes?.headerRightIcon,
+                  }}
+                ></kizuna-icon>
               </span>
             </header>
 
