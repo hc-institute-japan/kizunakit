@@ -25,8 +25,9 @@
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   height: 20px;
   width: 20px;
   background-color: var(--white);
