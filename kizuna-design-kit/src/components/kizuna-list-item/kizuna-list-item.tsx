@@ -6,8 +6,6 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: false,
 })
 export class KizunaListItem {
-  @Prop() type: string;
-  @Prop() disabled: boolean;
   @Prop() icon: string;
   @Prop() text: string = 'List Item Text';
   @Prop() handleOnClick: Function;
@@ -28,7 +26,9 @@ export class KizunaListItem {
           )}
           {this.text}
         </div>
-        {this.divider && <kizuna-divider />}
+        {this.divider && (
+          <kizuna-divider classes={{ divider: this.classes?.divider }} />
+        )}
       </slot>
     );
   }

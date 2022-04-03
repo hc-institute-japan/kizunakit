@@ -206,7 +206,7 @@ const DrawerComponent = (props: any) => {
             boxSizing: 'border-box',
             width: drawerWidth,
             top: 'unset',
-            maxHeight: '90vh',
+            maxHeight: '95vh',
           },
         }}
         open
