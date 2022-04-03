@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from './Icon.module.css';
-import { KizunaIcon, KizunaDivider } from 'kizuna-react-kit';
 import CustomTabs from '../../components/Tabs/Tabs';
 import CustomTable from '../../components/CustomTable/CustomTable';
+import { KizunaIcon, KizunaDivider } from 'kizuna-react-kit';
+import styles from './Icon.module.css';
 
 const Icon = (props: any) => {
   const [selected, setSelected] = useState('examples');

@@ -40,7 +40,6 @@ export namespace Components {
         "monthNames": string[];
         "onChange": Function;
         "position": string;
-        "showFillDays": boolean;
         "value": string;
     }
     interface KizunaCheckbox {
@@ -292,7 +291,6 @@ declare namespace LocalJSX {
         "onDayChanged"?: (event: CustomEvent<CalendarEntry>) => void;
         "onMonthChanged"?: (event: CustomEvent<CalendarEntry>) => void;
         "position"?: string;
-        "showFillDays"?: boolean;
         "value"?: string;
     }
     interface KizunaCheckbox {
