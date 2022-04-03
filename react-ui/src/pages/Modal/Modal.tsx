@@ -70,11 +70,10 @@ const Modal = (props: any) => {
   return (
     <>
       <div>
-        <h1 className="title">Icons</h1>
+        <h1 className="title">Modal</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>
-            <h1 className="title">Modal</h1>
             <div className={styles.modalButtonsContainer}>
               <KizunaButton
                 type="secondary"
