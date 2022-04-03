@@ -51,8 +51,48 @@ const MessageBox = (props: any) => {
 
   const CSS_DATA = [
     {
-      name: '',
-      description: '',
+      name: 'root',
+      description: 'Overide styling for main wrapper of component',
+    },
+    {
+      name: 'message',
+      description: 'Overide styling for the text of component',
+    },
+    {
+      name: 'metadata',
+      description: 'Overide styling for text at the bottom of the component',
+    },
+    {
+      name: 'time',
+      description: 'Overide styling for time text of component',
+    },
+    {
+      name: 'messageStatus',
+      description: 'Overide styling for Message status of component',
+    },
+    {
+      name: 'messageStatusIcon',
+      description: 'Overide styling for messageStatusIcon wrapper of component',
+    },
+    {
+      name: 'reactionsContainer',
+      description: 'Overide styling for Reactions container',
+    },
+    {
+      name: 'reactionContainer',
+      description: 'Overide styling for Reaction Container',
+    },
+    {
+      name: 'messageReactWrapper',
+      description: 'Overide styling for Message Reac tWrapper of component',
+    },
+    {
+      name: 'emoji',
+      description: 'Overide styling for memoji',
+    },
+    {
+      name: 'count',
+      description: 'Overide styling for count text',
     },
   ];
   return (
@@ -124,6 +164,7 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="sent"
+                          sent
                           darkmode
                         />
                       </div>
@@ -134,6 +175,7 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="delivered"
+                          sent
                           darkmode
                         />
                       </div>
@@ -144,6 +186,7 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="seen"
+                          sent
                           darkmode
                         />
                       </div>
@@ -233,8 +276,15 @@ const MessageBox = (props: any) => {
             <h1 className={styles.title}>Example</h1>
 
             <div className={styles.codeExampleContainer}>
-              <code>{'insert code here'}</code>
-              <code>{'insert code here'}</code>
+              <code>
+                {`<KizunaMessageBox message="Welcome to Kizuna!" time="10:00 AM" messageStatus="sent" 
+                    classes={{
+                      root: styles.customRoot,
+                      message: styles.coloredText,
+                      messageStatus: styles.borderedMessageStatus
+                    }}
+                  />`}
+              </code>
             </div>
           </div>
         )}

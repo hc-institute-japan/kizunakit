@@ -18,8 +18,11 @@ export class KizunaMessageReact {
         }`}
       >
         {this.emoji && (
-          <span class={`react-emoji ${this.classes?.emoji}`}>
-            <kizuna-icon name={this.emoji}></kizuna-icon>
+          <span class={`react-emoji`}>
+            <kizuna-icon
+              name={this.emoji}
+              classes={{ root: this.classes?.emoji }}
+            ></kizuna-icon>
           </span>
         )}
 
