@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'kizuna-message-react',
   styleUrl: 'kizuna-message-react.css',
-  shadow: true,
+  shadow: false,
 })
 export class KizunaMessageReact {
   @Prop() classes: { [key: string]: any };
