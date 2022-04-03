@@ -106,3 +106,17 @@ header {
   display: flex;
   justify-content: flex-end;
 }
+
+.calendar-darkmode {
+  background-color: var(--dark-primary-bg);
+}
+
+.calendar-darkmode header,
+.calendar-darkmode .date-container,
+.calendar-darkmode .day-names {
+  color: var(--dark-primary-text);
+}
+
+.calendar-darkmode header svg path {
+  stroke: var(--dark-primary-text);
+}

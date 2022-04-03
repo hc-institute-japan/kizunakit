@@ -31,9 +31,11 @@ export class KizunaPopover {
     'December',
   ];
   @Prop() showFillDays = true;
+  @Prop() darkmode: boolean = false;
   @Prop() onChange: Function;
   @Prop() position: string;
   @Prop() value: string;
+  @Prop() classes: { [key: string]: any };
 
   @State() date = Calendar.getToday();
   @State() daysInMonth: number[];
@@ -302,11 +304,20 @@ export class KizunaPopover {
     return (
       <div class="calendar-wrapper">
         <span onClick={this._toggleCalendar}>
-          <kizuna-icon name="calendar" />
+          <kizuna-icon
+            name="calendar"
+            classes={{
+              root: this.classes?.calenderIcon,
+            }}
+          />
         </span>
 
         {this.open && (
-          <div class={`calendar ${this._getPositionClassName()}`}>
+          <div
+            class={`calendar ${this._getPositionClassName()} ${
+              this.darkmode && 'calendar-darkmode'
+            }`}
+          >
             <header>
               <span onClick={this.switchToPreviousMonth}>
                 <kizuna-icon name="left"></kizuna-icon>

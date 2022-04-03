@@ -34,6 +34,8 @@ export namespace Components {
         "type": string;
     }
     interface KizunaCalendar {
+        "classes": { [key: string]: any };
+        "darkmode": boolean;
         "dayNames": string[];
         "monthNames": string[];
         "onChange": Function;
@@ -280,6 +282,8 @@ declare namespace LocalJSX {
         "type"?: string;
     }
     interface KizunaCalendar {
+        "classes"?: { [key: string]: any };
+        "darkmode"?: boolean;
         "dayNames"?: string[];
         "monthNames"?: string[];
         "onChange"?: Function;
