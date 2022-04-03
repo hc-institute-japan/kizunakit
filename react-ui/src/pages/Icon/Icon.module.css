@@ -1,0 +1,39 @@
+.iconsExamplesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.iconDisplayContainer {
+  margin: 1rem;
+  width: 15rem;
+  display: flex;
+  align-items: center;
+}
+
+.iconDisplayNameContainer {
+  margin-left: 1rem;
+}
+
+.coloredIcon svg path {
+  stroke: red;
+  fill: red;
+}
+
+.thickIcon svg path {
+  stroke-width: 5;
+  stroke: blue;
+}
+
+.borderedIcon {
+  background-color: blue;
+}
+
+.borderedIcon svg path {
+  stroke-width: 3;
+  stroke: white;
+}
+
+.cssWidth {
+  width: 300px;
+}
