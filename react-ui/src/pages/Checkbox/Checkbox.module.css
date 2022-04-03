@@ -1,0 +1,43 @@
+.checkboxPage .title {
+  font-weight: 400;
+}
+
+.checkboxExamplesContainer {
+  display: flex;
+}
+.checkboxExamplesContainer h3,
+.checkboxExamplesContainer h4 {
+  font-weight: 400;
+}
+
+.checkboxExamplesContainer .default,
+.checkboxExamplesContainer .rounded {
+  margin-right: 4rem;
+}
+
+.customCheckmark {
+  border: 1px solid red;
+}
+
+.customCheckbox .customInput:checked ~ .customCheckmark {
+  background-color: red !important;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.checkboxPage small {
+  color: var(--secondary-text);
+}
