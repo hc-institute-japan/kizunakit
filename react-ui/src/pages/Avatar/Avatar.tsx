@@ -100,9 +100,6 @@ const Avatar = (props: any) => {
                     image="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                   />
                 </div>
-              </div>
-
-              <div className={styles.exampleContainer}>
                 <h3 className="title">Without Image</h3>
                 <div className={styles.avatarsContainer}>
                   <KizunaAvatar size="md" name="Ella Gopez" />
@@ -133,9 +130,6 @@ const Avatar = (props: any) => {
                     status="online"
                   />
                 </div>
-              </div>
-
-              <div className={styles.exampleContainer}>
                 <h3 className="title">Custom Styles</h3>
                 <div className={styles.avatarsContainer}>
                   <KizunaAvatar

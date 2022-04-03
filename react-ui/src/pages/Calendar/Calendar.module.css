@@ -2,32 +2,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 5rem 0;
+  padding: 1rem 0;
 }
 
 .calendarContainer {
-  padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 1rem;
+}
+
+.calendarContainer:not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 .calendarTitle {
   margin: 0;
   margin-bottom: 1rem;
+  font-weight: 400;
+  color: var(--secondary-text);
 }
 
 .calendars {
   display: flex;
 }
 
-.calendarsWrapper {
-  text-align: center;
-}
-
 .wrapperTitle {
   margin-bottom: 0;
+  font-weight: 400;
 }
 
 .customCalendar {
@@ -57,4 +60,8 @@
 
 .codeExampleContainer small {
   color: var(--secondary-text);
+}
+
+.dividerMargin {
+  margin: 2rem 0;
 }

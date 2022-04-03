@@ -123,15 +123,7 @@ const Icon = (props: any) => {
                   {'contacts'}
                 </span>
               </span>
-              <span className={styles.iconDisplayContainer}>
-                <KizunaIcon
-                  name="call"
-                  classes={{ root: styles.borderedIcon }}
-                />
-                <span className={styles.iconDisplayNameContainer}>
-                  {'call'}
-                </span>
-              </span>
+
               <span className={styles.iconDisplayContainer}>
                 <KizunaIcon
                   name="create"
@@ -141,18 +133,7 @@ const Icon = (props: any) => {
                   {'create'}
                 </span>
               </span>
-              <span className={styles.iconDisplayContainer}>
-                <KizunaIcon
-                  name="camera"
-                  classes={{
-                    root: `${styles.thickIcon} ${styles.coloredIcon}`,
-                  }}
-                />
-                <span className={styles.iconDisplayNameContainer}>
-                  {'camera'}
-                </span>
-              </span>
-            </div>{' '}
+            </div>
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
             <h1 className="title">Examples</h1>
             <div className="codeExampleContainer">

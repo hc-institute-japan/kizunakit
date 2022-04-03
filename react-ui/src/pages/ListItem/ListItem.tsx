@@ -71,18 +71,18 @@ const ListItem = (props: any) => {
           <div>
             <div className={styles.exampleWrapper}>
               <div className={styles.exampleContainer}>
-                <h1 className={styles.exampleTitle}>Default</h1>
+                <h3 className={styles.exampleTitle}>Default</h3>
                 <KizunaListItem icon="settings" text="Settings" />
                 <KizunaListItem icon="caution" text="Caution" />
               </div>
               <div className={styles.exampleContainer}>
-                <h1 className={styles.exampleTitle}>List Item with Divider</h1>
+                <h3 className={styles.exampleTitle}>List Item with Divider</h3>
                 <KizunaListItem icon="trash" text="Delete" divider />
                 <KizunaListItem icon="send" text="Send" divider />
               </div>
 
               <div className={styles.exampleContainer}>
-                <h1 className={styles.exampleTitle}>List Item in a Popover</h1>{' '}
+                <h3 className={styles.exampleTitle}>List Item in a Popover</h3>{' '}
                 <div className={styles.popoverContainer}>
                   <KizunaButton
                     type="secondary"

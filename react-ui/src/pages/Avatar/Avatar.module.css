@@ -1,8 +1,12 @@
 .avatarsExamplesContainer {
   display: flex;
-  justify-content: center;
+
   align-items: center;
   flex-wrap: wrap;
+}
+
+.avatarsExamplesContainer > div:not(:last-child) {
+  margin-right: 6rem;
 }
 
 .codeExampleContainer {
@@ -22,11 +26,6 @@
 
 .checkboxPage small {
   color: var(--secondary-text);
-}
-
-.exampleContainer {
-  text-align: center;
-  margin: 5rem;
 }
 
 .avatarsContainer {

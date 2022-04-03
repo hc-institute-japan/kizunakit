@@ -32,6 +32,11 @@
 
 .darkModeWrapper {
   margin-top: 1rem;
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
+  padding: 5px 20px;
+  width: fit-content;
+  border-radius: 10px;
 }
 
 .darkModeWrapper h2 {

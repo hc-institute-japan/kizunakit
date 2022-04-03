@@ -1,3 +1,7 @@
 .exampleWrapper {
   width: 600px;
 }
+
+.exampleTitle {
+  font-weight: 400;
+}

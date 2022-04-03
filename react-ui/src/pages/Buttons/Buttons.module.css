@@ -48,6 +48,16 @@
   margin: 4rem 0;
 }
 
-.buttonsExampleContainer {
-  margin: 2rem 0;
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+.buttonsPage small {
+  color: var(--secondary-text);
 }

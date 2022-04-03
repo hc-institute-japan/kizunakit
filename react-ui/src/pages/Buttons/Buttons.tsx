@@ -153,48 +153,46 @@ const ButtonsPage = () => {
           </div>
           <KizunaDivider classes={{ divider: styles.dividerMargin }} />
           <h1 className={styles.title}>EXAMPLE</h1>
-          <code>{`<KizunaButton type="primary" text="Primary Button" />`}</code>{' '}
-          <br />
-          <code>{`<KizunaButton type="secondary" text="Secondary Button" />`}</code>{' '}
-          <br />
-          <code>{`                  <KizunaButton
+          <div className={styles.codeExampleContainer}>
+            <small>Default</small>
+            <code>{`<KizunaButton type="primary" text="Primary Button" />`}</code>
+            <code>{`<KizunaButton type="secondary" text="Secondary Button" />`}</code>
+            <small>Button with Icon</small>
+            <code>{`                  <KizunaButton
                     type="primary"
                     text="Primary "
                     icon={'addContact'}
-                  />`}</code>{' '}
-          <br />
-          <code>{`                  <KizunaButton
+                  />`}</code>
+            <code>{`                  <KizunaButton
                     type="secondary"
                     text="Secondary "
                     icon={'addContact'}
-                  />`}</code>{' '}
-          <br />
-          <code>{`<KizunaButton type="primary" text="Disabled" disabled />`}</code>{' '}
-          <br />
-          <code>{`<KizunaButton type="secondary" text="Disabled" disabled />`}</code>{' '}
-          <br />
-          <code>{`                  <KizunaButton
+                  />`}</code>
+            <small>Disabled</small>
+            <code>{`<KizunaButton type="primary" text="Disabled" disabled />`}</code>
+            <code>{`<KizunaButton type="secondary" text="Disabled" disabled />`}</code>
+            <small>Disabled with Icon</small>
+            <code>{`                  <KizunaButton
                     type="primary"
                     text="Disabled"
                     disabled
                     icon={'addContact'}
-                  />`}</code>{' '}
-          <br />
-          <code>{`                  <KizunaButton
+                  />`}</code>
+            <code>{`                  <KizunaButton
                     type="secondary"
                     text="Disabled"
                     disabled
                     icon={'addContact'}
-                  />`}</code>{' '}
-          <br />
-          <code>{`                  <KizunaButton
+                  />`}</code>
+            <small>Custom Style</small>
+            <code>{`                  <KizunaButton
                     type="primary"
                     text="Custom Styles"
                     classes={{
                       btnWrapper: styles.customButton,
                     }}
-                  />`}</code>{' '}
-          <br />
+                  />`}</code>
+          </div>
         </div>
       )}
       {selected === 'api' && (
@@ -210,22 +208,24 @@ const ButtonsPage = () => {
           <p>Use these class names to override styling</p>
           <CustomTable type="CSS" data={CSS_DATA} />
           <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-          <h1 className={styles.title}>EXAMPLE</h1>
-          <code>{`<KizunaButton
+          <h1 className={styles.title}>Example</h1>
+          <div className={styles.codeExampleContainer}>
+            <code>{`<KizunaButton
                     type="primary"
                     text="Custom Styles"
                     classes={{
                       btnWrapper: styles.customButton,
                     }}
                   />`}</code>{' '}
-          <br />
-          <code>{`<KizunaButton
+            <br />
+            <code>{`<KizunaButton
                     type="primary"
                     text="Custom Styles"
                     classes={{
                       icon: styles.customIcon,
                     }}
                   />`}</code>
+          </div>
         </div>
       )}
     </div>

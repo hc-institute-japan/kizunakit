@@ -204,6 +204,7 @@ const MessageBox = (props: any) => {
                     </div>
                   </div>
                 </div>
+                <br />
               </div>
             </div>
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
