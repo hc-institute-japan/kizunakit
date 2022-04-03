@@ -1,0 +1,13 @@
+.popoverContainer {
+  position: relative;
+}
+
+.exampleWrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.exampleContainer {
+  width: 500px;
+  margin: 2rem;
+}

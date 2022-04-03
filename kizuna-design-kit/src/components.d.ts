@@ -60,12 +60,10 @@ export namespace Components {
     }
     interface KizunaListItem {
         "classes": { [key: string]: any };
-        "disabled": boolean;
         "divider": boolean;
         "handleOnClick": Function;
         "icon": string;
         "text": string;
-        "type": string;
     }
     interface KizunaMessageBox {
         "classes": { [key: string]: any };
@@ -311,12 +309,10 @@ declare namespace LocalJSX {
     }
     interface KizunaListItem {
         "classes"?: { [key: string]: any };
-        "disabled"?: boolean;
         "divider"?: boolean;
         "handleOnClick"?: Function;
         "icon"?: string;
         "text"?: string;
-        "type"?: string;
     }
     interface KizunaMessageBox {
         "classes"?: { [key: string]: any };
