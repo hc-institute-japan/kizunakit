@@ -55,3 +55,7 @@ code {
 .title {
   font-weight: 400;
 }
+
+p {
+  margin: 0;
+}
