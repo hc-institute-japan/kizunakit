@@ -11,21 +11,16 @@ const Calendar = (props: any) => {
     {
       name: 'dayNames',
       type: 'Array',
-      defaultValue: '',
-      description: '',
+      defaultValue: '["M", "T", "W", "Th", "F", "Sa","Su"]',
+      description: 'Array of day name you want to display on the calendar',
     },
     {
       name: 'monthNames',
       type: 'Array',
-      defaultValue: '',
+      defaultValue:
+        '["January","February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]',
       description:
         '[OPTIONAL] When provided, an icon will be visible beside the badge text.',
-    },
-    {
-      name: 'showFillDays',
-      type: 'boolean',
-      defaultValue: 'false',
-      description: '',
     },
     {
       name: 'darkmode',
@@ -37,19 +32,19 @@ const Calendar = (props: any) => {
       name: 'onChange',
       type: 'Function',
       defaultValue: '',
-      description: '',
+      description: 'Function to be triggered when an onChange event occured',
     },
     {
       name: 'position',
       type: 'string',
       defaultValue: 'left',
-      description: '',
+      description: 'Position alignment of the calendar',
     },
     {
       name: 'value',
       type: 'string',
-      defaultValue: 'false',
-      description: '',
+      defaultValue: 'Current date in a string format',
+      description: 'The selected date of the calendar',
     },
     {
       name: 'classes',
@@ -85,7 +80,7 @@ const Calendar = (props: any) => {
   return (
     <>
       <div className={styles.badgePage}>
-        <h1 className={styles.title}>Calendar</h1>
+        <h1 className="title">Calendar</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>
@@ -165,7 +160,7 @@ const Calendar = (props: any) => {
               </div>
             </div>
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-            <h1 className={styles.title}>Examples</h1>
+            <h1 className="title">Examples</h1>
 
             <div className={styles.codeExampleContainer}>
               <small>Default</small>
@@ -209,18 +204,18 @@ const Calendar = (props: any) => {
         )}
         {selected === 'api' && (
           <div className={styles.apiContainer}>
-            <h1 className={styles.title}>API</h1>
+            <h1 className="title">API</h1>
             <p>Use these Props to access features of the component</p>
             <CustomTable type="API" data={API_DATA} />
           </div>
         )}
         {selected === 'css' && (
           <div>
-            <h1 className={styles.title}>CSS</h1>
+            <h1 className="title">CSS</h1>
             <p>Use these class names to override styling</p>
             <CustomTable type="CSS" data={CSS_DATA} />
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
-            <h1 className={styles.title}>Example</h1>
+            <h1 className="title">Example</h1>
 
             <div className={styles.codeExampleContainer}>
               <code>

@@ -31,7 +31,6 @@ export class KizunaPopover {
     'November',
     'December',
   ];
-  @Prop() showFillDays = true;
   @Prop() darkmode: boolean = false;
   @Prop() onChange: Function;
   @Prop() position: string;
