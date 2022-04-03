@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Element } from '@stencil/core';
 
 @Component({
   tag: 'kizuna-popover',
@@ -9,6 +9,20 @@ export class KizunaPopover {
   @Prop() darkmode: boolean;
   @Prop({ mutable: true }) open: boolean = false;
   @Prop() position: string;
+  @Element() el: HTMLElement;
+
+  componentWillLoad() {
+    window.addEventListener(
+      'click',
+      (e: Event) => {
+        const target = e.target as HTMLElement;
+        if (!this.el.contains(target)) {
+          this.open = false;
+        }
+      },
+      false,
+    );
+  }
 
   _togglePopover = () => {
     this.open = !this.open;

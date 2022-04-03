@@ -6,6 +6,7 @@ import {
   EventEmitter,
   State,
   Event,
+  Element,
 } from '@stencil/core';
 import { CalendarEntry } from '../../util/calendar-entry';
 import { Calendar } from '../../util/calendar';
@@ -41,6 +42,22 @@ export class KizunaPopover {
   @State() daysInMonth: number[];
   @State() selectedDate: CalendarEntry;
   @State() open: boolean = false;
+  @Element() el: HTMLElement;
+
+  componentWillLoad() {
+    this._initCalendar();
+
+    window.addEventListener(
+      'click',
+      (e: Event) => {
+        const target = e.target as HTMLElement;
+        if (!this.el.contains(target)) {
+          this.open = false;
+        }
+      },
+      false,
+    );
+  }
 
   @Event({
     eventName: 'dayChanged',
@@ -70,10 +87,6 @@ export class KizunaPopover {
     if ('month' in date && 'year' in date) {
       this.selectedDate = date;
     }
-  }
-
-  componentWillLoad() {
-    this._initCalendar();
   }
 
   _initCalendar = () => {

@@ -1,4 +1,4 @@
-import { Component, Prop, h, State } from '@stencil/core';
+import { Component, Prop, h, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'kizuna-textbox',
@@ -19,6 +19,20 @@ export class KizunaTextbox {
   @Prop() startIconName: string;
   @Prop() onChange: Function;
   @State() inFocus: boolean = false;
+  @Element() el: HTMLElement;
+
+  componentWillLoad() {
+    window.addEventListener(
+      'click',
+      (e: Event) => {
+        const target = e.target as HTMLElement;
+        if (!this.el.contains(target)) {
+          this.inFocus = false;
+        }
+      },
+      false,
+    );
+  }
 
   private getTextFieldVariant = () => {
     if (this.variant?.toLowerCase() === 'standard') {
@@ -57,6 +71,7 @@ export class KizunaTextbox {
 
   render() {
     console.log(this.inFocus);
+
     return (
       <div class="textboxWrapper ">
         <input
@@ -72,15 +87,6 @@ export class KizunaTextbox {
           value={this.value}
           onChange={this._handleChange}
           onFocusin={() => (this.inFocus = true)}
-          onFocusout={() => (this.inFocus = false)}
-          // onBlur={() => {
-          //   this.inFocus = false;
-          // }}
-
-          // onFocusoutCapture={() => console.log('focus out')}
-          // onClick={() => console.log('clicked')}
-          // onMouseOut={() => console.log('out')}
-          // onMouseIn={() => console.log('')}
         />
 
         {this.inFocus && (
@@ -90,10 +96,9 @@ export class KizunaTextbox {
                 <kizuna-icon name={`${this.startIconName}`} />
               </span>
             )}
-            {/* 
             <span class="end-icon" onClick={this._handleClear}>
               <kizuna-icon name="close" />
-            </span> */}
+            </span>
           </div>
         )}
 
