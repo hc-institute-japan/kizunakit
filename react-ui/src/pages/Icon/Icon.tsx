@@ -152,17 +152,9 @@ const Icon = (props: any) => {
                   {'camera'}
                 </span>
               </span>
-            </div>
-          </div>
-        )}
-        {selected === 'api' && (
-          <div className={styles.apiContainer}>
-            <h1 className="title">API</h1>
-            <p>Use these Props to access features of the component</p>
-            <CustomTable type="API" data={API_DATA} />
+            </div>{' '}
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
             <h1 className="title">Examples</h1>
-
             <div className="codeExampleContainer">
               <code>{`<KizunaIcon name="addContact />`}</code>
               <code>{`<KizunaIcon name="call" />`}</code>
@@ -171,6 +163,13 @@ const Icon = (props: any) => {
                   classes={{ root: styles.coloredIcon }}
                 />`}</code>
             </div>
+          </div>
+        )}
+        {selected === 'api' && (
+          <div className={styles.apiContainer}>
+            <h1 className="title">API</h1>
+            <p>Use these Props to access features of the component</p>
+            <CustomTable type="API" data={API_DATA} />
           </div>
         )}
         {selected === 'css' && (
