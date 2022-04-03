@@ -1,189 +1,170 @@
-import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Drawer.module.css';
 import Divider from '@mui/material/Divider';
 
 const DrawerComponent = (props: any) => {
   const { drawerWidth, handleDrawerToggle, window, mobileOpen } = props;
-  const [selectedTab, setSelectedTab] = useState('home');
 
   const drawerContent = (
     <div>
       <Divider />
 
       <div className={styles.drawerListItems}>
-        <Link
+        <NavLink
           to="/"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'home' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('home')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Home
-        </Link>
+        </NavLink>
 
         <p className={styles.componentText}>COMPONENTS</p>
-        <Link
+        <NavLink
           to="/avatar"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'avatar' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('avatar')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Avatar
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/badge"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'badge' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('badge')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Badge
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/buttons"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'buttons' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('buttons')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Buttons
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/calendar"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'calendar' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('calendar')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Calendar
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/checkbox"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'checkbox' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('checkbox')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Checkbox
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/divider"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'divider' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('divider')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Divider
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/icon"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'icon' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('icon')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Icon
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/list-item"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'list-item' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('list-item')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           List Item
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/message-box"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'message-box' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('message-box')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Message Box
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/message-react"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'message-react' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('message-react')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Message React
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/modal"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'modal' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('modal')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Modal
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/popover"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'popover' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('popover')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Popover
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/tabs"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'tabs' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('tabs')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Tabs
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/text-editor"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'text-editor' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('text-editor')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Text Editor
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/textbox"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'textbox' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('textbox')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Textbox
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           to="/toggle"
-          className={`${styles.drawerLink} ${
-            selectedTab === 'toggle' && styles.selected
-          }`}
-          onClick={() => setSelectedTab('toggle')}
+          className={({ isActive }) =>
+            `${styles.drawerLink} ${isActive && styles.selected}`
+          }
         >
           Toggle
-        </Link>
+        </NavLink>
       </div>
     </div>
   );
