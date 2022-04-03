@@ -63,6 +63,27 @@
   background-color: rgba(228, 130, 33, 0.2);
 }
 
+.received-message-darkmode .message-content {
+  color: var(--dark-primary-text);
+}
+
+.received-message-darkmode .message-time {
+  color: var(--dark-primary-text);
+}
+
+.received-message-darkmode svg path {
+  stroke: var(--dark-secondary-text);
+}
+
+.received-message-darkmode .delivered-icon-colors svg path {
+  stroke: var(--dark-secondary-text);
+  opacity: 0.4;
+}
+
+.received-message-darkmode .seen-icon-colors svg path {
+  stroke: var(--dark-primary-text);
+}
+
 .reactions-container {
   display: flex;
   position: absolute;

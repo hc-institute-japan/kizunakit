@@ -143,6 +143,7 @@ export class App {
               message="Sample received message with no message status (dark mode)"
               time="3:14pm"
               darkmode
+              messageStatus="sent"
             />
           </div>
 

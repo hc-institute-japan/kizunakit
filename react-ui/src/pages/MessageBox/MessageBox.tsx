@@ -164,7 +164,6 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="sent"
-                          sent
                           darkmode
                         />
                       </div>
@@ -175,7 +174,6 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="delivered"
-                          sent
                           darkmode
                         />
                       </div>
@@ -186,7 +184,6 @@ const MessageBox = (props: any) => {
                           message="Welcome to Kizuna!"
                           time="10:00 AM"
                           messageStatus="seen"
-                          sent
                           darkmode
                         />
                       </div>

@@ -96,9 +96,7 @@ export namespace Components {
     interface KizunaTabs {
         "classes": { [key: string]: string };
         "darkmode": boolean;
-        "disabled": boolean;
         "menus": Array<{ [key: string]: string }>;
-        "name": string;
         "onClick": any;
         "value": string;
     }
@@ -346,9 +344,7 @@ declare namespace LocalJSX {
     interface KizunaTabs {
         "classes"?: { [key: string]: string };
         "darkmode"?: boolean;
-        "disabled"?: boolean;
         "menus"?: Array<{ [key: string]: string }>;
-        "name"?: string;
         "onClick"?: any;
         "value"?: string;
     }

@@ -11,9 +11,7 @@
 | ---------- | ---------- | ----------- | ------------------------------ | ----------- |
 | `classes`  | --         |             | `{ [key: string]: string; }`   | `undefined` |
 | `darkmode` | `darkmode` |             | `boolean`                      | `undefined` |
-| `disabled` | `disabled` |             | `boolean`                      | `undefined` |
 | `menus`    | --         |             | `{ [key: string]: string; }[]` | `undefined` |
-| `name`     | `name`     |             | `string`                       | `undefined` |
 | `onClick`  | `on-click` |             | `any`                          | `undefined` |
 | `value`    | `value`    |             | `string`                       | `undefined` |
 
