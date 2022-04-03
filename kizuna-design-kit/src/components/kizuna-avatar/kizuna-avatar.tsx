@@ -12,7 +12,6 @@ export class KizunaAvatar {
   @Prop() status: string;
   @Prop() indicator: boolean;
   @Prop() rounded: string;
-  @Prop() toolkit: string;
   @Prop() name: string;
   @Prop() classes: { [key: string]: any };
 
