@@ -603,6 +603,15 @@ export class App {
 
           <br />
           <kizuna-textbox
+            placeholder="Input with emoticon"
+            name="firstName"
+            emoticon
+            onEmoticonClick={() => console.log('Emoticon clicked')}
+            onChange={data => console.log({ text: data })}
+          ></kizuna-textbox>
+
+          <br />
+          <kizuna-textbox
             placeholder="Left Align Textbox"
             name="firstName"
             label="First Name"

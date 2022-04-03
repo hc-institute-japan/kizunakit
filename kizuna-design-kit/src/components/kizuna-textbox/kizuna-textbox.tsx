@@ -1,4 +1,5 @@
 import { Component, Prop, h, State, Element } from '@stencil/core';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   tag: 'kizuna-textbox',
@@ -7,7 +8,7 @@ import { Component, Prop, h, State, Element } from '@stencil/core';
 })
 export class KizunaTextbox {
   @Prop() name: string;
-  @Prop() id: string;
+  @Prop() id: string = uuidv4();
   @Prop({ mutable: true }) value: string;
   @Prop() placeholder: string;
   @Prop() label: string;
@@ -18,6 +19,8 @@ export class KizunaTextbox {
   @Prop() align: string;
   @Prop() startIconName: string;
   @Prop() onChange: Function;
+  @Prop() onEmoticonClick: Function;
+  @Prop() emoticon: boolean;
   @State() inFocus: boolean = false;
   @Element() el: HTMLElement;
 
@@ -55,7 +58,6 @@ export class KizunaTextbox {
   };
 
   _handleClear = () => {
-    this.inFocus = true;
     this.value = '';
     this.onChange && this.onChange('');
   };
@@ -63,17 +65,21 @@ export class KizunaTextbox {
   _handleChange = e => {
     this.value = e.target.value;
     this.onChange && this.onChange(this.value);
+    this._focusTextField();
   };
 
-  _toggleClear = () => {
-    this.inFocus = !this.inFocus;
+  _focusTextField = () => {
+    const element = document.getElementById(this.id);
+    element.focus();
+  };
+
+  _handleEmoticonClear = () => {
+    this.onEmoticonClick && this.onEmoticonClick();
   };
 
   render() {
-    console.log(this.inFocus);
-
     return (
-      <div class="textboxWrapper ">
+      <div class="textboxWrapper">
         <input
           class={`textfield ${this.getTextFieldVariant()} ${
             this.classes?.input
@@ -96,15 +102,28 @@ export class KizunaTextbox {
                 <kizuna-icon name={`${this.startIconName}`} />
               </span>
             )}
-            <span class="end-icon" onClick={this._handleClear}>
-              <kizuna-icon name="close" />
-            </span>
+            {!this.emoticon && (
+              <span class="end-icon" onClick={this._handleClear}>
+                <kizuna-icon name="close" />
+              </span>
+            )}
           </div>
         )}
 
-        <label class={`labelWrapper ${this.classes?.labelWrapper}`}>
-          {this.label}
-        </label>
+        {this.emoticon && (
+          <span class="emoticon-icon" onClick={this._handleEmoticonClear}>
+            <kizuna-icon
+              name="emoticon"
+              classes={{ root: `emoticonIcon ${this.classes?.emoticonIcon}` }}
+            />
+          </span>
+        )}
+
+        {this.label && (
+          <label class={`labelWrapper ${this.classes?.labelWrapper}`}>
+            {this.label}
+          </label>
+        )}
       </div>
     );
   }

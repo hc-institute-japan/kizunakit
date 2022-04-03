@@ -114,12 +114,14 @@ export namespace Components {
     interface KizunaTextbox {
         "align": string;
         "classes": { [key: string]: any };
+        "emoticon": boolean;
         "icon": string;
         "id": string;
         "isFocus": boolean;
         "label": string;
         "name": string;
         "onChange": Function;
+        "onEmoticonClick": Function;
         "placeholder": string;
         "startIconName": string;
         "value": string;
@@ -364,12 +366,14 @@ declare namespace LocalJSX {
     interface KizunaTextbox {
         "align"?: string;
         "classes"?: { [key: string]: any };
+        "emoticon"?: boolean;
         "icon"?: string;
         "id"?: string;
         "isFocus"?: boolean;
         "label"?: string;
         "name"?: string;
         "onChange"?: Function;
+        "onEmoticonClick"?: Function;
         "placeholder"?: string;
         "startIconName"?: string;
         "value"?: string;
