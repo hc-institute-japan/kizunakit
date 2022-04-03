@@ -9,8 +9,12 @@
   width: fit-content;
 }
 
-.badge .text {
+/* .badge .text {
   margin-left: 10px;
+} */
+
+.badge-icon {
+  margin-right: 10px;
 }
 .badge-icon .icon-container svg {
   width: 12px;
