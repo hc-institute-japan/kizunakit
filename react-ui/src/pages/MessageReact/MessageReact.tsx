@@ -66,7 +66,7 @@ const MessageReact = (props: any) => {
   return (
     <>
       <div className={styles.messageReactPage}>
-        <h1 className={styles.title}>Badge</h1>
+        <h1 className={styles.title}>Message React</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>
