@@ -53,7 +53,7 @@ const TextEditor = (props: any) => {
   return (
     <>
       <div className={styles.textEditorPage}>
-        <h1 className={styles.title}>Badge</h1>
+        <h1 className={styles.title}>Text Editor</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>

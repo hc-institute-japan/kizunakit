@@ -11,23 +11,70 @@ const Textbox = (props: any) => {
 
   const API_DATA = [
     {
-      name: 'text',
+      name: 'name',
       type: 'string',
       defaultValue: '',
-      description: 'The displayed text of the badge.',
+      description: 'Name of Textbox',
     },
     {
-      name: 'icon',
+      name: 'id',
+      type: 'string',
+      defaultValue: 'random string value',
+      description: 'Unique identifier of the component',
+    },
+    {
+      name: 'value',
       type: 'string',
       defaultValue: '',
-      description:
-        '[OPTIONAL] When provided, an icon will be visible beside the badge text.',
+      description: 'Text value of the input component',
     },
     {
-      name: 'darkmode',
-      type: 'boolean',
-      defaultValue: 'false',
-      description: 'Set the dark mode of the component',
+      name: 'placeholder',
+      type: 'string',
+      defaultValue: '',
+      description: 'Placeholder text',
+    },
+    {
+      name: 'label',
+      type: 'string',
+      defaultValue: '',
+      description: 'Label of the input',
+    },
+    {
+      name: 'variant',
+      type: 'standard | outlined',
+      defaultValue: '',
+      description: 'Variant type of the component',
+    },
+    {
+      name: 'align',
+      type: 'left | center | right',
+      defaultValue: 'left',
+      description: 'Text alignment of component',
+    },
+    {
+      name: 'startIconName',
+      type: 'string',
+      defaultValue: '',
+      description: 'Icon name of the icon you want to be the start icon',
+    },
+    {
+      name: 'emoticon',
+      type: 'string',
+      defaultValue: '',
+      description: 'Placeholder to display a emoticon icon for the component',
+    },
+    {
+      name: 'onChange',
+      type: 'function',
+      defaultValue: '',
+      description: 'Function to be triggered when component value changed',
+    },
+    {
+      name: 'onEmoticonClick',
+      type: 'function',
+      defaultValue: '',
+      description: 'Function to be triggered when emoticon icon is clicked',
     },
     {
       name: 'classes',
@@ -40,10 +87,17 @@ const Textbox = (props: any) => {
 
   const CSS_DATA = [
     {
-      name: 'badgeWrapper',
-      description: 'Overides the styling for the main wrapper of the badge',
+      name: 'input',
+      description: 'Overides the styling for the input wrapper of the badge',
     },
-    { name: 'icon', description: 'Overides the styling for the icon wrapper' },
+    {
+      name: 'emoticonIcon',
+      description: 'Overides the styling for the Emoticon Icon wrapper',
+    },
+    {
+      name: 'labelWrapper',
+      description: 'Overides the styling for the Label Wrapper wrapper',
+    },
   ];
   return (
     <>
@@ -171,31 +225,28 @@ const Textbox = (props: any) => {
             <h1 className={styles.title}>Examples</h1>
 
             <div className={styles.codeExampleContainer}>
-              <small>Default</small>
-
-              <code>{'<KizunaBadge icon={"circle"} text="Admin" />'}</code>
-              <code>{'<KizunaBadge icon={"circle"} text="Observer" />'}</code>
-              <code>{'<KizunaBadge icon={"heart"} text="Assistant" />'}</code>
-              <small>Dark Mode</small>
               <code>
-                {'<KizunaBadge icon={"circle"} text="Admin" /> darkmode'}
+                {`                <KizunaTextbox
+                  name="name"
+                  placeholder="Enter your name"
+                  variant="standard"
+                />`}
               </code>
               <code>
-                {'<KizunaBadge icon={"circle"} text="Observer" darkmode />'}
+                {`                <KizunaTextbox
+                  name="name"
+                  placeholder=" Enter a message..."
+                  emoticon
+                  variant="standard"
+                />`}
               </code>
               <code>
-                {'<KizunaBadge icon={"heart"} text="Assistant" darkmode />'}
-              </code>
-              <small>Custom Styles</small>
-              <code>
-                {
-                  '<KizunaBadge icon={"circle"} text="Assistant" classes={{ badgeWrapper: styles.customIconColor }}/>'
-                }
-              </code>
-              <code>
-                {
-                  '<KizunaBadge text="Success" classes={{ badgeWrapper: styles.customBadge }}/>'
-                }
+                {`                <KizunaTextbox
+                  label="Name"
+                  name="name"
+                  placeholder="Enter your name"
+                  variant="outlined"
+                />`}
               </code>
             </div>
           </div>
@@ -217,14 +268,11 @@ const Textbox = (props: any) => {
 
             <div className={styles.codeExampleContainer}>
               <code>
-                {
-                  '<KizunaBadge icon={"circle"} text="Assistant" classes={{ badgeWrapper: styles.customIconColor }}/>'
-                }
-              </code>
-              <code>
-                {
-                  '<KizunaBadge text="Success" classes={{ badgeWrapper: styles.customBadge }}/>'
-                }
+                {` <KizunaTextbox
+                  name="name"
+                  placeholder=" Enter a message..."
+                  emoticon
+                  variant="standard" classes={{ input: styles.customInput }}/>`}
               </code>
             </div>
           </div>

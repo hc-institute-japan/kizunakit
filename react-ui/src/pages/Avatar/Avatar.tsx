@@ -219,14 +219,18 @@ const Avatar = (props: any) => {
 
             <div className={styles.codeExampleContainer}>
               <code>
-                {
-                  '<KizunaCheckbox name="Ella Gopez" value="Ella Gopez" checked classes={{ checkmark: styles.customCheckmark, checkboxWrapper: styles.customCheckbox, input: styles.customInput, }}/>'
-                }
+                {`                  <KizunaAvatar
+                  size="lg"
+                  image="https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  classes={{ imageWrapper: styles.customImageWrapper }}
+                />`}
               </code>
               <code>
-                {
-                  '<KizunaCheckbox name="Charlie Charlie" value="Charlie Charlie" classes={{ checkmark: styles.customCheckmark, checkboxWrapper: styles.customCheckbox, input: styles.customInput, }}/>'
-                }
+                {`                  <KizunaAvatar
+                 size="lg"
+                 name="Ella Gopez"
+                 classes={{ imageWrapper: styles.customColor }}
+               />`}
               </code>
             </div>
           </div>

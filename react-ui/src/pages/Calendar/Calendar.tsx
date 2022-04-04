@@ -9,6 +9,12 @@ const Calendar = (props: any) => {
 
   const API_DATA = [
     {
+      name: 'id',
+      type: 'string',
+      defaultValue: 'random string value',
+      description: 'A unique identifier of component',
+    },
+    {
       name: 'dayNames',
       type: 'Array',
       defaultValue: '["M", "T", "W", "Th", "F", "Sa","Su"]',
