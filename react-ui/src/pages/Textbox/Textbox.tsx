@@ -129,7 +129,7 @@ const Textbox = (props: any) => {
                 <h3>Emoticon</h3>
                 <KizunaTextbox
                   name="name"
-                  placeholder="Enter a message..."
+                  placeholder=" Enter a message..."
                   emoticon
                   variant="standard"
                 />
@@ -141,7 +141,32 @@ const Textbox = (props: any) => {
                   variant="outlined"
                 />
               </div>
+
+              <div className={styles.withIcon}>
+                <h3>Search with Icon Placeholder</h3>
+                <KizunaTextbox
+                  name="name"
+                  placeholder="&#xF002; Search"
+                  variant="standard"
+                  classes={{ input: styles.customInputWithFontAwesome }}
+                />{' '}
+                <KizunaTextbox
+                  name="name"
+                  placeholder="&#xF002; Search"
+                  variant="standard"
+                  classes={{ input: styles.customInputWithFontAwesome }}
+                  align="center"
+                />
+                <KizunaTextbox
+                  name="name"
+                  placeholder="&#xF002; Search"
+                  variant="outlined"
+                  classes={{ input: styles.customInputWithFontAwesome }}
+                  align="right"
+                />
+              </div>
             </div>
+
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
             <h1 className={styles.title}>Examples</h1>
 

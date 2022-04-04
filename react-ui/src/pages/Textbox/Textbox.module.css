@@ -37,3 +37,7 @@
 .textboxPage small {
   color: var(--secondary-text);
 }
+
+.customInputWithFontAwesome {
+  font-family: 'FontAwesome';
+}
