@@ -46,16 +46,16 @@ export class KizunaPopover {
   componentWillLoad() {
     this._initCalendar();
 
-    window.addEventListener(
-      'click',
-      (e: Event) => {
-        const target = e.target as HTMLElement;
-        if (!this.el.contains(target)) {
-          this.open = false;
-        }
-      },
-      false,
-    );
+    // window.addEventListener(
+    //   'click',
+    //   (e: Event) => {
+    //     const target = e.target as HTMLElement;
+    //     if (!this.el.contains(target)) {
+    //       this.open = false;
+    //     }
+    //   },
+    //   false,
+    // );
   }
 
   @Event({

@@ -22,23 +22,23 @@ export class KizunaTextbox {
   @Prop() onEmoticonClick: Function;
   @Prop() emoticon: boolean;
   @State() inFocus: boolean = false;
-  @Element() el: HTMLElement;
+  // @Element() el: HTMLElement;
 
   inputElement = document.getElementById(this.id);
 
-  componentWillLoad() {
-    window.addEventListener(
-      'click',
-      (e: Event) => {
-        const target = e.target as HTMLElement;
-        if (!this.el.contains(target)) {
-          this.inFocus = false;
-          this.inputElement.blur();
-        }
-      },
-      false,
-    );
-  }
+  // componentWillLoad() {
+  //   window.addEventListener(
+  //     'click',
+  //     (e: Event) => {
+  //       const target = e.target as HTMLElement;
+  //       if (!this.el.contains(target)) {
+  //         this.inFocus = false;
+  //         this.inputElement.blur();
+  //       }
+  //     },
+  //     false,
+  //   );
+  // }
 
   private getTextFieldVariant = () => {
     if (this.variant?.toLowerCase() === 'standard') {

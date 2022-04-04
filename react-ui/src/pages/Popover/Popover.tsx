@@ -95,14 +95,16 @@ const Popover = (props: any) => {
                   <div className={styles.popoverContainer}>
                     <KizunaButton
                       type="secondary"
-                      text="Center Align"
+                      text="Center Align - test me"
                       onClick={() =>
                         setPopovers({ ...defaultPopovers, 2: !popovers[2] })
                       }
                     />
-                    <KizunaPopover open={popovers[2]} position="center">
-                      <p>Add Content here</p>
-                    </KizunaPopover>
+                    <div tabIndex={0} onBlur={() => console.log('test')}>
+                      <KizunaPopover open={popovers[2]} position="center">
+                        <p>Add Content here</p>
+                      </KizunaPopover>
+                    </div>
                   </div>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
