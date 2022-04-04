@@ -36,6 +36,7 @@ export namespace Components {
         "classes": { [key: string]: any };
         "darkmode": boolean;
         "dayNames": string[];
+        "id": string;
         "monthNames": string[];
         "onChange": Function;
         "position": string;
@@ -281,6 +282,7 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "darkmode"?: boolean;
         "dayNames"?: string[];
+        "id"?: string;
         "monthNames"?: string[];
         "onChange"?: Function;
         "onDayChanged"?: (event: CustomEvent<CalendarEntry>) => void;

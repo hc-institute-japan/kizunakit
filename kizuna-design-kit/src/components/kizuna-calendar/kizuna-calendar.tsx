@@ -10,6 +10,7 @@ import {
 } from '@stencil/core';
 import { CalendarEntry } from '../../util/calendar-entry';
 import { Calendar } from '../../util/calendar';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   tag: 'kizuna-calendar',
@@ -31,6 +32,7 @@ export class KizunaPopover {
     'November',
     'December',
   ];
+  @Prop() id: string = uuidv4();
   @Prop() darkmode: boolean = false;
   @Prop() onChange: Function;
   @Prop() position: string;
@@ -87,6 +89,11 @@ export class KizunaPopover {
       this.selectedDate = date;
     }
   }
+
+  _setCalendarFocus = (id: string) => {
+    const element = document.getElementById(`calendar-${id}`);
+    element.focus();
+  };
 
   _initCalendar = () => {
     this.setCalendarDetails();
@@ -286,6 +293,7 @@ export class KizunaPopover {
 
   _toggleCalendar = () => {
     this.open = !this.open;
+    this._setCalendarFocus(this.id);
   };
 
   _getPositionClassName = () => {
@@ -323,54 +331,59 @@ export class KizunaPopover {
             }}
           />
         </span>
+        <div
+          id={`calendar-${this.id}`}
+          tabIndex={0}
+          onBlur={() => (this.open = false)}
+        >
+          {this.open && (
+            <div
+              class={`calendar ${
+                this.classes?.root
+              } ${this._getPositionClassName()} ${
+                this.darkmode && 'calendar-darkmode'
+              }`}
+            >
+              <header>
+                <span onClick={this.switchToPreviousMonth}>
+                  <kizuna-icon
+                    name="left"
+                    classes={{
+                      root: this.classes?.headerLeftIcon,
+                    }}
+                  ></kizuna-icon>
+                </span>
+                <span class={`${this.classes?.monthName}`}>
+                  {this.monthNames[date.month - 1]} {date.year}
+                </span>
+                <span onClick={this.switchToNextMonth}>
+                  <kizuna-icon
+                    name="right"
+                    classes={{
+                      root: this.classes?.headerRightIcon,
+                    }}
+                  ></kizuna-icon>
+                </span>
+              </header>
 
-        {this.open && (
-          <div
-            class={`calendar ${
-              this.classes?.root
-            } ${this._getPositionClassName()} ${
-              this.darkmode && 'calendar-darkmode'
-            }`}
-          >
-            <header>
-              <span onClick={this.switchToPreviousMonth}>
-                <kizuna-icon
-                  name="left"
-                  classes={{
-                    root: this.classes?.headerLeftIcon,
-                  }}
-                ></kizuna-icon>
-              </span>
-              <span class={`${this.classes?.monthName}`}>
-                {this.monthNames[date.month - 1]} {date.year}
-              </span>
-              <span onClick={this.switchToNextMonth}>
-                <kizuna-icon
-                  name="right"
-                  classes={{
-                    root: this.classes?.headerRightIcon,
-                  }}
-                ></kizuna-icon>
-              </span>
-            </header>
+              <div class="day-names">
+                {this.dayNames.map(dayName => (
+                  <span>{dayName}</span>
+                ))}
+              </div>
 
-            <div class="day-names">
-              {this.dayNames.map(dayName => (
-                <span>{dayName}</span>
-              ))}
+              <div class="days-in-month">{this._renderDaysInMonth()}</div>
+
+              <div class="calender-buttons">
+                <kizuna-button
+                  text="Today"
+                  type="primary"
+                  onClick={this.setSelectedToCurrentDate}
+                ></kizuna-button>
+              </div>
             </div>
-
-            <div class="days-in-month">{this._renderDaysInMonth()}</div>
-
-            <div class="calender-buttons">
-              <kizuna-button
-                text="Today"
-                type="primary"
-                onClick={this.setSelectedToCurrentDate}
-              ></kizuna-button>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     );
   }
