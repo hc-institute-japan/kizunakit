@@ -1,5 +1,5 @@
 //@ts-ignore
-import kizunaLogo from '../../assets/kizuna-logo.svg';
+import kizunaLogo from '../../assets/kizunaLogo.png';
 import styles from './Header.module.css';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -21,7 +21,7 @@ const Header = (props: any) => {
             <MenuIcon />
           </IconButton>
         </Toolbar>
-        <img src={kizunaLogo} alt="Kizuna Logo" />
+        <img className={styles.kizunaLogo} src={kizunaLogo} alt="Kizuna Logo" />
         <h1>DESIGN SYSTEM</h1>
       </header>
     </>

@@ -6,6 +6,11 @@
   justify-content: left;
 }
 
+.kizunaLogo {
+  max-width: 150px;
+  width: 100%;
+}
+
 .kizunaHeader h1 {
   font-size: 12px;
   font-weight: 500;
@@ -16,6 +21,7 @@
 
 .toolbar {
   display: block;
+  min-height: unset !important;
 }
 
 .toolbar svg {
