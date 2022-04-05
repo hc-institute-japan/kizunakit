@@ -28,7 +28,7 @@
 }
 
 .format-selected .icon-container svg path {
-  fill: white;
+  fill: white !important;
 }
 
 .text-editor-left-align {
@@ -46,4 +46,8 @@
 
 .textEditorDark {
   background-color: var(--dark-primary-bg);
+}
+
+.textEditorDark .icon-container svg path {
+  fill: var(--secondary-text);
 }

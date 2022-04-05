@@ -18,6 +18,12 @@ const ButtonsPage = () => {
       description: 'This sets the deafult appearance of the button.',
     },
     {
+      name: 'rounded',
+      type: 'boolean',
+      defaultValue: '',
+      description: '',
+    },
+    {
       name: 'icon',
       type: 'string',
       defaultValue: '',
@@ -136,7 +142,19 @@ const ButtonsPage = () => {
             </div>
 
             <div className={styles.wrapper}>
-              <h3>Button with Custom Styles</h3>
+              <h3>Rounded Button</h3>
+              <div className={styles.defaultContainer}>
+                <div>
+                  <h4 className={styles.componentLabel}>Primary </h4>
+                  <KizunaButton type="primary" text="Primary" rounded />
+                </div>
+                <div>
+                  <h4 className={styles.componentLabel}>Secondary </h4>
+                  <KizunaButton type="secondary" text="Secondary" rounded />
+                </div>
+              </div>
+
+              <h3 className={styles.customStyles}>Button with Custom Styles</h3>
               <div className={styles.customStyleContainer}>
                 <div>
                   <h4 className={styles.componentLabel}>Custom Style </h4>

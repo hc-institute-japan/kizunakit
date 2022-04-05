@@ -57,7 +57,7 @@ const Toggle = (props: any) => {
               </div>
 
               <div className={styles.customStyles}>
-                <h3>Custom Styles</h3>
+                <h3>Custom </h3>
                 <KizunaToggleButton
                   classes={{
                     slider: styles.customSlider,

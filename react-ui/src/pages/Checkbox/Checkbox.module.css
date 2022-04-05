@@ -4,6 +4,7 @@
 
 .checkboxExamplesContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 .checkboxExamplesContainer h3,
 .checkboxExamplesContainer h4 {

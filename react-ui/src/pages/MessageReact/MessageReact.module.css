@@ -6,6 +6,7 @@
 .messageReactExamplesContainer .darkMode {
   display: flex;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .messageReactExamplesContainer .default > div:not(:last-child),
@@ -20,6 +21,7 @@
 
 .messageReactExamplesContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .messageReactExamplesContainer > div:not(:last-child) {

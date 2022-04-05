@@ -4,6 +4,7 @@
 
 .dividerExampleContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .dividerExampleContainer h3 {

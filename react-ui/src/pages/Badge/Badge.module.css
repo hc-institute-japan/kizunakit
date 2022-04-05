@@ -22,6 +22,7 @@
 
 .badgeExamplesContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 .badgeExamplesContainer h3 {
   font-weight: 400;

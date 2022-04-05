@@ -11,6 +11,7 @@
 
 .buttonsContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .buttonsContainer:nth-child(3) {
@@ -40,7 +41,8 @@
   display: flex;
 }
 
-.labelwithIcon {
+.labelwithIcon,
+.customStyles {
   margin-top: 3rem;
 }
 

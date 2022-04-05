@@ -62,16 +62,12 @@ const Tabs = (props: any) => {
     { name: 'Tab1', value: 'tab1' },
     { name: 'Tab2', value: 'tab2' },
     { name: 'Tab3', value: 'tab3' },
-    { name: 'Tab4', value: 'tab4' },
   ];
 
   const tabMenusDark = [
-    { name: 'Menu1', value: 'menu1' },
-    { name: 'Menu2', value: 'menu2' },
-    { name: 'Menu3', value: 'menu3' },
-    { name: 'Menu4', value: 'menu4' },
-    { name: 'Menu5', value: 'menu5' },
-    { name: 'Menu6', value: 'menu6' },
+    { name: 'Tab1', value: 'tab1' },
+    { name: 'Tab2', value: 'tab2' },
+    { name: 'Tab3', value: 'tab3' },
   ];
 
   return (

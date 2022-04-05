@@ -1,10 +1,13 @@
 .calendarExamplesContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+
   padding: 1rem 0;
 }
 
+.calendarExamplesContainer > div:not(:last-child) {
+  margin-right: 2rem;
+}
 .calendarContainer {
   display: flex;
   align-items: center;

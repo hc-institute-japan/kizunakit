@@ -120,29 +120,6 @@ const Textbox = (props: any) => {
                   placeholder="Enter your name"
                   variant="outlined"
                 />
-                <div className={styles.position}>
-                  <h3>Position</h3>
-                  <KizunaTextbox
-                    name="left"
-                    placeholder="Align Left"
-                    variant="outlined"
-                    align="left"
-                  />
-                  <br />
-                  <KizunaTextbox
-                    name="center"
-                    placeholder="Align Center"
-                    variant="outlined"
-                    align="center"
-                  />
-                  <br />
-                  <KizunaTextbox
-                    name="right"
-                    placeholder="Align Right"
-                    variant="outlined"
-                    align="right"
-                  />
-                </div>
               </div>
 
               <div className={styles.withLabel}>
@@ -179,6 +156,30 @@ const Textbox = (props: any) => {
                 />
               </div>
 
+              <div className={styles.position}>
+                <h3>Position</h3>
+                <KizunaTextbox
+                  name="left"
+                  placeholder="Align Left"
+                  variant="outlined"
+                  align="left"
+                />
+                <br />
+                <KizunaTextbox
+                  name="center"
+                  placeholder="Align Center"
+                  variant="outlined"
+                  align="center"
+                />
+                <br />
+                <KizunaTextbox
+                  name="right"
+                  placeholder="Align Right"
+                  variant="outlined"
+                  align="right"
+                />
+              </div>
+
               <div className={styles.withIcon}>
                 <h3>Emoticon</h3>
                 <KizunaTextbox
@@ -196,8 +197,8 @@ const Textbox = (props: any) => {
                 />
               </div>
 
-              <div className={styles.withIcon}>
-                <h3>Search with Icon Placeholder</h3>
+              {/* <div className={styles.withIcon}>
+                <h3>Icon Placeholder</h3>
                 <KizunaTextbox
                   name="name"
                   placeholder="&#xF002; Search"
@@ -218,7 +219,7 @@ const Textbox = (props: any) => {
                   classes={{ input: styles.customInputWithFontAwesome }}
                   align="right"
                 />
-              </div>
+              </div> */}
             </div>
 
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />

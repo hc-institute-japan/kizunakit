@@ -105,7 +105,7 @@ const Modal = (props: any) => {
             </div>
 
             <KizunaModal open={isOpen} onClose={_handleClose}>
-              <h1>Add Modal Content Here</h1>
+              <h3>Add Modal Content Here</h3>
             </KizunaModal>
 
             <KizunaModal
@@ -130,7 +130,7 @@ const Modal = (props: any) => {
                 modalContent: styles.customModalContent,
               }}
             >
-              <h1>Transparent Background</h1>
+              <h3>Transparent Background</h3>
             </KizunaModal>
 
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />

@@ -9,6 +9,7 @@
 
 .textboxExamplesContainer {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .textboxExamplesContainer > div:not(:last-child) {

@@ -5,12 +5,12 @@
 
 .exampleWrapper {
   display: flex;
-  justify-content: space-around;
+
+  flex-wrap: wrap;
 }
 
-.exampleContainer {
-  width: 500px;
-  margin: 2rem;
+.exampleContainer:not(:last-child) {
+  margin-right: 3rem;
 }
 
 .exampleTitle {

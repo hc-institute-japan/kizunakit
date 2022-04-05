@@ -4,6 +4,7 @@
 
 .messageBoxExamplesContainer .default {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .messageBoxExamplesContainer h3,
@@ -28,6 +29,7 @@
 
 .messageBoxExamplesContainer .darkMode {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .darkModeWrapper {

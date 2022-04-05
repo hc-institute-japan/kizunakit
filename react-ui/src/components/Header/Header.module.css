@@ -7,7 +7,7 @@
 }
 
 .kizunaHeader h1 {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   margin: 0;
   margin-left: 15px;
@@ -18,8 +18,16 @@
   display: block;
 }
 
+.toolbar svg {
+  fill: var(--primary);
+}
+
 @media only screen and (min-width: 600px) {
   .toolbar {
-    display: none;
+    display: none !important;
+  }
+
+  .kizunaHeader h1 {
+    font-size: 14px;
   }
 }

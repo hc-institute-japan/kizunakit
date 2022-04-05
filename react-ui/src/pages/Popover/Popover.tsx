@@ -127,7 +127,7 @@ const Popover = (props: any) => {
                     />
 
                     <KizunaPopover open={popovers[3]} position="right">
-                      <h2>Content goes here</h2>
+                      <p>Content goes here</p>
                     </KizunaPopover>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ const Popover = (props: any) => {
                     />
 
                     <KizunaPopover open={popovers[6]} position="right" darkmode>
-                      <h2>Content goes here</h2>
+                      <p>Content goes here</p>
                     </KizunaPopover>
                   </div>
                 </div>
