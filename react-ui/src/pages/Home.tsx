@@ -28,17 +28,17 @@ const Home = () => {
           }
         </p>
         <br />
-        <p>{'/* Light Mode */'}</p>
+        <p className={styles.commentCode}>{'/* Light Mode */'}</p>
         <p>{'--primary-text: #404040;'}</p>
         <p>{'--secondary-text: #838383;'}</p>
         <br />
-        <p>{'/* Dark Mode */'}</p>
+        <p className={styles.commentCode}>{'/* Dark Mode */'}</p>
         <p>{'-dark-primary-text: #cfcfcf;'}</p>-
         <p>{'--dark-secondary-text: #979797;'}</p>
         <p>{'--dark-primary-bg: #23252e;'}</p>
         <p>{'--dark-secondary-bg: #292b33;'}</p>
         <br />
-        <p>{'/* Colors */'}</p>
+        <p className={styles.commentCode}>{'/* Colors */'}</p>
         <p>{'-white: #ffff;'}</p>
         <p>{'--black: #0000;'}</p>
         <p>{'--red: #f10404;'}</p>
