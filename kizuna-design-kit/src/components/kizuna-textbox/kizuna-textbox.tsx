@@ -21,6 +21,8 @@ export class KizunaTextbox {
   @Prop() onChange: Function;
   @Prop() onEmoticonClick: Function;
   @Prop() emoticon: boolean;
+  @Prop() rounded: boolean = true;
+
   @State() inFocus: boolean = false;
   @State() showClose: boolean = false;
 
@@ -90,8 +92,10 @@ export class KizunaTextbox {
           tabIndex={0}
           class={`textfield ${this.getTextFieldVariant()} ${
             this.classes?.input
-          } ${this._getTextAlign()} ${
-            this.startIconName && 'padding-start'
+          } ${this._getTextAlign()} ${this.startIconName && 'padding-start'} ${
+            this.inFocus && 'textfield-left-align-force'
+          } ${
+            this.variant === 'outlined' && this.rounded && 'rounded-input'
           } padding-end`}
           type="text"
           name={this.name}

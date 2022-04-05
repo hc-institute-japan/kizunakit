@@ -161,3 +161,26 @@ label ~ .textfield:focus {
 .textfield-right-align:-ms-input-placeholder {
   text-align: right;
 }
+
+/* Left Placeholder */
+.textfield-left-align-force::-webkit-input-placeholder {
+  text-align: left !important;
+}
+
+.textfield-left-align-force:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: left !important;
+}
+
+.textfield-left-align-force::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: left !important;
+}
+
+.textfield-left-align-force:-ms-input-placeholder {
+  text-align: left !important;
+}
+
+.textboxWrapper .rounded-input {
+  border-radius: 30px;
+}

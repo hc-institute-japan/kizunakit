@@ -602,6 +602,15 @@ export class App {
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
+            placeholder="Rounded "
+            name="Rounded"
+            startIconName="search"
+            variant="outlined"
+            rounded
+            onChange={data => console.log({ text: data })}
+          ></kizuna-textbox>
+          <br />
+          <kizuna-textbox
             placeholder="First Name (No Start Icon) "
             name="firstName"
             label="First Name"

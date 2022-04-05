@@ -120,6 +120,7 @@ export namespace Components {
         "onChange": Function;
         "onEmoticonClick": Function;
         "placeholder": string;
+        "rounded": boolean;
         "startIconName": string;
         "value": string;
         "variant": string;
@@ -369,6 +370,7 @@ declare namespace LocalJSX {
         "onChange"?: Function;
         "onEmoticonClick"?: Function;
         "placeholder"?: string;
+        "rounded"?: boolean;
         "startIconName"?: string;
         "value"?: string;
         "variant"?: string;

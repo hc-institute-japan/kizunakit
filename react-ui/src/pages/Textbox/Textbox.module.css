@@ -39,5 +39,10 @@
 }
 
 .customInputWithFontAwesome {
-  font-family: 'FontAwesome';
+  font-family: 'Montserrat', sans-serif, 'FontAwesome';
+}
+
+.customInputWithFontAwesome::-webkit-input-placeholder {
+  font-weight: 500;
+  opacity: 0.7;
 }
