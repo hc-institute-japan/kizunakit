@@ -11,6 +11,7 @@
 | ---------- | ---------- | ----------- | ------------------------- | ----------- |
 | `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
 | `darkmode` | `darkmode` |             | `boolean`                 | `undefined` |
+| `id`       | `id`       |             | `string`                  | `uuidv4()`  |
 | `open`     | `open`     |             | `boolean`                 | `false`     |
 | `position` | `position` |             | `string`                  | `undefined` |
 

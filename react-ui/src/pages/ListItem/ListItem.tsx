@@ -62,12 +62,6 @@ const ListItem = (props: any) => {
     },
   ];
 
-  const _setFocus = () => {
-    const element = document.getElementById(`list-1`);
-    console.log(element);
-    element?.focus();
-  };
-
   return (
     <>
       <div>
@@ -95,26 +89,14 @@ const ListItem = (props: any) => {
                     text="View List Items in a Popover"
                     onClick={() => setPopover1(!popover1)}
                   />
-                  <div
-                    id={`list-1`}
-                    tabIndex={1}
-                    onBlur={() => {
-                      setPopover1(!popover1);
-                      _setFocus();
-                    }}
-                  >
-                    <KizunaPopover open={popover1}>
-                      <KizunaListItem icon="trash" text="Delete" divider />
-                      <KizunaListItem icon="send" text="Send" divider />
-                      <KizunaListItem icon="copy" text="Copy" divider />
-                      <KizunaListItem
-                        icon="briefcase"
-                        text="Briefcase"
-                        divider
-                      />
-                      <KizunaListItem icon="message" text="Message" />
-                    </KizunaPopover>
-                  </div>
+
+                  <KizunaPopover open={popover1}>
+                    <KizunaListItem icon="trash" text="Delete" divider />
+                    <KizunaListItem icon="send" text="Send" divider />
+                    <KizunaListItem icon="copy" text="Copy" divider />
+                    <KizunaListItem icon="briefcase" text="Briefcase" divider />
+                    <KizunaListItem icon="message" text="Message" />
+                  </KizunaPopover>
                 </div>
               </div>
             </div>

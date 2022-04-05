@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CustomTabs from '../../components/Tabs/Tabs';
 import CustomTable from '../../components/CustomTable/CustomTable';
 import {
@@ -25,7 +25,6 @@ const defaultPopovers: popoverState = {
 const Popover = (props: any) => {
   const [selected, setSelected] = useState('examples');
   const [popovers, setPopovers] = useState(defaultPopovers);
-  const isPopoverOpen = Object.values(popovers).some(popover => popover);
 
   const API_DATA = [
     {
@@ -92,28 +91,22 @@ const Popover = (props: any) => {
                 <div className={styles.flexContainer}>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
-                      disabled={popovers[1]}
                       type="secondary"
                       text="Left Align"
                       onClick={() => _togglePopover(1)}
                     />
-                    <div
-                      id={`popover-1`}
-                      tabIndex={1}
-                      onBlur={() => setPopovers(defaultPopovers)}
-                    >
-                      <KizunaPopover open={popovers[1]} position="left">
-                        <KizunaListItem icon="trash" text="Delete" divider />
-                        <KizunaListItem icon="send" text="Send" divider />
-                        <KizunaListItem icon="copy" text="Copy" divider />
-                        <KizunaListItem
-                          icon="briefcase"
-                          text="Briefcase"
-                          divider
-                        />
-                        <KizunaListItem icon="message" text="Message" />
-                      </KizunaPopover>
-                    </div>
+
+                    <KizunaPopover open={popovers[1]} position="left">
+                      <KizunaListItem icon="trash" text="Delete" divider />
+                      <KizunaListItem icon="send" text="Send" divider />
+                      <KizunaListItem icon="copy" text="Copy" divider />
+                      <KizunaListItem
+                        icon="briefcase"
+                        text="Briefcase"
+                        divider
+                      />
+                      <KizunaListItem icon="message" text="Message" />
+                    </KizunaPopover>
                   </div>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
@@ -121,15 +114,10 @@ const Popover = (props: any) => {
                       text="Center Align"
                       onClick={() => _togglePopover(2)}
                     />
-                    <div
-                      id={`popover-2`}
-                      tabIndex={2}
-                      onBlur={() => setPopovers(defaultPopovers)}
-                    >
-                      <KizunaPopover open={popovers[2]} position="center">
-                        <p>Add Content here</p>
-                      </KizunaPopover>
-                    </div>
+
+                    <KizunaPopover open={popovers[2]} position="center">
+                      <p>Add Content here</p>
+                    </KizunaPopover>
                   </div>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
@@ -138,15 +126,9 @@ const Popover = (props: any) => {
                       onClick={() => _togglePopover(3)}
                     />
 
-                    <div
-                      id={`popover-3`}
-                      tabIndex={2}
-                      onBlur={() => setPopovers(defaultPopovers)}
-                    >
-                      <KizunaPopover open={popovers[3]} position="right">
-                        <h2>Content goes here</h2>
-                      </KizunaPopover>
-                    </div>
+                    <KizunaPopover open={popovers[3]} position="right">
+                      <h2>Content goes here</h2>
+                    </KizunaPopover>
                   </div>
                 </div>
               </div>
@@ -160,27 +142,18 @@ const Popover = (props: any) => {
                       text="Left Align"
                       onClick={() => _togglePopover(4)}
                     />
-                    <div
-                      id={`popover-4`}
-                      tabIndex={1}
-                      onBlur={() => setPopovers(defaultPopovers)}
-                    >
-                      <KizunaPopover
-                        open={popovers[4]}
-                        position="left"
-                        darkmode
-                      >
-                        <KizunaListItem icon="trash" text="Delete" divider />
-                        <KizunaListItem icon="send" text="Send" divider />
-                        <KizunaListItem icon="copy" text="Copy" divider />
-                        <KizunaListItem
-                          icon="briefcase"
-                          text="Briefcase"
-                          divider
-                        />
-                        <KizunaListItem icon="message" text="Message" />
-                      </KizunaPopover>
-                    </div>
+
+                    <KizunaPopover open={popovers[4]} position="left" darkmode>
+                      <KizunaListItem icon="trash" text="Delete" divider />
+                      <KizunaListItem icon="send" text="Send" divider />
+                      <KizunaListItem icon="copy" text="Copy" divider />
+                      <KizunaListItem
+                        icon="briefcase"
+                        text="Briefcase"
+                        divider
+                      />
+                      <KizunaListItem icon="message" text="Message" />
+                    </KizunaPopover>
                   </div>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
@@ -188,19 +161,14 @@ const Popover = (props: any) => {
                       text="Center Align"
                       onClick={() => _togglePopover(5)}
                     />
-                    <div
-                      id={`popover-5`}
-                      tabIndex={1}
-                      onBlur={() => setPopovers(defaultPopovers)}
+
+                    <KizunaPopover
+                      open={popovers[5]}
+                      position="center"
+                      darkmode
                     >
-                      <KizunaPopover
-                        open={popovers[5]}
-                        position="center"
-                        darkmode
-                      >
-                        <p>Add Content here</p>
-                      </KizunaPopover>
-                    </div>
+                      <p>Add Content here</p>
+                    </KizunaPopover>
                   </div>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
@@ -208,19 +176,10 @@ const Popover = (props: any) => {
                       text="Left Align"
                       onClick={() => _togglePopover(6)}
                     />
-                    <div
-                      id={`popover-6`}
-                      tabIndex={1}
-                      onBlur={() => setPopovers(defaultPopovers)}
-                    >
-                      <KizunaPopover
-                        open={popovers[6]}
-                        position="right"
-                        darkmode
-                      >
-                        <h2>Content goes here</h2>
-                      </KizunaPopover>
-                    </div>
+
+                    <KizunaPopover open={popovers[6]} position="right" darkmode>
+                      <h2>Content goes here</h2>
+                    </KizunaPopover>
                   </div>
                 </div>
               </div>
