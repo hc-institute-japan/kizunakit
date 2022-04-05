@@ -591,6 +591,12 @@ export class App {
             name="firstName"
             variant="standard"
             label="First Name"
+            onChange={data => console.log({ text: data })}
+          ></kizuna-textbox>
+          <br />
+          <kizuna-textbox
+            placeholder="Search textbox "
+            name="searchBox"
             startIconName="search"
             onChange={data => console.log({ text: data })}
           ></kizuna-textbox>

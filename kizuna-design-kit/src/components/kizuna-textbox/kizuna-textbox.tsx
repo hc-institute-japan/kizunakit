@@ -22,9 +22,14 @@ export class KizunaTextbox {
   @Prop() onEmoticonClick: Function;
   @Prop() emoticon: boolean;
   @State() inFocus: boolean = false;
-  // @Element() el: HTMLElement;
+  @State() showClose: boolean = false;
 
-  inputElement = document.getElementById(this.id);
+  inputElement = (<span></span>);
+
+  // @Element() el: HTMLElement;
+  componentDidLoad() {
+    this.inputElement = document.getElementById(`textbox-${this.id}`);
+  }
 
   // componentWillLoad() {
   //   window.addEventListener(
@@ -61,14 +66,16 @@ export class KizunaTextbox {
   };
 
   _handleClear = () => {
+    this.inFocus = true;
     this.value = '';
     this.onChange && this.onChange('');
+    this.inputElement?.focus();
   };
 
   _handleChange = e => {
     this.value = e.target.value;
     this.onChange && this.onChange(this.value);
-    this.inputElement.focus();
+    this.inputElement?.focus();
   };
 
   _handleEmoticonClear = () => {
@@ -79,34 +86,38 @@ export class KizunaTextbox {
     return (
       <div class="textboxWrapper">
         <input
+          id={`textbox-${this.id}`}
+          tabIndex={0}
           class={`textfield ${this.getTextFieldVariant()} ${
             this.classes?.input
           } ${this._getTextAlign()} ${
-            this.startIconName && this.inFocus && 'padding-start'
+            this.startIconName && 'padding-start'
           } padding-end`}
           type="text"
-          id={this.id}
           name={this.name}
           placeholder={`${this.placeholder}`}
           value={this.value}
+          autoFocus
           onChange={this._handleChange}
           onFocusin={() => (this.inFocus = true)}
+          onBlur={() => (this.inFocus = false)}
         />
 
-        {this.inFocus && (
-          <div>
-            {this.startIconName && (
-              <span class="start-icon">
-                <kizuna-icon name={`${this.startIconName}`} />
-              </span>
-            )}
-            {!this.emoticon && (
-              <span class="end-icon" onClick={this._handleClear}>
-                <kizuna-icon name="close" />
-              </span>
-            )}
-          </div>
-        )}
+        <div>
+          {this.startIconName && (
+            <span class={`start-icon ${this.inFocus && 'active-icon'}`}>
+              <kizuna-icon name={`${this.startIconName}`} />
+            </span>
+          )}
+          {!this.emoticon && (
+            <span
+              class={`end-icon active-icon ${!this.inFocus && 'show-end-icon'}`}
+              onClick={this._handleClear}
+            >
+              <kizuna-icon name="close" />
+            </span>
+          )}
+        </div>
 
         {this.emoticon && (
           <span class="emoticon-icon" onClick={this._handleEmoticonClear}>
