@@ -5,7 +5,7 @@ import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from 'kizuna-design-kit';
 
-import { defineCustomElements } from 'kizuna-design-kit/loader';
+import { defineCustomElements } from 'kizuna-design-kit/dist/loader';
 
 defineCustomElements();
 export const KizunaApp = /*@__PURE__*/createReactComponent<JSX.KizunaApp, HTMLKizunaAppElement>('kizuna-app');
