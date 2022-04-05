@@ -52,10 +52,27 @@ code {
   color: var(--secondary-text);
 }
 
-.title {
-  font-weight: 400;
+h1,
+h3,
+h2 {
+  font-weight: 400 !important;
+  color: var(--primary-text);
 }
 
 p {
   margin: 0;
+  color: var(--primary-text);
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }

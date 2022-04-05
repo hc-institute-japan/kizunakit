@@ -38,4 +38,7 @@
   .tableData {
     font-size: 10px;
   }
+  .tableHeader {
+    font-size: 12px;
+  }
 }

@@ -112,7 +112,7 @@ const Calendar = (props: any) => {
               </div>
 
               <div className={styles.calendarsWrapper}>
-                <h2 className={styles.wrapperTitle}>Darkmode</h2>
+                <h2 className={styles.wrapperTitle}>Dark Mode</h2>
                 <div className={styles.calendars}>
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Left Align</p>
