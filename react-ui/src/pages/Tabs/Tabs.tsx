@@ -50,11 +50,11 @@ const Tabs = (props: any) => {
   const CSS_DATA = [
     {
       name: 'tabWrapper',
-      description: 'Overides the styling for the main wrapper',
+      description: 'Overrides the styling for the main wrapper',
     },
     {
       name: 'tabMenu',
-      description: 'Overides the styling for the Tab menu wrapper',
+      description: 'Overrides the styling for the Tab menu wrapper',
     },
   ];
 

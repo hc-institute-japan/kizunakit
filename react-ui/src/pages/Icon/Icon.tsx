@@ -90,7 +90,7 @@ const Icon = (props: any) => {
   const CSS_DATA = [
     {
       name: 'root',
-      description: 'Overides the styling for the main wrapper of the icon',
+      description: 'Overrides the styling for the main wrapper of the icon',
     },
   ];
   return (

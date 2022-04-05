@@ -7,6 +7,10 @@ const Home = () => {
       <p>Learn how to include Kizuna Kit in your project</p>
 
       <h2>Installation</h2>
+      <p>
+        To consume Kizuna design kit, use the npm package which you can install
+        with npm (or yarn if you prefer).
+      </p>
 
       <div className={styles.codeWrapper}>
         <code>{'npm install kizuna-react-kit'}</code>
@@ -17,7 +21,10 @@ const Home = () => {
         <code>{"import { KizunaButton } from 'kizuna-react-kit' "}</code>
       </div>
 
-      <h2>Browser Global</h2>
+      <h2>Browser Global Styles</h2>
+      <p>
+        To use the colors of the package, add theses on your global css file.
+      </p>
       <div className={styles.codeWrapper}>
         <p>{':root {'}</p>
         <p>{'   --primary: #e48221;'}</p>

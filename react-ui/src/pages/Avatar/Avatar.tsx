@@ -53,19 +53,19 @@ const Avatar = (props: any) => {
   const CSS_DATA = [
     {
       name: 'avatarWrapper',
-      description: 'Overides the styling for the main wrapper of the Avatar',
+      description: 'Overrides the styling for the main wrapper of the Avatar',
     },
     {
       name: 'imageWrapper',
-      description: 'Overides the styling for the image wrapper of the Avatar',
+      description: 'Overrides the styling for the image wrapper of the Avatar',
     },
     {
       name: 'indicator',
-      description: 'Overides the styling for the indicator',
+      description: 'Overrides the styling for the indicator',
     },
     {
       name: 'checkmark',
-      description: 'Overides the styling for the checkmark',
+      description: 'Overrides the styling for the checkmark',
     },
   ];
   return (

@@ -57,11 +57,11 @@ const Popover = (props: any) => {
   const CSS_DATA = [
     {
       name: 'root',
-      description: 'Overides the styling for the main wrapper',
+      description: 'Overrides the styling for the main wrapper',
     },
     {
       name: 'contentWrapper',
-      description: 'Overides the styling for the content wrapper',
+      description: 'Overrides the styling for the content wrapper',
     },
   ];
 

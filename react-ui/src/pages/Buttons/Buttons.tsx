@@ -60,9 +60,9 @@ const ButtonsPage = () => {
   const CSS_DATA = [
     {
       name: 'btnWrapper',
-      description: 'Overides the styling for the main wrapper of the button',
+      description: 'Overrides the styling for the main wrapper of the button',
     },
-    { name: 'icon', description: 'Overides the styling for the icon wrapper' },
+    { name: 'icon', description: 'Overrides the styling for the icon wrapper' },
   ];
 
   return (

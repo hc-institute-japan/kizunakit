@@ -52,12 +52,12 @@ const Checkbox = (props: any) => {
   const CSS_DATA = [
     {
       name: 'checkboxWrapper',
-      description: 'Overides the styling for the main wrapper of the checkbox',
+      description: 'Overrides the styling for the main wrapper of the checkbox',
     },
-    { name: 'input', description: 'Overides the styling for the input' },
+    { name: 'input', description: 'Overrides the styling for the input' },
     {
       name: 'checkmark',
-      description: 'Overides the styling for the checkmark',
+      description: 'Overrides the styling for the checkmark',
     },
   ];
   return (

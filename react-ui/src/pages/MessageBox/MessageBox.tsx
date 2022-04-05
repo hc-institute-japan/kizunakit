@@ -52,47 +52,48 @@ const MessageBox = (props: any) => {
   const CSS_DATA = [
     {
       name: 'root',
-      description: 'Overide styling for main wrapper of component',
+      description: 'Overrides styling for main wrapper of component',
     },
     {
       name: 'message',
-      description: 'Overide styling for the text of component',
+      description: 'Overrides styling for the text of component',
     },
     {
       name: 'metadata',
-      description: 'Overide styling for text at the bottom of the component',
+      description: 'Overrides styling for text at the bottom of the component',
     },
     {
       name: 'time',
-      description: 'Overide styling for time text of component',
+      description: 'Overrides styling for time text of component',
     },
     {
       name: 'messageStatus',
-      description: 'Overide styling for Message status of component',
+      description: 'Overrides styling for Message status of component',
     },
     {
       name: 'messageStatusIcon',
-      description: 'Overide styling for messageStatusIcon wrapper of component',
+      description:
+        'Overrides styling for messageStatusIcon wrapper of component',
     },
     {
       name: 'reactionsContainer',
-      description: 'Overide styling for Reactions container',
+      description: 'Overrides styling for Reactions container',
     },
     {
       name: 'reactionContainer',
-      description: 'Overide styling for Reaction Container',
+      description: 'Overrides styling for Reaction Container',
     },
     {
       name: 'messageReactWrapper',
-      description: 'Overide styling for Message Reac tWrapper of component',
+      description: 'Overrides styling for Message Reac tWrapper of component',
     },
     {
       name: 'emoji',
-      description: 'Overide styling for memoji',
+      description: 'Overrides styling for memoji',
     },
     {
       name: 'count',
-      description: 'Overide styling for count text',
+      description: 'Overrides styling for count text',
     },
   ];
   return (

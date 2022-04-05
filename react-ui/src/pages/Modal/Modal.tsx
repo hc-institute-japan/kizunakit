@@ -47,19 +47,19 @@ const Modal = (props: any) => {
   const CSS_DATA = [
     {
       name: 'overlayBackground',
-      description: 'Overides the styling for background of the modal',
+      description: 'Overrides the styling for background of the modal',
     },
     {
       name: 'modalWrapper',
-      description: 'Overides the styling for the main wrapper of the modal',
+      description: 'Overrides the styling for the main wrapper of the modal',
     },
     {
       name: 'modalContent',
-      description: 'Overides the styling for the body of the modal',
+      description: 'Overrides the styling for the body of the modal',
     },
     {
       name: 'closeIcon',
-      description: 'Overides the styling for the closeIcon wrapper',
+      description: 'Overrides the styling for the closeIcon wrapper',
     },
   ];
 

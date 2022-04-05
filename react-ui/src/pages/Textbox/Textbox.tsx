@@ -88,15 +88,15 @@ const Textbox = (props: any) => {
   const CSS_DATA = [
     {
       name: 'input',
-      description: 'Overides the styling for the input wrapper of the badge',
+      description: 'Overrides the styling for the input wrapper of the badge',
     },
     {
       name: 'emoticonIcon',
-      description: 'Overides the styling for the Emoticon Icon wrapper',
+      description: 'Overrides the styling for the Emoticon Icon wrapper',
     },
     {
       name: 'labelWrapper',
-      description: 'Overides the styling for the Label Wrapper wrapper',
+      description: 'Overrides the styling for the Label Wrapper wrapper',
     },
   ];
   return (

@@ -34,9 +34,9 @@ const Toggle = (props: any) => {
   const CSS_DATA = [
     {
       name: 'badgeWrapper',
-      description: 'Overides the styling for the main wrapper of the badge',
+      description: 'Overrides the styling for the main wrapper of the badge',
     },
-    { name: 'icon', description: 'Overides the styling for the icon wrapper' },
+    { name: 'icon', description: 'Overrides the styling for the icon wrapper' },
   ];
   return (
     <>

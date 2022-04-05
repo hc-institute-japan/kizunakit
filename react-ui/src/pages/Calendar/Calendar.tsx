@@ -64,23 +64,23 @@ const Calendar = (props: any) => {
   const CSS_DATA = [
     {
       name: 'root',
-      description: 'Overides the styling for the main wrapper of the badge',
+      description: 'Overrides the styling for the main wrapper of the badge',
     },
     {
       name: 'monthName',
-      description: 'Overides the styling for the calendar name',
+      description: 'Overrides the styling for the calendar name',
     },
     {
       name: 'calenderIcon',
-      description: 'Overides the styling for the calendar icon wrapper',
+      description: 'Overrides the styling for the calendar icon wrapper',
     },
     {
       name: 'headerLeftIcon',
-      description: 'Overides the styling for the headerLeftIcon wrapper',
+      description: 'Overrides the styling for the headerLeftIcon wrapper',
     },
     {
       name: 'headerRightIcon',
-      description: 'Overides the styling for the headerRightIcon wrapper',
+      description: 'Overrides the styling for the headerRightIcon wrapper',
     },
   ];
   return (

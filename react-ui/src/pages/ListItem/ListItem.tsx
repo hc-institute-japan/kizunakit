@@ -50,15 +50,17 @@ const ListItem = (props: any) => {
   const CSS_DATA = [
     {
       name: 'listItemWrapper',
-      description: 'Overides the styling for the main wrapper of the list item',
+      description:
+        'Overrides the styling for the main wrapper of the list item',
     },
     {
       name: 'listItemIcon',
-      description: 'Overides the styling for the icon wrapper of the list item',
+      description:
+        'Overrides the styling for the icon wrapper of the list item',
     },
     {
       name: 'divider',
-      description: 'Overides the styling for the divider of the list item',
+      description: 'Overrides the styling for the divider of the list item',
     },
   ];
 
