@@ -1,7 +1,7 @@
 {
   "name": "kizuna-react-kit",
   "version": "0.1.0",
-  "private": true,
+  
   "sideEffects": false,
   "description": "React specific wrapper for component-library",
   "scripts": {
