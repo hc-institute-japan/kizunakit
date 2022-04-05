@@ -16,7 +16,7 @@
   display: flex;
   justify-content: right;
   align-items: center;
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 
 .message-time {
@@ -52,15 +52,16 @@
 }
 
 .sent-message-darkmode {
-  background-color: var(--primary);
+  background-color: #e48221;
 }
 
 .received-message {
-  background-color: rgba(228, 130, 33, 0.2);
+  background-color: rgba(228, 114, 33, 0.1);
 }
 
 .received-message-darkmode {
   background-color: rgba(228, 130, 33, 0.2);
+  color: var(--dark-primary-text);
 }
 
 .received-message-darkmode .message-content {

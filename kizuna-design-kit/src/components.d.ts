@@ -29,6 +29,7 @@ export namespace Components {
         "disabled": boolean;
         "handleOnClick": Function;
         "icon": string;
+        "rounded": boolean;
         "text": string;
         "type": string;
     }
@@ -276,6 +277,7 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "handleOnClick"?: Function;
         "icon"?: string;
+        "rounded"?: boolean;
         "text"?: string;
         "type"?: string;
     }

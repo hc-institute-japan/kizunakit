@@ -9,9 +9,10 @@ export class KizunaButton {
   @Prop() type: string;
   @Prop() disabled: boolean;
   @Prop() icon: string;
-  @Prop() text: string = 'Button Text';
+  @Prop() text: string;
   @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
+  @Prop() rounded: boolean;
 
   private getBtnType = () => {
     if (this.type?.toLowerCase() === 'primary') {
@@ -39,7 +40,7 @@ export class KizunaButton {
     return (
       <button
         disabled={this.disabled}
-        class={`btn ${
+        class={`btn ${this.rounded && 'buttonRounded'} ${
           this.classes?.btnWrapper
         } ${this.getBtnType()} ${this.getBtnDisabledClassName()}`}
         onClick={() => this.handleOnClick}

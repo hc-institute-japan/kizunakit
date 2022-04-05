@@ -15,6 +15,8 @@ export class KizunaMessageBox {
   @Prop() reactionList: Array<{ [key: string]: any }>;
 
   _renderMessageStatus = () => {
+    if (this.sent) return;
+
     if (this.messageStatus === 'sent') {
       return (
         <div class={`message-status-indicator ${this.classes?.messageStatus}`}>
@@ -90,15 +92,15 @@ export class KizunaMessageBox {
   _getWrapperClassName = () => {
     if (this.sent) {
       if (this.darkmode) {
-        return 'sent-message-darkmode';
-      } else {
-        return 'sent-message';
-      }
-    } else {
-      if (this.darkmode) {
         return 'received-message-darkmode';
       } else {
         return 'received-message';
+      }
+    } else {
+      if (this.darkmode) {
+        return 'sent-message-darkmode';
+      } else {
+        return 'sent-message';
       }
     }
   };

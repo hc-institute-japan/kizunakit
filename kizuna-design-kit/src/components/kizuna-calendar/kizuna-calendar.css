@@ -1,6 +1,7 @@
 .calendar-wrapper {
   position: relative;
   width: fit-content;
+  cursor: pointer;
 }
 
 .calendar {
