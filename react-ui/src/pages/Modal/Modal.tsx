@@ -136,7 +136,7 @@ const Modal = (props: any) => {
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />
             <h1 className="title">Examples</h1>
 
-            <div className="codeExampleContainer">
+            <div className={styles.codeExampleContainer}>
               <code>{`            <KizunaModal open={isOpen} onClose={_handleClose}>
               <h1>Add Modal Content Here</h1>
             </KizunaModal>`}</code>

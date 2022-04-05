@@ -31,3 +31,15 @@
   align-items: center;
   padding: 2rem;
 }
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+  word-break: break-word;
+}
+.codeExampleContainer code {
+  display: block;
+}
