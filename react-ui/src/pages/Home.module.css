@@ -1,0 +1,19 @@
+.homePage h1 {
+  margin-bottom: 0;
+}
+
+.homePage h1,
+.homePage h2,
+.homePage h3 {
+  font-weight: 400;
+}
+
+.homePage h2 {
+  margin-top: 4rem;
+}
+.codeWrapper {
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
+  padding: 15px;
+  border-radius: 5px;
+}
