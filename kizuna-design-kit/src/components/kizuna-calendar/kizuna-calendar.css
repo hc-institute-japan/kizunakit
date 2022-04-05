@@ -121,3 +121,7 @@ header {
 .calendar-darkmode header svg path {
   stroke: var(--dark-primary-text);
 }
+
+.disabled-click-event {
+  pointer-events: none;
+}

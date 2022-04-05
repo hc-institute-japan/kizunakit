@@ -323,7 +323,10 @@ export class KizunaPopover {
 
     return (
       <div class={`calendar-wrapper `}>
-        <span onClick={this._toggleCalendar}>
+        <span
+          onClick={this.open ? e => e.preventDefault() : this._toggleCalendar}
+          class={`${this.open && 'disabled-click-event'}`}
+        >
           <kizuna-icon
             name="calendar"
             classes={{

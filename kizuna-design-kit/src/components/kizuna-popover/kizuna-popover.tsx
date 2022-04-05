@@ -1,4 +1,5 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Watch } from '@stencil/core';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   tag: 'kizuna-popover',
@@ -10,24 +11,29 @@ export class KizunaPopover {
   @Prop({ mutable: true }) open: boolean = false;
   @Prop() position: string;
   @Prop() classes: { [key: string]: any };
+  @Prop() id: string = uuidv4();
   // @Element() el: HTMLElement;
 
-  // componentWillLoad() {
-  //   window.addEventListener(
-  //     'click',
-  //     (e: Event) => {
-  //       const target = e.target as HTMLElement;
-  //       if (!this.el.contains(target)) {
-  //         this.open = false;
-  //       }
-  //     },
-  //     false,
-  //   );
-  // }
+  @Watch('open')
+  setFocus() {
+    if (this.open) {
+      this._setPopoverFocus();
+    }
+  }
 
-  _togglePopover = () => {
-    this.open = !this.open;
-  };
+  // componentWillLoad() {
+  //   this._setPopoverFocus();
+  //   // window.addEventListener(
+  //   //   'click',
+  //   //   (e: Event) => {
+  //   //     const target = e.target as HTMLElement;
+  //   //     if (!this.el.contains(target)) {
+  //   //       this.open = false;
+  //   //     }
+  //   //   },
+  //   //   false,
+  //   // );
+  // }
 
   _getPositionClassName = () => {
     switch (this.position) {
@@ -43,19 +49,34 @@ export class KizunaPopover {
     }
   };
 
+  _togglePopover = () => {
+    this.open = !this.open;
+  };
+
+  _setPopoverFocus = () => {
+    const element = document.getElementById(`popover-${this.id}`);
+    element.focus();
+  };
+
   render() {
     return (
       <div
-        class={`popoverMainContainer ${!this.open && 'hidden-slot'} ${
-          this.classes?.root
-        }`}
+        id={`popover-${this.id}`}
+        tabIndex={1}
+        onBlur={() => (this.open = false)}
       >
         <div
-          class={`popoverWrapper ${
-            this.darkmode && 'popoverDarkmode'
-          } ${this._getPositionClassName()} ${this.classes?.contentWrapper}`}
+          class={`popoverMainContainer ${!this.open && 'hidden-slot'} ${
+            this.classes?.root
+          }`}
         >
-          <slot></slot>
+          <div
+            class={`popoverWrapper ${
+              this.darkmode && 'popoverDarkmode'
+            } ${this._getPositionClassName()} ${this.classes?.contentWrapper}`}
+          >
+            <slot></slot>
+          </div>
         </div>
       </div>
     );

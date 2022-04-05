@@ -25,6 +25,7 @@ const defaultPopovers: popoverState = {
 const Popover = (props: any) => {
   const [selected, setSelected] = useState('examples');
   const [popovers, setPopovers] = useState(defaultPopovers);
+  const isPopoverOpen = Object.values(popovers).some(popover => popover);
 
   const API_DATA = [
     {
@@ -77,6 +78,7 @@ const Popover = (props: any) => {
     });
     _setFocus(popoverNumber);
   };
+
   return (
     <>
       <div>
@@ -90,6 +92,7 @@ const Popover = (props: any) => {
                 <div className={styles.flexContainer}>
                   <div className={styles.popoverContainer}>
                     <KizunaButton
+                      disabled={popovers[1]}
                       type="secondary"
                       text="Left Align"
                       onClick={() => _togglePopover(1)}
