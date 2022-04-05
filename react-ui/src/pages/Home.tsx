@@ -23,7 +23,7 @@ const Home = () => {
 
       <h2>Browser Global Styles</h2>
       <p>
-        To use the colors of the package, add theses on your global css file.
+        To use the colors of the package, add these on your global css file.
       </p>
       <div className={styles.codeWrapper}>
         <p>{':root {'}</p>
