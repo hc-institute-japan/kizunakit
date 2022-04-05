@@ -15,7 +15,8 @@
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
