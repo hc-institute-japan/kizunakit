@@ -44,7 +44,7 @@ export class KizunaTextEditor {
   render() {
     return (
       <div
-        class={`text-editor ${
+        class={`text-editor ${this.darkmode && 'textEditorDark'} ${
           !this.open && 'hidden-slot'
         } ${this._getPositionClassName()}`}
       >

@@ -43,3 +43,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.textEditorDark {
+  background-color: var(--dark-primary-bg);
+}

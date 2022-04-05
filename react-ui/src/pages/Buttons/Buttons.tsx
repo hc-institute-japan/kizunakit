@@ -71,11 +71,11 @@ const ButtonsPage = () => {
               <div className={styles.defaultContainer}>
                 <div>
                   <h4 className={styles.componentLabel}>Primary </h4>
-                  <KizunaButton type="primary" text="Primary Button" />
+                  <KizunaButton type="primary" text="Primary" />
                 </div>
                 <div>
                   <h4 className={styles.componentLabel}>Secondary </h4>
-                  <KizunaButton type="secondary" text="Secondary Button" />
+                  <KizunaButton type="secondary" text="Secondary" />
                 </div>
               </div>
 
