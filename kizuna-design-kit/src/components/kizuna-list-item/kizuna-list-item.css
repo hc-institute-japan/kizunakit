@@ -1,0 +1,10 @@
+.listItemWrapper {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list-item-icon {
+  margin: 5px;
+}

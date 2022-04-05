@@ -1,0 +1,127 @@
+.calendar-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.calendar {
+  width: 250px;
+  padding: 1rem;
+  background: var(--white);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  z-index: 100;
+}
+
+.left-align-calendar {
+  left: 0;
+}
+
+.right-align-calendar {
+  right: 0;
+}
+
+.center-align-calendar {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.calendar span {
+  flex-grow: 30;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-container {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.active {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar header span:first-child,
+.calendar header span:last-child {
+  flex-grow: 0.1;
+  cursor: pointer;
+}
+
+.day-names {
+  display: flex;
+}
+
+.days-in-month {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.days-in-month i {
+  font-style: normal;
+  position: relative;
+  width: 100%;
+}
+
+.date-disabled {
+  opacity: 0.2;
+}
+
+.calender-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calendar-darkmode {
+  background-color: var(--dark-primary-bg);
+}
+
+.calendar-darkmode header,
+.calendar-darkmode .date-container,
+.calendar-darkmode .day-names {
+  color: var(--dark-primary-text);
+}
+
+.calendar-darkmode header svg path {
+  stroke: var(--dark-primary-text);
+}
+
+.disabled-click-event {
+  pointer-events: none;
+}

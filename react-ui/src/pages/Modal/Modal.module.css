@@ -1,0 +1,33 @@
+.customModalWrapper {
+  width: 600px;
+  height: 600px;
+  background-color: #9ec3ff;
+  padding: 1rem;
+}
+
+.customModalContent {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+}
+
+.customOverlayBackground {
+  background-color: rgba(221, 255, 163, 0.4);
+}
+
+.customTransparentModalOverlay {
+  width: 600px;
+  height: 600px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.modalButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}

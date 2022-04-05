@@ -1,0 +1,63 @@
+.customButton {
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+}
+
+.customButton:hover {
+  background-color: red;
+  color: var(--white);
+}
+
+.buttonsContainer {
+  display: flex;
+}
+
+.buttonsContainer:nth-child(3) {
+  align-items: end;
+}
+
+.wrapper:not(:last-child) {
+  margin-right: 2rem;
+}
+.buttonsContainer h3 {
+  font-weight: 400;
+}
+
+.buttonsPage .title {
+  font-weight: 400;
+}
+
+.componentLabel {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-text);
+}
+
+.disabledContainer,
+.defaultContainer,
+.customStyleContainer {
+  display: flex;
+}
+
+.labelwithIcon {
+  margin-top: 3rem;
+}
+
+.dividerMargin {
+  margin: 4rem 0;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+.buttonsPage small {
+  color: var(--secondary-text);
+}

@@ -1,0 +1,51 @@
+.popoverMainContainer {
+  width: fit-content;
+  display: block;
+}
+
+.popoverWrapper {
+  background: var(--white);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1.35rem;
+  position: absolute;
+  z-index: 10;
+  width: fit-content;
+  min-width: 200px;
+}
+
+.popover-left-align-calendar {
+  left: 0;
+}
+
+.popover-right-align-calendar {
+  right: 0;
+}
+
+.popover-center-align-calendar {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popoverDarkmode {
+  background: var(--dark-primary-bg);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  color: var(--dark-secondary-text);
+}
+
+.popoverDarkmode path {
+  stroke: var(--dark-secondary-text);
+}
+
+.toggleButton {
+  padding: 1rem 2rem;
+  border: 1px solid gray;
+  width: 15rem;
+  border-radius: 5px;
+  display: block;
+}
+
+.hidden-slot {
+  display: none;
+  border: 2px solid red;
+}

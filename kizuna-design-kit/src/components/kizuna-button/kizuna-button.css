@@ -1,0 +1,78 @@
+.btn {
+  background-color: var(--white);
+  padding: 5px 20px;
+  height: 36px;
+  min-width: 120px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid black;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border: unset;
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.primary-disabled {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.3);
+  border: unset;
+}
+
+.primary-disabled:hover,
+.secondary-disabled:hover {
+  opacity: unset;
+  cursor: unset;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.secondary-disabled,
+.disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.btn-icon {
+  margin: 5px;
+}
+
+.btn-icon .icon-container svg {
+  width: 18px;
+}
+
+.btn-icon .icon-container svg path {
+  stroke-width: 3;
+}
+
+.btn-primary .btn-icon .icon-container svg path {
+  stroke: var(--white);
+}
+
+.btn-secondary .btn-icon .icon-container svg path {
+  stroke: var(--primary);
+}
+
+.primary-disabled .btn-icon .icon-container svg path,
+.secondary-disabled .btn-icon .icon-container svg path {
+  stroke: rgba(0, 0, 0, 0.3);
+}

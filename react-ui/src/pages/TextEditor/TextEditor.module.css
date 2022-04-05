@@ -1,0 +1,32 @@
+.textEditorPage .title {
+  font-weight: 400;
+}
+
+.textEditorExamplesContainer h3,
+.textEditorExamplesContainer h4 {
+  font-weight: 400;
+}
+
+.textEditorContainer {
+  width: fit-content;
+  position: relative;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.textEditorPage small {
+  color: var(--secondary-text);
+}

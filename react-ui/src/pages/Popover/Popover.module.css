@@ -1,0 +1,22 @@
+.popoverContainer {
+  position: relative;
+  width: fit-content;
+}
+
+.exampleWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.exampleContainer {
+  margin: 2rem;
+  text-align: center;
+}
+
+.exampleTitle {
+  font-weight: 400;
+}
+
+.flexContainer {
+  display: flex;
+}

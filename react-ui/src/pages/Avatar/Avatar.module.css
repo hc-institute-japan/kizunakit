@@ -1,0 +1,45 @@
+.avatarsExamplesContainer {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.avatarsExamplesContainer > div:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.checkboxPage small {
+  color: var(--secondary-text);
+}
+
+.avatarsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* custom image wrappper */
+.customImageWrapper {
+  border: 5px solid pink;
+}
+
+.customColor {
+  color: rgb(19, 168, 255);
+  border-color: rgb(24, 122, 251);
+}

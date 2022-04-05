@@ -1,0 +1,46 @@
+.messageReactPage .title {
+  font-weight: 400;
+}
+
+.messageReactExamplesContainer .default,
+.messageReactExamplesContainer .darkMode {
+  display: flex;
+  text-align: center;
+}
+
+.messageReactExamplesContainer .default > div:not(:last-child),
+.messageReactExamplesContainer .darkMode > div:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.messageReactPage h3,
+.messageReactPage h4 {
+  font-weight: 400;
+}
+
+.messageReactExamplesContainer {
+  display: flex;
+}
+
+.messageReactExamplesContainer > div:not(:last-child) {
+  margin-right: 5rem;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.messageReactPage small {
+  color: var(--secondary-text);
+}

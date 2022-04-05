@@ -1,0 +1,43 @@
+.dividerPage .title {
+  font-weight: 400;
+}
+
+.dividerExampleContainer {
+  display: flex;
+}
+
+.dividerExampleContainer h3 {
+  font-weight: 400;
+}
+
+.customDivider {
+  border: 2px solid var(--primary);
+  opacity: unset;
+}
+
+.dividerExampleContainer .default {
+  width: 400px;
+  margin-right: 2rem;
+}
+
+.dividerExampleContainer .customStyles {
+  width: 400px;
+}
+
+.dividerPage .dividerMargin {
+  margin: 2rem 0;
+}
+.codeExampleContainer code {
+  display: block;
+}
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.dividerPage small {
+  color: var(--secondary-text);
+}

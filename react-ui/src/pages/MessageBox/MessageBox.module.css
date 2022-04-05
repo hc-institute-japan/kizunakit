@@ -1,0 +1,67 @@
+.messageBoxPage .title {
+  font-weight: 400;
+}
+
+.messageBoxExamplesContainer .default {
+  display: flex;
+}
+
+.messageBoxExamplesContainer h3,
+.messageBoxExamplesContainer h4,
+.messageBoxExamplesContainer h2 {
+  font-weight: 400;
+}
+
+.messageBoxExamplesContainer h4 {
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.messageBoxExamplesContainer .default {
+  display: flex;
+}
+
+.messageBoxExamplesContainer .default > div:not(:last-child),
+.messageBoxExamplesContainer .darkMode > div:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.messageBoxExamplesContainer .darkMode {
+  display: flex;
+}
+
+.darkModeWrapper {
+  margin-top: 1rem;
+  background-color: var(--dark-primary-bg);
+  color: var(--dark-primary-text);
+  padding: 5px 20px;
+  width: fit-content;
+  border-radius: 10px;
+}
+
+.darkModeWrapper h2 {
+  margin-bottom: 1rem;
+}
+
+.codeExampleContainer {
+  background-color: #011e3c;
+  color: #a7e12e;
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+.codeExampleContainer code {
+  display: block;
+}
+
+.dividerMargin {
+  margin: 2rem 0;
+}
+
+.messageBoxPage small {
+  color: var(--secondary-text);
+}
+
+.contactMessageBoxContainer {
+  display: flex;
+}

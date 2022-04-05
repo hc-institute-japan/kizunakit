@@ -1,0 +1,30 @@
+.tabWrapper {
+  display: flex;
+  /* width: 100%; */
+  /* border-bottom: 3px solid #ccc; */
+}
+
+.tabMenu {
+  flex: 1;
+  width: 150px;
+  border-bottom: 3px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  color: var(--secondary-text);
+}
+.tabMenu:hover {
+  color: var(--primary);
+}
+.isActive {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  transition: all 0.5s linear;
+  font-weight: 500;
+}
+
+.tabMenus {
+  display: flex;
+}

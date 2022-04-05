@@ -1,0 +1,30 @@
+.badge {
+  background-color: var(--gray);
+  color: var(--primary-text);
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+/* .badge .text {
+  margin-left: 10px;
+} */
+
+.badge-icon {
+  margin-right: 10px;
+}
+.badge-icon .icon-container svg {
+  width: 12px;
+}
+
+.badge-icon .icon-container svg circle {
+  fill: var(--primary);
+}
+
+.badge-dark {
+  background-color: var(--dark-secondary-bg);
+  color: var(--dark-primary-text);
+}

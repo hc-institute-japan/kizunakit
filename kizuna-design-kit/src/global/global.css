@@ -1,0 +1,141 @@
+:root {
+  --primary: #e48221;
+  --primary-10: #e5c8ab;
+  --primary-gradient: linear-gradient(180deg, #e47221 0%, #f5c31a 100%);
+
+  /* Light Mode */
+  --primary-text: #404040;
+  --secondary-text: #838383;
+
+  /* Dark Mode */
+  --dark-primary-text: #cfcfcf;
+  --dark-secondary-text: #979797;
+  --dark-primary-bg: #23252e;
+  --dark-secondary-bg: #292b33;
+
+  /* Colors */
+  --white: #ffff;
+  --black: #0000;
+  --red: #f10404;
+  --green: #11d30d;
+  --gray: #f3f3f3;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+table {
+  width: 450px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+tr:first-child {
+  height: 50px;
+}
+
+tr td:first-child {
+  text-align: left;
+}
+
+th {
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+}
+
+.wrapper,
+.wrapper,
+.wrapper {
+  margin: 40px 0;
+}
+.textbox {
+  width: 400px;
+}
+.avatars-content {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.avatars-content > * {
+  margin: 12px;
+}
+
+.tabs {
+  width: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+.calendar-display-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.modalContainer {
+  max-width: 250px;
+}
+
+/* For toggle buttons */
+.popoverToggleButtonContainer {
+  width: fit-content;
+  position: relative;
+}
+
+.margin-all-side {
+  margin: 2rem;
+}
