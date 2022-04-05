@@ -17,3 +17,7 @@
   padding: 15px;
   border-radius: 5px;
 }
+
+.commentCode {
+  color: var(--dark-secondary-text);
+}
