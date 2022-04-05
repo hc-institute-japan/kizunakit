@@ -40,13 +40,13 @@ const Home = () => {
         <p>{'--secondary-text: #838383;'}</p>
         <br />
         <p className={styles.commentCode}>{'/* Dark Mode */'}</p>
-        <p>{'-dark-primary-text: #cfcfcf;'}</p>-
+        <p>{'--dark-primary-text: #cfcfcf;'}</p>
         <p>{'--dark-secondary-text: #979797;'}</p>
         <p>{'--dark-primary-bg: #23252e;'}</p>
         <p>{'--dark-secondary-bg: #292b33;'}</p>
         <br />
         <p className={styles.commentCode}>{'/* Colors */'}</p>
-        <p>{'-white: #ffff;'}</p>
+        <p>{'--white: #ffff;'}</p>
         <p>{'--black: #0000;'}</p>
         <p>{'--red: #f10404;'}</p>
         <p>{'--green: #11d30d;'}</p>
