@@ -21,14 +21,16 @@ const ResponsiveDrawer = (props: any) => {
 
   return (
     <Box>
-      <Header />
+      <Header
+        drawerWidth={drawerWidth}
+        handleDrawerToggle={handleDrawerToggle}
+      />
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
 
         {/* Appbar */}
         {/* <AppbarComponent
-          drawerWidth={drawerWidth}
-          handleDrawerToggle={handleDrawerToggle}
+
         /> */}
 
         {/* Drawer */}
