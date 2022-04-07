@@ -12,8 +12,14 @@
 | `classes`  | --         |             | `{ [key: string]: string; }`   | `undefined` |
 | `darkmode` | `darkmode` |             | `boolean`                      | `undefined` |
 | `menus`    | --         |             | `{ [key: string]: string; }[]` | `undefined` |
-| `onClick`  | `on-click` |             | `any`                          | `undefined` |
 | `value`    | `value`    |             | `string`                       | `undefined` |
+
+
+## Events
+
+| Event     | Description | Type                  |
+| --------- | ----------- | --------------------- |
+| `onClick` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

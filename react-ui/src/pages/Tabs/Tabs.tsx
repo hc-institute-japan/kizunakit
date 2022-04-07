@@ -80,7 +80,10 @@ const Tabs = (props: any) => {
             <div className={styles.exampleWrapper}>
               <div className={styles.exampleContainer}>
                 <h3 className={styles.exampleTitle}>Default</h3>
-                <KizunaTabs menus={tabMenusLight} />
+                <KizunaTabs
+                  menus={tabMenusLight}
+                  onClick={(data: any) => console.log(data)}
+                />
               </div>
 
               <div className={styles.exampleContainer}>

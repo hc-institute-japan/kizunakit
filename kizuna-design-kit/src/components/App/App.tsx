@@ -240,6 +240,7 @@ export class App {
           <kizuna-tabs
             value="tab1"
             menus={tabMenus}
+            onHandleClick={data => console.log({ data: data.detail })}
             // on-click={(data, value) => console.log(data, value)}
           ></kizuna-tabs>
           <br />

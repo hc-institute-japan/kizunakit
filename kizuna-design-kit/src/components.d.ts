@@ -99,7 +99,6 @@ export namespace Components {
         "classes": { [key: string]: string };
         "darkmode": boolean;
         "menus": Array<{ [key: string]: string }>;
-        "onClick": any;
         "value": string;
     }
     interface KizunaTextEditor {
@@ -350,7 +349,7 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: string };
         "darkmode"?: boolean;
         "menus"?: Array<{ [key: string]: string }>;
-        "onClick"?: any;
+        "onHandleClick"?: (event: CustomEvent<string>) => void;
         "value"?: string;
     }
     interface KizunaTextEditor {

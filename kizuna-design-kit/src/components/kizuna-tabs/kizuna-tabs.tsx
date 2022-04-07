@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'kizuna-tabs',
@@ -10,15 +10,16 @@ export class KizunaTabs {
   @Prop() darkmode: boolean;
   @Prop() menus: Array<{ [key: string]: string }>;
   @Prop() classes: { [key: string]: string };
-  @Prop() onClick: any;
 
-  _onClickHandler = (event: Event, clickedMenu: string) => {
+  @Event() handleClick: EventEmitter<string>;
+
+  _onClickHandler = (clickedMenu: string) => {
     this.value = clickedMenu;
-    this.onClick(event, clickedMenu);
+    this.handleClick.emit(clickedMenu);
   };
 
   private renderMenus = () => {
-    const menusMarkup = this.menus?.map((menu, index) => {
+    return this.menus?.map((menu, index) => {
       const isMenuActive = this.value === menu?.value;
       return (
         <div
@@ -26,14 +27,12 @@ export class KizunaTabs {
             this.classes?.tabMenu
           }`}
           key={index}
-          onClick={e => this._onClickHandler(e, menu?.value)}
+          onClick={() => this._onClickHandler(menu?.value)}
         >
           {menu?.name}
         </div>
       );
     });
-
-    return menusMarkup;
   };
 
   render() {

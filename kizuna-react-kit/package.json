@@ -40,8 +40,5 @@
       "node_modules",
       "dist"
     ]
-  },
-  "dependencies": {
-    "kizuna-design-kit": "^1.0.1"
   }
 }
