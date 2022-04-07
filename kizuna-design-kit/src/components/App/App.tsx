@@ -94,6 +94,8 @@ export class App {
   };
 
   render() {
+    console.log(this.open1Popover);
+
     return (
       <div>
         <div class="wrapper">
@@ -276,7 +278,8 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 1 - Left Align"
-              onClick={() => this._togglePopover(1)}
+              handleClick={() => this._togglePopover(1)}
+              disableClickEvent={this['open1Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open1Popover']}
@@ -293,7 +296,8 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 2 - Center align"
-              onClick={() => this._togglePopover(2)}
+              handleClick={() => this._togglePopover(2)}
+              disableClickEvent={this['open2Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open2Popover']}
@@ -311,10 +315,11 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 3 - Right Align"
-              onClick={() => this._togglePopover(3)}
+              handleClick={() => this._togglePopover(3)}
               classes={{
                 btnWrapper: 'popoverToggleButton',
               }}
+              disableClickEvent={this['open3Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open3Popover']}
@@ -332,7 +337,8 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 4 - Left Align -  Dark mode"
-              onClick={() => this._togglePopover(4)}
+              handleClick={() => this._togglePopover(4)}
+              disableClickEvent={this['open4Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open4Popover']}
@@ -350,7 +356,8 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 5 - Center align - Dark mode"
-              onClick={() => this._togglePopover(5)}
+              handleClick={() => this._togglePopover(5)}
+              disableClickEvent={this['open5Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open5Popover']}
@@ -369,7 +376,8 @@ export class App {
             <kizuna-button
               type="secondary"
               text="Toggle Popover 6 - Right Align - Dark mode"
-              onClick={() => this._togglePopover(6)}
+              handleClick={() => this._togglePopover(6)}
+              disableClickEvent={this['open6Popover']}
             ></kizuna-button>
             <kizuna-popover
               open={this['open6Popover']}

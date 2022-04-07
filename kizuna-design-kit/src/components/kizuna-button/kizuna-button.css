@@ -80,3 +80,7 @@
 .buttonRounded {
   border-radius: 20px;
 }
+
+.disable-btn-event {
+  pointer-events: none;
+}

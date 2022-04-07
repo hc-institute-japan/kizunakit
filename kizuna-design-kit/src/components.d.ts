@@ -26,6 +26,7 @@ export namespace Components {
     }
     interface KizunaButton {
         "classes": { [key: string]: any };
+        "disableClickEvent": boolean;
         "disabled": boolean;
         "handleClick": Function;
         "icon": string;
@@ -276,6 +277,7 @@ declare namespace LocalJSX {
     }
     interface KizunaButton {
         "classes"?: { [key: string]: any };
+        "disableClickEvent"?: boolean;
         "disabled"?: boolean;
         "handleClick"?: Function;
         "icon"?: string;

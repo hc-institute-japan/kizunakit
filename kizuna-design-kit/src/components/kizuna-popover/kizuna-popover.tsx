@@ -59,7 +59,7 @@ export class KizunaPopover {
     }
   };
 
-  _handleClickOutside = (e: FocusEvent) => {
+  _handleClickOutside = () => {
     this.onClose && this.onClose();
     this.open = false;
   };
