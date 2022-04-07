@@ -39,7 +39,6 @@ export namespace Components {
         "dayNames": string[];
         "id": string;
         "monthNames": string[];
-        "onChange": Function;
         "position": string;
         "value": string;
     }
@@ -290,9 +289,7 @@ declare namespace LocalJSX {
         "dayNames"?: string[];
         "id"?: string;
         "monthNames"?: string[];
-        "onChange"?: Function;
-        "onDayChanged"?: (event: CustomEvent<CalendarEntry>) => void;
-        "onMonthChanged"?: (event: CustomEvent<CalendarEntry>) => void;
+        "onHandleChange"?: (event: CustomEvent<CalendarEntry>) => void;
         "position"?: string;
         "value"?: string;
     }

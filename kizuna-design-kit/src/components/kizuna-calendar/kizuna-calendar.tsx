@@ -34,7 +34,6 @@ export class KizunaPopover {
   ];
   @Prop() id: string = uuidv4();
   @Prop() darkmode: boolean = false;
-  @Prop() onChange: Function;
   @Prop() position: string;
   @Prop() value: string;
   @Prop() classes: { [key: string]: any };
@@ -60,20 +59,7 @@ export class KizunaPopover {
     // );
   }
 
-  @Event({
-    eventName: 'dayChanged',
-    composed: true,
-    cancelable: true,
-    bubbles: true,
-  })
-  dayChanged: EventEmitter<CalendarEntry>;
-  @Event({
-    eventName: 'monthChanged',
-    composed: true,
-    cancelable: true,
-    bubbles: true,
-  })
-  monthChanged: EventEmitter<CalendarEntry>;
+  @Event() handleChange: EventEmitter<CalendarEntry>;
 
   private startOfMonth: number;
   private endOfMonth: number;
@@ -90,9 +76,9 @@ export class KizunaPopover {
     }
   }
 
-  _setCalendarFocus = (id: string) => {
-    const element = document.getElementById(`calendar-${id}`);
-    element.focus();
+  _setCalendarFocus = () => {
+    const element = document.getElementById(`calendar-${this.id}`);
+    element?.focus();
   };
 
   _initCalendar = () => {
@@ -121,8 +107,7 @@ export class KizunaPopover {
   }
 
   dayChangedHandler(calendarEntry: CalendarEntry): void {
-    this.dayChanged.emit(calendarEntry);
-    this.onChange(this.selectedDate);
+    this.handleChange.emit(calendarEntry);
   }
 
   daySelectedHandler = (day, isPreviousDate, isNextMonthDate): void => {
@@ -168,10 +153,6 @@ export class KizunaPopover {
     this.dayChangedHandler(this.selectedDate);
   };
 
-  monthChangedHandler(calendarEntry: CalendarEntry): void {
-    this.monthChanged.emit(calendarEntry);
-  }
-
   switchToPreviousMonth = (): void => {
     if (this.date.month !== 1) {
       this.date.month -= 1;
@@ -185,7 +166,6 @@ export class KizunaPopover {
     }
 
     this.setCalendarDetails();
-    this.monthChangedHandler(this.date);
   };
 
   switchToNextMonth = (): void => {
@@ -199,7 +179,6 @@ export class KizunaPopover {
     delete this.date.day;
 
     this.setCalendarDetails();
-    this.monthChangedHandler(this.date);
   };
 
   getDateClassNames = (
@@ -277,7 +256,6 @@ export class KizunaPopover {
     this.date = { ...newSelectedDate };
 
     this.setCalendarDetails();
-    this.monthChangedHandler(this.date);
     this.dayChangedHandler(this.date);
   };
 
@@ -287,13 +265,14 @@ export class KizunaPopover {
     this.date = { ...newSelectedDate };
 
     this.setCalendarDetails();
-    this.monthChangedHandler(this.date);
     this.dayChangedHandler(this.date);
+    this.open = true;
+    this._setCalendarFocus();
   };
 
   _toggleCalendar = () => {
     this.open = !this.open;
-    this._setCalendarFocus(this.id);
+    this._setCalendarFocus();
   };
 
   _getPositionClassName = () => {
@@ -378,11 +357,12 @@ export class KizunaPopover {
               <div class="days-in-month">{this._renderDaysInMonth()}</div>
 
               <div class="calender-buttons">
-                <kizuna-button
-                  text="Today"
-                  type="primary"
+                <span
+                  class="todayButton"
                   onClick={this.setSelectedToCurrentDate}
-                ></kizuna-button>
+                >
+                  Today
+                </span>
               </div>
             </div>
           )}

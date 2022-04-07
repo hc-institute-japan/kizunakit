@@ -227,18 +227,18 @@ export class App {
           <h2 class="title">Calendar</h2>
           <div class="calendar-display-content">
             <kizuna-calendar
-              onChange={data => console.log(data)}
+              onHandleChange={data => console.log({ date: data.detail })}
               value="Fri Mar 4 2022 21:31:58 GMT+0800 (Philippine Standard Time)"
               darkmode
             ></kizuna-calendar>
             <kizuna-calendar
               position="center"
-              onChange={data => console.log(data)}
+              onHandleChange={data => console.log({ date: data.detail })}
               value="Fri Mar 18 2022 21:31:58 GMT+0800 (Philippine Standard Time)"
             ></kizuna-calendar>
             <kizuna-calendar
               position="right"
-              onChange={data => console.log(data)}
+              onHandleChange={data => console.log({ date: data.detail })}
             ></kizuna-calendar>
           </div>
         </div>
