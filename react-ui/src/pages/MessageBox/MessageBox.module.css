@@ -41,6 +41,11 @@
   border-radius: 10px;
 }
 
+.darkModeWrapper h2,
+.darkModeWrapper h3 {
+  color: var(--dark-primary-text);
+}
+
 .darkModeWrapper h2 {
   margin-bottom: 1rem;
 }
