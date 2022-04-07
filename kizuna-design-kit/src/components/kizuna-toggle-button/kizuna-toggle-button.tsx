@@ -9,10 +9,14 @@ export class KizunaToggleButton {
   @Prop() checked: boolean;
   @Prop() disabled: boolean;
   @Prop() classes: { [key: string]: any };
+  @Prop() handleClick: Function;
 
   render() {
     return (
-      <label class={`switch ${this.classes?.toggleWrapper}`}>
+      <label
+        class={`switch ${this.classes?.toggleWrapper}`}
+        onClick={() => this.handleClick && this.handleClick()}
+      >
         <input
           class={`${this.classes?.input}`}
           disabled={this.disabled}

@@ -11,11 +11,15 @@ export class KizunaCheckbox {
   @Prop() checked: boolean;
   @Prop() disabled: boolean;
   @Prop() rounded: boolean;
+  @Prop() handleClick: Function;
   @Prop() classes: { [key: string]: any };
 
   render() {
     return (
-      <label class={`checkbox-container ${this.classes?.checkboxWrapper}`}>
+      <label
+        class={`checkbox-container ${this.classes?.checkboxWrapper}`}
+        onClick={() => this.handleClick && this.handleClick()}
+      >
         {this.value}
         <input
           class={`${this.classes?.input}`}

@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'kizuna-list-item',
@@ -8,16 +8,23 @@ import { Component, h, Prop } from '@stencil/core';
 export class KizunaListItem {
   @Prop() icon: string;
   @Prop() text: string = 'List Item Text';
+  @Prop() value: string = '';
   @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
   @Prop() divider: boolean;
+
+  @Event() handleClick: EventEmitter<string>;
+
+  _onClickHandler = () => {
+    this.handleClick.emit(this.value);
+  };
 
   render() {
     return (
       <slot>
         <div
           class={`listItemWrapper ${this.classes?.listItemWrapper}`}
-          onClick={() => this.handleOnClick}
+          onClick={this._onClickHandler}
         >
           {this.icon && (
             <span class={`list-item-icon ${this.classes?.listItemIcon}`}>

@@ -27,7 +27,7 @@ export namespace Components {
     interface KizunaButton {
         "classes": { [key: string]: any };
         "disabled": boolean;
-        "handleOnClick": Function;
+        "handleClick": Function;
         "icon": string;
         "rounded": boolean;
         "text": string;
@@ -47,6 +47,7 @@ export namespace Components {
         "checked": boolean;
         "classes": { [key: string]: any };
         "disabled": boolean;
+        "handleClick": Function;
         "name": string;
         "rounded": boolean;
         "value": string;
@@ -65,6 +66,7 @@ export namespace Components {
         "handleOnClick": Function;
         "icon": string;
         "text": string;
+        "value": string;
     }
     interface KizunaMessageBox {
         "classes": { [key: string]: any };
@@ -92,6 +94,7 @@ export namespace Components {
         "classes": { [key: string]: any };
         "darkmode": boolean;
         "id": string;
+        "onClose": Function;
         "open": boolean;
         "position": string;
     }
@@ -117,7 +120,6 @@ export namespace Components {
         "isFocus": boolean;
         "label": string;
         "name": string;
-        "onChange": Function;
         "onEmoticonClick": Function;
         "placeholder": string;
         "rounded": boolean;
@@ -129,6 +131,7 @@ export namespace Components {
         "checked": boolean;
         "classes": { [key: string]: any };
         "disabled": boolean;
+        "handleClick": Function;
     }
 }
 declare global {
@@ -275,7 +278,7 @@ declare namespace LocalJSX {
     interface KizunaButton {
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
-        "handleOnClick"?: Function;
+        "handleClick"?: Function;
         "icon"?: string;
         "rounded"?: boolean;
         "text"?: string;
@@ -297,6 +300,7 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
+        "handleClick"?: Function;
         "name"?: string;
         "rounded"?: boolean;
         "value"?: string;
@@ -314,7 +318,9 @@ declare namespace LocalJSX {
         "divider"?: boolean;
         "handleOnClick"?: Function;
         "icon"?: string;
+        "onHandleClick"?: (event: CustomEvent<string>) => void;
         "text"?: string;
+        "value"?: string;
     }
     interface KizunaMessageBox {
         "classes"?: { [key: string]: any };
@@ -342,6 +348,7 @@ declare namespace LocalJSX {
         "classes"?: { [key: string]: any };
         "darkmode"?: boolean;
         "id"?: string;
+        "onClose"?: Function;
         "open"?: boolean;
         "position"?: string;
     }
@@ -368,8 +375,8 @@ declare namespace LocalJSX {
         "isFocus"?: boolean;
         "label"?: string;
         "name"?: string;
-        "onChange"?: Function;
         "onEmoticonClick"?: Function;
+        "onHandleChange"?: (event: CustomEvent<string>) => void;
         "placeholder"?: string;
         "rounded"?: boolean;
         "startIconName"?: string;
@@ -380,6 +387,7 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "classes"?: { [key: string]: any };
         "disabled"?: boolean;
+        "handleClick"?: Function;
     }
     interface IntrinsicElements {
         "kizuna-app": KizunaApp;

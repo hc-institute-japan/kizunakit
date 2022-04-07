@@ -1,4 +1,4 @@
-import { Component, Prop, h, State } from '@stencil/core';
+import { Component, Prop, h, State, Event, EventEmitter } from '@stencil/core';
 import { v4 as uuidv4 } from 'uuid';
 
 @Component({
@@ -18,13 +18,18 @@ export class KizunaTextbox {
   @Prop() classes: { [key: string]: any };
   @Prop() align: string;
   @Prop() startIconName: string;
-  @Prop() onChange: Function;
   @Prop() onEmoticonClick: Function;
   @Prop() emoticon: boolean;
   @Prop() rounded: boolean = true;
 
   @State() inFocus: boolean = false;
   @State() showClose: boolean = false;
+
+  @Event() handleChange: EventEmitter<string>;
+
+  _onChangeHandler = () => {
+    this.handleChange.emit(this.value);
+  };
 
   inputElement = (<span></span>);
 
@@ -70,13 +75,13 @@ export class KizunaTextbox {
   _handleClear = () => {
     this.inFocus = true;
     this.value = '';
-    this.onChange && this.onChange('');
     this.inputElement?.focus();
+    this._onChangeHandler();
   };
 
   _handleChange = e => {
     this.value = e.target.value;
-    this.onChange && this.onChange(this.value);
+    this.handleChange.emit(this.value);
     this.inputElement?.focus();
   };
 
@@ -102,7 +107,7 @@ export class KizunaTextbox {
           placeholder={`${this.placeholder}`}
           value={this.value}
           autoFocus
-          onChange={this._handleChange}
+          onInput={this._handleChange}
           onFocusin={() => (this.inFocus = true)}
           onBlur={() => (this.inFocus = false)}
         />

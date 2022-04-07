@@ -18,22 +18,27 @@ export class App {
     {
       icon: 'settings',
       name: 'Settings',
+      value: 'settings',
     },
     {
       icon: 'trash',
       name: 'Message Request',
+      value: 'messageRequest',
     },
     {
       icon: 'calendar',
       name: 'Blocked',
+      value: 'blocked',
     },
     {
       icon: 'emoticon',
       name: 'Report an issue',
+      value: 'reportAnIssue',
     },
     {
       icon: 'settings',
       name: 'Logout',
+      value: 'logout',
     },
   ];
 
@@ -69,8 +74,10 @@ export class App {
         <kizuna-list-item
           key={index}
           text={item?.name}
+          value={item?.value}
           icon={item.icon}
           divider={!isLastItem}
+          onHandleClick={data => console.log({ itemValue: data.detail })}
         ></kizuna-list-item>
       );
     });
@@ -81,14 +88,14 @@ export class App {
     this[popoverName] = !this[popoverName];
   };
 
+  _handlePopoverClose = (number: number) => {
+    const popoverName = `open${number}Popover`;
+    this[popoverName] = false;
+  };
+
   render() {
     return (
       <div>
-        <kizuna-button
-          type="primary"
-          text="Label"
-          onClick={() => alert('handle click here')}
-        ></kizuna-button>
         <div class="wrapper">
           <h2 class="title">Text Editor</h2>
           <div class="popoverToggleButtonContainer">
@@ -241,14 +248,13 @@ export class App {
             value="tab1"
             menus={tabMenus}
             onHandleClick={data => console.log({ data: data.detail })}
-            // on-click={(data, value) => console.log(data, value)}
           ></kizuna-tabs>
           <br />
           <kizuna-tabs
             darkmode
             value="tab3"
             menus={tabMenus}
-            // onClick={data => console.log(data)}
+            onHandleClick={data => console.log({ data: data.detail })}
           ></kizuna-tabs>
         </div>
         <div>
@@ -272,7 +278,10 @@ export class App {
               text="Toggle Popover 1 - Left Align"
               onClick={() => this._togglePopover(1)}
             ></kizuna-button>
-            <kizuna-popover open={this['open1Popover']}>
+            <kizuna-popover
+              open={this['open1Popover']}
+              onClose={() => this._handlePopoverClose(1)}
+            >
               {this._renderListItems()}
             </kizuna-popover>
           </div>
@@ -286,7 +295,11 @@ export class App {
               text="Toggle Popover 2 - Center align"
               onClick={() => this._togglePopover(2)}
             ></kizuna-button>
-            <kizuna-popover open={this['open2Popover']} position="center">
+            <kizuna-popover
+              open={this['open2Popover']}
+              position="center"
+              onClose={() => this._handlePopoverClose(2)}
+            >
               <p>Add Popover content here</p>
             </kizuna-popover>
           </div>
@@ -303,7 +316,11 @@ export class App {
                 btnWrapper: 'popoverToggleButton',
               }}
             ></kizuna-button>
-            <kizuna-popover open={this['open3Popover']} position="right">
+            <kizuna-popover
+              open={this['open3Popover']}
+              position="right"
+              onClose={() => this._handlePopoverClose(3)}
+            >
               {this._renderListItems()}
             </kizuna-popover>
           </div>
@@ -317,7 +334,11 @@ export class App {
               text="Toggle Popover 4 - Left Align -  Dark mode"
               onClick={() => this._togglePopover(4)}
             ></kizuna-button>
-            <kizuna-popover open={this['open4Popover']} darkmode>
+            <kizuna-popover
+              open={this['open4Popover']}
+              darkmode
+              onClose={() => this._handlePopoverClose(4)}
+            >
               {this._renderListItems()}
             </kizuna-popover>
           </div>
@@ -335,6 +356,7 @@ export class App {
               open={this['open5Popover']}
               position="center"
               darkmode
+              onClose={() => this._handlePopoverClose(5)}
             >
               <p>Add Popover content here</p>
             </kizuna-popover>
@@ -353,6 +375,7 @@ export class App {
               open={this['open6Popover']}
               position="right"
               darkmode
+              onClose={() => this._handlePopoverClose(6)}
             >
               {this._renderListItems()}
             </kizuna-popover>
@@ -435,7 +458,7 @@ export class App {
                   <kizuna-button
                     type="primary"
                     text="Label"
-                    onClick={() => alert('handle click here')}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -443,6 +466,7 @@ export class App {
                     type="primary"
                     text="Label"
                     disabled
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
               </tr>
@@ -452,8 +476,8 @@ export class App {
                   <kizuna-button
                     type="primary"
                     text="Label"
-                    onClick={() => alert('handle click here')}
                     icon={'addContact'}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -462,6 +486,7 @@ export class App {
                     disabled
                     text="Label"
                     icon={'addContact'}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
               </tr>
@@ -471,7 +496,7 @@ export class App {
                   <kizuna-button
                     type="secondary"
                     text="Label"
-                    onClick={() => alert('handle click here')}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -479,6 +504,7 @@ export class App {
                     type="secondary"
                     text="Label"
                     disabled
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
               </tr>
@@ -488,8 +514,8 @@ export class App {
                   <kizuna-button
                     type="secondary"
                     text="Label"
-                    onClick={() => alert('handle click here')}
                     icon={'addContact'}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
                 <td>
@@ -498,6 +524,7 @@ export class App {
                     text="Label"
                     disabled
                     icon={'addContact'}
+                    handleClick={() => console.log('button clicked')}
                   ></kizuna-button>
                 </td>
               </tr>
@@ -514,22 +541,26 @@ export class App {
           <kizuna-checkbox
             value="Charlie Chan"
             name="Charlie Chan"
+            handleClick={() => console.log('toggled checkbox')}
           ></kizuna-checkbox>
           <kizuna-checkbox
             value="Charlie Chan"
             name="Charlie Chan"
             checked
+            handleClick={() => console.log('toggled checkbox')}
           ></kizuna-checkbox>
           <kizuna-checkbox
             value="Charlie Chan"
             name="Charlie Chan"
             rounded
+            handleClick={() => console.log('toggled checkbox')}
           ></kizuna-checkbox>
           <kizuna-checkbox
             value="Charlie Chan"
             name="Charlie Chan"
             checked
             rounded
+            handleClick={() => console.log('toggled checkbox')}
           ></kizuna-checkbox>
         </div>
         <div class="wrapper">
@@ -592,14 +623,15 @@ export class App {
             name="firstName"
             variant="standard"
             label="First Name"
-            onChange={data => console.log({ text: data })}
+            value="hello world"
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
             placeholder="Search textbox "
             name="searchBox"
             startIconName="search"
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
@@ -608,14 +640,14 @@ export class App {
             startIconName="search"
             variant="outlined"
             rounded
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
             placeholder="First Name (No Start Icon) "
             name="firstName"
             label="First Name"
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
 
           <br />
@@ -624,7 +656,7 @@ export class App {
             name="firstName"
             emoticon
             onEmoticonClick={() => console.log('Emoticon clicked')}
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
 
           <br />
@@ -634,7 +666,7 @@ export class App {
             label="First Name"
             align="left"
             startIconName="search"
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
 
           <br />
@@ -644,7 +676,7 @@ export class App {
             // label="First Name"
             align="center"
             startIconName="search"
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
           <br />
           <kizuna-textbox
@@ -653,7 +685,7 @@ export class App {
             label="First Name"
             align="right"
             startIconName="search"
-            onChange={data => console.log({ text: data })}
+            onHandleChange={data => console.log({ text: data.detail })}
           ></kizuna-textbox>
         </div>
       </div>
