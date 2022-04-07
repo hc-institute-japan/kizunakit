@@ -7,15 +7,16 @@
 
 ## Properties
 
-| Property        | Attribute  | Description | Type                      | Default     |
-| --------------- | ---------- | ----------- | ------------------------- | ----------- |
-| `classes`       | --         |             | `{ [key: string]: any; }` | `undefined` |
-| `disabled`      | `disabled` |             | `boolean`                 | `undefined` |
-| `handleOnClick` | --         |             | `Function`                | `undefined` |
-| `icon`          | `icon`     |             | `string`                  | `undefined` |
-| `rounded`       | `rounded`  |             | `boolean`                 | `undefined` |
-| `text`          | `text`     |             | `string`                  | `undefined` |
-| `type`          | `type`     |             | `string`                  | `undefined` |
+| Property            | Attribute             | Description | Type                      | Default     |
+| ------------------- | --------------------- | ----------- | ------------------------- | ----------- |
+| `classes`           | --                    |             | `{ [key: string]: any; }` | `undefined` |
+| `disableClickEvent` | `disable-click-event` |             | `boolean`                 | `undefined` |
+| `disabled`          | `disabled`            |             | `boolean`                 | `undefined` |
+| `handleClick`       | --                    |             | `Function`                | `undefined` |
+| `icon`              | `icon`                |             | `string`                  | `undefined` |
+| `rounded`           | `rounded`             |             | `boolean`                 | `undefined` |
+| `text`              | `text`                |             | `string`                  | `undefined` |
+| `type`              | `type`                |             | `string`                  | `undefined` |
 
 
 ## Dependencies
@@ -23,7 +24,6 @@
 ### Used by
 
  - [kizuna-app](../App)
- - [kizuna-calendar](../kizuna-calendar)
 
 ### Depends on
 
@@ -34,7 +34,6 @@
 graph TD;
   kizuna-button --> kizuna-icon
   kizuna-app --> kizuna-button
-  kizuna-calendar --> kizuna-button
   style kizuna-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

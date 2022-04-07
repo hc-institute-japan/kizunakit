@@ -27,10 +27,17 @@ const ListItem = (props: any) => {
       description: 'Displayed text for our list item',
     },
     {
-      name: 'handleOnClick',
+      name: 'value',
+      type: 'string',
+      defaultValue: '',
+      description: 'The value of the item when clicked',
+    },
+    {
+      name: 'onHandleClick',
       type: 'Function',
       defaultValue: '',
-      description: 'The function that will be called when list item is clicked',
+      description:
+        'The function that will be called when list item is clicked. The function will receive an event data. To get the value, get the value for the "detail" field of the event. [eg. data => console.log(data.detail)]',
     },
     {
       name: 'divider',
@@ -74,8 +81,20 @@ const ListItem = (props: any) => {
             <div className={styles.exampleWrapper}>
               <div className={styles.exampleContainer}>
                 <h3 className={styles.exampleTitle}>Default</h3>
-                <KizunaListItem icon="settings" text="Settings" />
-                <KizunaListItem icon="caution" text="Caution" />
+                <KizunaListItem
+                  icon="settings"
+                  text="Settings"
+                  onHandleClick={(data: any) =>
+                    console.log({ itemValue: data.detail })
+                  }
+                />
+                <KizunaListItem
+                  icon="caution"
+                  text="Caution"
+                  onHandleClick={(data: any) =>
+                    console.log({ itemValue: data.detail })
+                  }
+                />
               </div>
               <div className={styles.exampleContainer}>
                 <h3 className={styles.exampleTitle}>List Item with Divider</h3>

@@ -19,8 +19,14 @@ const Toggle = (props: any) => {
     {
       name: 'disabled',
       type: 'booblean',
-      defaultValue: 'dalse',
+      defaultValue: 'false',
       description: 'disables the component',
+    },
+    {
+      name: 'handleClick',
+      type: 'function',
+      defaultValue: '',
+      description: 'Function that will be triggered when component is clicked',
     },
     {
       name: 'classes',
@@ -48,17 +54,23 @@ const Toggle = (props: any) => {
             <div className={styles.badgeExamplesContainer}>
               <div className={styles.default}>
                 <h3>Default</h3>
-                <KizunaToggleButton />
+                <KizunaToggleButton
+                  handleClick={() => console.log('toggled')}
+                />
               </div>
 
               <div className={styles.default}>
                 <h3>Disabled</h3>
-                <KizunaToggleButton disabled />
+                <KizunaToggleButton
+                  disabled
+                  handleClick={() => console.log('toggled')}
+                />
               </div>
 
               <div className={styles.customStyles}>
                 <h3>Custom </h3>
                 <KizunaToggleButton
+                  handleClick={() => console.log('toggled')}
                   classes={{
                     slider: styles.customSlider,
                     input: styles.customInput,

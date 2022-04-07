@@ -7,13 +7,20 @@
 
 ## Properties
 
-| Property        | Attribute | Description | Type                      | Default            |
-| --------------- | --------- | ----------- | ------------------------- | ------------------ |
-| `classes`       | --        |             | `{ [key: string]: any; }` | `undefined`        |
-| `divider`       | `divider` |             | `boolean`                 | `undefined`        |
-| `handleOnClick` | --        |             | `Function`                | `undefined`        |
-| `icon`          | `icon`    |             | `string`                  | `undefined`        |
-| `text`          | `text`    |             | `string`                  | `'List Item Text'` |
+| Property  | Attribute | Description | Type                      | Default            |
+| --------- | --------- | ----------- | ------------------------- | ------------------ |
+| `classes` | --        |             | `{ [key: string]: any; }` | `undefined`        |
+| `divider` | `divider` |             | `boolean`                 | `undefined`        |
+| `icon`    | `icon`    |             | `string`                  | `undefined`        |
+| `text`    | `text`    |             | `string`                  | `'List Item Text'` |
+| `value`   | `value`   |             | `string`                  | `''`               |
+
+
+## Events
+
+| Event         | Description | Type                  |
+| ------------- | ----------- | --------------------- |
+| `handleClick` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

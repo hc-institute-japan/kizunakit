@@ -46,6 +46,12 @@ const Popover = (props: any) => {
       description: 'Position alignment of the popover',
     },
     {
+      name: 'handleClose',
+      type: 'function',
+      defaultValue: '',
+      description: 'Function that will be triggered when popover is closed',
+    },
+    {
       name: 'classes',
       type: 'object',
       defaultValue: '',
@@ -93,10 +99,14 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Left Align"
-                      onClick={() => _togglePopover(1)}
+                      handleClick={() => _togglePopover(1)}
+                      disableClickEvent={popovers[1]}
                     />
 
-                    <KizunaPopover open={popovers[1]} position="left">
+                    <KizunaPopover
+                      open={popovers[1]}
+                      handleClose={() => _togglePopover(1)}
+                    >
                       <KizunaListItem icon="trash" text="Delete" divider />
                       <KizunaListItem icon="send" text="Send" divider />
                       <KizunaListItem icon="copy" text="Copy" divider />
@@ -112,10 +122,15 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Center Align"
-                      onClick={() => _togglePopover(2)}
+                      handleClick={() => _togglePopover(2)}
+                      disableClickEvent={popovers[2]}
                     />
 
-                    <KizunaPopover open={popovers[2]} position="center">
+                    <KizunaPopover
+                      open={popovers[2]}
+                      position="center"
+                      handleClose={() => _togglePopover(2)}
+                    >
                       <p>Add Content here</p>
                     </KizunaPopover>
                   </div>
@@ -123,10 +138,15 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Left Align"
-                      onClick={() => _togglePopover(3)}
+                      handleClick={() => _togglePopover(3)}
+                      disableClickEvent={popovers[3]}
                     />
 
-                    <KizunaPopover open={popovers[3]} position="right">
+                    <KizunaPopover
+                      open={popovers[3]}
+                      position="right"
+                      handleClose={() => _togglePopover(3)}
+                    >
                       <p>Content goes here</p>
                     </KizunaPopover>
                   </div>
@@ -140,10 +160,16 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Left Align"
-                      onClick={() => _togglePopover(4)}
+                      handleClick={() => _togglePopover(4)}
+                      disableClickEvent={popovers[4]}
                     />
 
-                    <KizunaPopover open={popovers[4]} position="left" darkmode>
+                    <KizunaPopover
+                      open={popovers[4]}
+                      position="left"
+                      darkmode
+                      handleClose={() => _togglePopover(4)}
+                    >
                       <KizunaListItem icon="trash" text="Delete" divider />
                       <KizunaListItem icon="send" text="Send" divider />
                       <KizunaListItem icon="copy" text="Copy" divider />
@@ -159,13 +185,15 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Center Align"
-                      onClick={() => _togglePopover(5)}
+                      handleClick={() => _togglePopover(5)}
+                      disableClickEvent={popovers[5]}
                     />
 
                     <KizunaPopover
                       open={popovers[5]}
                       position="center"
                       darkmode
+                      handleClose={() => _togglePopover(5)}
                     >
                       <p>Add Content here</p>
                     </KizunaPopover>
@@ -174,10 +202,16 @@ const Popover = (props: any) => {
                     <KizunaButton
                       type="secondary"
                       text="Left Align"
-                      onClick={() => _togglePopover(6)}
+                      handleClick={() => _togglePopover(6)}
+                      disableClickEvent={popovers[6]}
                     />
 
-                    <KizunaPopover open={popovers[6]} position="right" darkmode>
+                    <KizunaPopover
+                      open={popovers[6]}
+                      position="right"
+                      darkmode
+                      handleClose={() => _togglePopover(6)}
+                    >
                       <p>Content goes here</p>
                     </KizunaPopover>
                   </div>

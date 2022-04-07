@@ -12,7 +12,7 @@ export class KizunaPopover {
   @Prop() position: string;
   @Prop() classes: { [key: string]: any };
   @Prop() id: string = uuidv4();
-  @Prop() onClose: Function;
+  @Prop() handleClose: Function;
   // @Element() el: HTMLElement;
 
   @Watch('open')
@@ -52,7 +52,7 @@ export class KizunaPopover {
 
   _togglePopover = () => {
     if (this.open) {
-      this.onClose && this.onClose();
+      this.handleClose && this.handleClose();
       this.open = false;
     } else {
       this.open = true;
@@ -60,7 +60,7 @@ export class KizunaPopover {
   };
 
   _handleClickOutside = () => {
-    this.onClose && this.onClose();
+    this.handleClose && this.handleClose();
     this.open = false;
   };
 
@@ -74,7 +74,7 @@ export class KizunaPopover {
       <div
         id={`popover-${this.id}`}
         tabIndex={1}
-        onFocusout={this._handleClickOutside}
+        onBlur={this._handleClickOutside}
       >
         <div
           class={`popoverMainContainer ${!this.open && 'hidden-slot'} ${

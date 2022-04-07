@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                      | Default     |
-| ---------- | ---------- | ----------- | ------------------------- | ----------- |
-| `checked`  | `checked`  |             | `boolean`                 | `undefined` |
-| `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
-| `disabled` | `disabled` |             | `boolean`                 | `undefined` |
+| Property      | Attribute  | Description | Type                      | Default     |
+| ------------- | ---------- | ----------- | ------------------------- | ----------- |
+| `checked`     | `checked`  |             | `boolean`                 | `undefined` |
+| `classes`     | --         |             | `{ [key: string]: any; }` | `undefined` |
+| `disabled`    | `disabled` |             | `boolean`                 | `undefined` |
+| `handleClick` | --         |             | `Function`                | `undefined` |
 
 
 ## Dependencies

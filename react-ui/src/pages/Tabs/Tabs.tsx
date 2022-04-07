@@ -33,10 +33,11 @@ const Tabs = (props: any) => {
       description: 'Menu tabs that will be rendered',
     },
     {
-      name: 'onClick',
+      name: 'onHandleClick',
       type: 'Function',
       defaultValue: '',
-      description: 'function that will be triggered when clicked',
+      description:
+        'The function that will be called when tab menu is clicked. The function will receive an event data. To get the value, get the value for the "detail" field of the event. [eg. data => console.log(data.detail)]',
     },
     {
       name: 'classes',
@@ -73,7 +74,7 @@ const Tabs = (props: any) => {
   return (
     <>
       <div>
-        <h1 className="title">Popover</h1>
+        <h1 className="title">Tabs</h1>
         <CustomTabs value={selected} onClickHandler={setSelected} />
         {selected === 'examples' && (
           <div>
@@ -82,13 +83,21 @@ const Tabs = (props: any) => {
                 <h3 className={styles.exampleTitle}>Default</h3>
                 <KizunaTabs
                   menus={tabMenusLight}
-                  onClick={(data: any) => console.log(data)}
+                  onHandleClick={(data: any) =>
+                    console.log({ data: data.detail })
+                  }
                 />
               </div>
 
               <div className={styles.exampleContainer}>
                 <h3 className={styles.exampleTitle}>Dark Mode</h3>
-                <KizunaTabs menus={tabMenusDark} darkmode />
+                <KizunaTabs
+                  menus={tabMenusDark}
+                  darkmode
+                  onHandleClick={(data: any) =>
+                    console.log({ data: data.detail })
+                  }
+                />
               </div>
             </div>
             <KizunaDivider classes={{ divider: styles.dividerMargin }} />

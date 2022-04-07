@@ -35,6 +35,13 @@ const Checkbox = (props: any) => {
       description: '',
     },
     {
+      name: 'handleClick',
+      type: 'function',
+      defaultValue: '',
+      description:
+        'Function that will be triggered when checkbox component is clicked',
+    },
+    {
       name: 'rounded',
       type: 'boolean',
       defaultValue: '',
@@ -74,9 +81,19 @@ const Checkbox = (props: any) => {
                   name="Charlie Charlie"
                   value="Charlie Charlie"
                   checked
+                  handleClick={() => console.log('checkbox is clicked')}
                 />
-                <KizunaCheckbox name="Ella Gopez" value="Ella Gopez" checked />
-                <KizunaCheckbox name="Alice Alice" value="Alice Alice" />
+                <KizunaCheckbox
+                  name="Ella Gopez"
+                  value="Ella Gopez"
+                  checked
+                  handleClick={() => console.log('checkbox is clicked')}
+                />
+                <KizunaCheckbox
+                  name="Alice Alice"
+                  value="Alice Alice"
+                  handleClick={() => console.log('checkbox is clicked')}
+                />
               </div>
 
               <div className={styles.rounded}>

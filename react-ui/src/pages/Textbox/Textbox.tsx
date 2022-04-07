@@ -65,10 +65,11 @@ const Textbox = (props: any) => {
       description: 'Placeholder to display a emoticon icon for the component',
     },
     {
-      name: 'onChange',
+      name: 'onHandleChange',
       type: 'function',
       defaultValue: '',
-      description: 'Function to be triggered when component value changed',
+      description:
+        'The function that will be called when input value is changed. The function will receive an event data. To get the value, get the value for the "detail" field of the event. [eg. data => console.log(data.detail)]',
     },
     {
       name: 'onEmoticonClick',
@@ -113,12 +114,18 @@ const Textbox = (props: any) => {
                   name="name"
                   placeholder="Enter your name"
                   variant="standard"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <h3>Outlined</h3>
                 <KizunaTextbox
                   name="name"
                   placeholder="Enter your name"
                   variant="outlined"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
               </div>
 
@@ -129,6 +136,9 @@ const Textbox = (props: any) => {
                   name="name"
                   placeholder="Enter your name"
                   variant="standard"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <br />
                 <KizunaTextbox
@@ -136,6 +146,9 @@ const Textbox = (props: any) => {
                   name="name"
                   placeholder="Enter your name"
                   variant="outlined"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
               </div>
 
@@ -146,6 +159,9 @@ const Textbox = (props: any) => {
                   placeholder="Enter your name"
                   startIconName="search"
                   variant="standard"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <br />
                 <KizunaTextbox
@@ -153,6 +169,9 @@ const Textbox = (props: any) => {
                   placeholder="Enter your name"
                   startIconName="search"
                   variant="outlined"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
               </div>
 
@@ -163,6 +182,9 @@ const Textbox = (props: any) => {
                   placeholder="Align Left"
                   variant="outlined"
                   align="left"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <br />
                 <KizunaTextbox
@@ -170,6 +192,9 @@ const Textbox = (props: any) => {
                   placeholder="Align Center"
                   variant="outlined"
                   align="center"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <br />
                 <KizunaTextbox
@@ -177,6 +202,9 @@ const Textbox = (props: any) => {
                   placeholder="Align Right"
                   variant="outlined"
                   align="right"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
               </div>
 
@@ -187,6 +215,9 @@ const Textbox = (props: any) => {
                   placeholder=" Enter a message..."
                   emoticon
                   variant="standard"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
                 <br />
                 <KizunaTextbox
@@ -194,6 +225,9 @@ const Textbox = (props: any) => {
                   placeholder="Enter a message..."
                   emoticon
                   variant="outlined"
+                  onHandleChange={(data: any) =>
+                    console.log({ text: data.detail })
+                  }
                 />
               </div>
 

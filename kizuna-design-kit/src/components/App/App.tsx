@@ -94,8 +94,6 @@ export class App {
   };
 
   render() {
-    console.log(this.open1Popover);
-
     return (
       <div>
         <div class="wrapper">
@@ -283,7 +281,7 @@ export class App {
             ></kizuna-button>
             <kizuna-popover
               open={this['open1Popover']}
-              onClose={() => this._handlePopoverClose(1)}
+              handleClose={() => this._handlePopoverClose(1)}
             >
               {this._renderListItems()}
             </kizuna-popover>
@@ -302,7 +300,7 @@ export class App {
             <kizuna-popover
               open={this['open2Popover']}
               position="center"
-              onClose={() => this._handlePopoverClose(2)}
+              handleClose={() => this._handlePopoverClose(2)}
             >
               <p>Add Popover content here</p>
             </kizuna-popover>
@@ -324,7 +322,7 @@ export class App {
             <kizuna-popover
               open={this['open3Popover']}
               position="right"
-              onClose={() => this._handlePopoverClose(3)}
+              handleClose={() => this._handlePopoverClose(3)}
             >
               {this._renderListItems()}
             </kizuna-popover>
@@ -343,7 +341,7 @@ export class App {
             <kizuna-popover
               open={this['open4Popover']}
               darkmode
-              onClose={() => this._handlePopoverClose(4)}
+              handleClose={() => this._handlePopoverClose(4)}
             >
               {this._renderListItems()}
             </kizuna-popover>
@@ -363,7 +361,7 @@ export class App {
               open={this['open5Popover']}
               position="center"
               darkmode
-              onClose={() => this._handlePopoverClose(5)}
+              handleClose={() => this._handlePopoverClose(5)}
             >
               <p>Add Popover content here</p>
             </kizuna-popover>
@@ -383,7 +381,7 @@ export class App {
               open={this['open6Popover']}
               position="right"
               darkmode
-              onClose={() => this._handlePopoverClose(6)}
+              handleClose={() => this._handlePopoverClose(6)}
             >
               {this._renderListItems()}
             </kizuna-popover>
@@ -541,7 +539,9 @@ export class App {
         </div>
         <div class="wrapper">
           <h2 class="title">Toggle Button</h2>
-          <kizuna-toggle-button></kizuna-toggle-button>
+          <kizuna-toggle-button
+            handleClick={() => console.log('toggled')}
+          ></kizuna-toggle-button>
           <kizuna-toggle-button checked></kizuna-toggle-button>
         </div>
         <div class="wrapper">

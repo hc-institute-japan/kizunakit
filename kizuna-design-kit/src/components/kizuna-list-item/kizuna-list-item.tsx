@@ -9,7 +9,6 @@ export class KizunaListItem {
   @Prop() icon: string;
   @Prop() text: string = 'List Item Text';
   @Prop() value: string = '';
-  @Prop() handleOnClick: Function;
   @Prop() classes: { [key: string]: any };
   @Prop() divider: boolean;
 

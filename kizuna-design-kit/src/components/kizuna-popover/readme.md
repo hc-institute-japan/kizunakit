@@ -7,13 +7,14 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type                      | Default     |
-| ---------- | ---------- | ----------- | ------------------------- | ----------- |
-| `classes`  | --         |             | `{ [key: string]: any; }` | `undefined` |
-| `darkmode` | `darkmode` |             | `boolean`                 | `undefined` |
-| `id`       | `id`       |             | `string`                  | `uuidv4()`  |
-| `open`     | `open`     |             | `boolean`                 | `false`     |
-| `position` | `position` |             | `string`                  | `undefined` |
+| Property      | Attribute  | Description | Type                      | Default     |
+| ------------- | ---------- | ----------- | ------------------------- | ----------- |
+| `classes`     | --         |             | `{ [key: string]: any; }` | `undefined` |
+| `darkmode`    | `darkmode` |             | `boolean`                 | `undefined` |
+| `handleClose` | --         |             | `Function`                | `undefined` |
+| `id`          | `id`       |             | `string`                  | `uuidv4()`  |
+| `open`        | `open`     |             | `boolean`                 | `false`     |
+| `position`    | `position` |             | `string`                  | `undefined` |
 
 
 ## Dependencies

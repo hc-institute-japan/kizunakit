@@ -35,10 +35,11 @@ const Calendar = (props: any) => {
       description: 'Set the dark mode of the component',
     },
     {
-      name: 'onChange',
+      name: 'onHandleChange',
       type: 'Function',
       defaultValue: '',
-      description: 'Function to be triggered when an onChange event occured',
+      description:
+        'The function that will be called when selected value is changed. The function will receive an event data. To get the value, get the value for the "detail" field of the event. [eg. data => console.log(data.detail)]',
     },
     {
       name: 'position',
@@ -96,17 +97,31 @@ const Calendar = (props: any) => {
                 <div className={styles.calendars}>
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Left Align</p>
-                    <KizunaCalendar />
+                    <KizunaCalendar
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
 
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Center Align</p>
-                    <KizunaCalendar position="center" />
+                    <KizunaCalendar
+                      position="center"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
 
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Right Align</p>
-                    <KizunaCalendar position="right" />
+                    <KizunaCalendar
+                      position="right"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -116,17 +131,34 @@ const Calendar = (props: any) => {
                 <div className={styles.calendars}>
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Left Align</p>
-                    <KizunaCalendar darkmode />
+                    <KizunaCalendar
+                      darkmode
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
 
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Center Align</p>
-                    <KizunaCalendar darkmode position="center" />
+                    <KizunaCalendar
+                      darkmode
+                      position="center"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
 
                   <div className={styles.calendarContainer}>
                     <p className={styles.calendarTitle}>Right Align</p>
-                    <KizunaCalendar darkmode position="right" />
+                    <KizunaCalendar
+                      darkmode
+                      position="right"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
+                    />
                   </div>
                 </div>
               </div>
@@ -139,6 +171,9 @@ const Calendar = (props: any) => {
                     <KizunaCalendar
                       darkmode
                       classes={{ root: styles.customCalendar }}
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
                     />
                   </div>
 
@@ -148,6 +183,9 @@ const Calendar = (props: any) => {
                       darkmode
                       classes={{ monthName: styles.customCalendarName }}
                       position="center"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
                     />
                   </div>
 
@@ -160,6 +198,9 @@ const Calendar = (props: any) => {
                         headerRightIcon: styles.customIcons,
                       }}
                       position="right"
+                      onHandleChange={(data: any) =>
+                        console.log({ selectedDate: data.detail })
+                      }
                     />
                   </div>
                 </div>

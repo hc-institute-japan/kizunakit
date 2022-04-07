@@ -17,9 +17,9 @@
 
 ## Events
 
-| Event     | Description | Type                  |
-| --------- | ----------- | --------------------- |
-| `onClick` |             | `CustomEvent<string>` |
+| Event         | Description | Type                  |
+| ------------- | ----------- | --------------------- |
+| `handleClick` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

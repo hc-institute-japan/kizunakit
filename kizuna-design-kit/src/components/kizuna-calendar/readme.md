@@ -14,7 +14,6 @@
 | `dayNames`   | --         |             | `string[]`                | `['M', 'T', 'W', 'Th', 'F', 'Sa', 'Su']`                                                                                                                                          |
 | `id`         | `id`       |             | `string`                  | `uuidv4()`                                                                                                                                                                        |
 | `monthNames` | --         |             | `string[]`                | `[     'January',     'February',     'March',     'April',     'May',     'June',     'July',     'August',     'September',     'October',     'November',     'December',   ]` |
-| `onChange`   | --         |             | `Function`                | `undefined`                                                                                                                                                                       |
 | `position`   | `position` |             | `string`                  | `undefined`                                                                                                                                                                       |
 | `value`      | `value`    |             | `string`                  | `undefined`                                                                                                                                                                       |
 
@@ -23,8 +22,7 @@
 
 | Event          | Description | Type                         |
 | -------------- | ----------- | ---------------------------- |
-| `dayChanged`   |             | `CustomEvent<CalendarEntry>` |
-| `monthChanged` |             | `CustomEvent<CalendarEntry>` |
+| `handleChange` |             | `CustomEvent<CalendarEntry>` |
 
 
 ## Dependencies
@@ -36,14 +34,11 @@
 ### Depends on
 
 - [kizuna-icon](../kizuna-icon)
-- [kizuna-button](../kizuna-button)
 
 ### Graph
 ```mermaid
 graph TD;
   kizuna-calendar --> kizuna-icon
-  kizuna-calendar --> kizuna-button
-  kizuna-button --> kizuna-icon
   kizuna-app --> kizuna-calendar
   style kizuna-calendar fill:#f9f,stroke:#333,stroke-width:4px
 ```

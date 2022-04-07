@@ -17,13 +17,19 @@
 | `isFocus`         | `is-focus`        |             | `boolean`                 | `false`     |
 | `label`           | `label`           |             | `string`                  | `undefined` |
 | `name`            | `name`            |             | `string`                  | `undefined` |
-| `onChange`        | --                |             | `Function`                | `undefined` |
 | `onEmoticonClick` | --                |             | `Function`                | `undefined` |
 | `placeholder`     | `placeholder`     |             | `string`                  | `undefined` |
 | `rounded`         | `rounded`         |             | `boolean`                 | `true`      |
 | `startIconName`   | `start-icon-name` |             | `string`                  | `undefined` |
 | `value`           | `value`           |             | `string`                  | `undefined` |
 | `variant`         | `variant`         |             | `string`                  | `undefined` |
+
+
+## Events
+
+| Event          | Description | Type                  |
+| -------------- | ----------- | --------------------- |
+| `handleChange` |             | `CustomEvent<string>` |
 
 
 ## Dependencies

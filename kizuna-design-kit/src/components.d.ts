@@ -63,7 +63,6 @@ export namespace Components {
     interface KizunaListItem {
         "classes": { [key: string]: any };
         "divider": boolean;
-        "handleOnClick": Function;
         "icon": string;
         "text": string;
         "value": string;
@@ -93,8 +92,8 @@ export namespace Components {
     interface KizunaPopover {
         "classes": { [key: string]: any };
         "darkmode": boolean;
+        "handleClose": Function;
         "id": string;
-        "onClose": Function;
         "open": boolean;
         "position": string;
     }
@@ -315,7 +314,6 @@ declare namespace LocalJSX {
     interface KizunaListItem {
         "classes"?: { [key: string]: any };
         "divider"?: boolean;
-        "handleOnClick"?: Function;
         "icon"?: string;
         "onHandleClick"?: (event: CustomEvent<string>) => void;
         "text"?: string;
@@ -346,8 +344,8 @@ declare namespace LocalJSX {
     interface KizunaPopover {
         "classes"?: { [key: string]: any };
         "darkmode"?: boolean;
+        "handleClose"?: Function;
         "id"?: string;
-        "onClose"?: Function;
         "open"?: boolean;
         "position"?: string;
     }

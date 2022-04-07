@@ -50,7 +50,7 @@ const ButtonsPage = () => {
         'An object of custom class names of the component. Please refer to CSS tab for more information.',
     },
     {
-      name: 'handleOnClick',
+      name: 'handleClick',
       type: 'function',
       defaultValue: '',
       description: '',
