@@ -13,11 +13,15 @@
 }
 .codeWrapper {
   background-color: var(--dark-primary-bg);
-  color: var(--dark-primary-text) !important;
+  color: var(--dark-primary-text);
   padding: 15px;
   border-radius: 5px;
 }
 
+.codeWrapper p {
+  color: var(--dark-primary-text);
+}
+
 .commentCode {
-  color: var(--dark-secondary-text);
+  color: var(--dark-secondary-text) !important;
 }
