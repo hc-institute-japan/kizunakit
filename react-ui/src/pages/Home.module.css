@@ -13,7 +13,7 @@
 }
 .codeWrapper {
   background-color: var(--dark-primary-bg);
-  color: var(--dark-primary-text);
+  color: var(--dark-primary-text) !important;
   padding: 15px;
   border-radius: 5px;
 }

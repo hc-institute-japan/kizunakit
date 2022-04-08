@@ -50,6 +50,10 @@ code {
   color: var(--secondary-text);
 }
 
+.dividerMargin {
+  margin: 2rem 0;
+}
+
 h1,
 h3,
 h2 {
